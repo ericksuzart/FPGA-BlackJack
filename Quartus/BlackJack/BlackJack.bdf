@@ -19,8 +19,40 @@ Intel and sold by Intel or its authorized distributors.  Please
 refer to the applicable agreement for further details.
 */
 (header "graphic" (version "1.4"))
+(pin
+	(input)
+	(rect 32 -104 200 -88)
+	(text "INPUT" (rect 125 0 150 7)(font "Arial" (font_size 6)))
+	(text "inclk0" (rect 5 0 30 9)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 145 14)(font "Arial" (font_size 6)))
+)
+(pin
+	(output)
+	(rect 800 -400 976 -384)
+	(text "OUTPUT" (rect 1 0 36 7)(font "Arial" (font_size 6)))
+	(text "c0" (rect 90 0 101 9)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
 (symbol
-	(rect 272 -296 488 -152)
+	(rect 368 -160 584 -16)
 	(text "PLL" (rect 98 0 123 14)(font "Arial" (font_size 10)))
 	(text "inst" (rect 8 131 24 140)(font "Arial" ))
 	(port
@@ -68,7 +100,7 @@ refer to the applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 280 280 496 408)
+	(rect 376 392 592 520)
 	(text "RAM" (rect 95 0 126 14)(font "Arial" (font_size 10)))
 	(text "inst1" (rect 8 115 28 124)(font "Arial" ))
 	(port
@@ -151,3 +183,108 @@ refer to the applicable agreement for further details.
 		(line (pt 0 0)(pt 0 0))
 	)
 )
+(symbol
+	(rect 784 -144 1032 0)
+	(text "Counter" (rect 5 0 39 9)(font "Arial" ))
+	(text "inst" (rect 8 128 24 137)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk_50M" (rect 0 0 35 9)(font "Arial" ))
+		(text "clk_50M" (rect 21 27 56 36)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clk_2K" (rect 0 0 29 9)(font "Arial" ))
+		(text "clk_2K" (rect 21 43 50 52)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "i_RstCounter" (rect 0 0 55 9)(font "Arial" ))
+		(text "i_RstCounter" (rect 21 59 76 68)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "i_ActCounter" (rect 0 0 55 9)(font "Arial" ))
+		(text "i_ActCounter" (rect 21 75 76 84)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "i_Reset" (rect 0 0 34 9)(font "Arial" ))
+		(text "i_Reset" (rect 21 91 55 100)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 248 32)
+		(output)
+		(text "o_Count[WIDTH-1..0]" (rect 0 0 90 9)(font "Arial" ))
+		(text "o_Count[WIDTH-1..0]" (rect 151 27 227 36)(font "Arial" ))
+		(line (pt 248 32)(pt 232 32)(line_width 3))
+	)
+	(port
+		(pt 248 48)
+		(output)
+		(text "o_TwoSec" (rect 0 0 44 9)(font "Arial" ))
+		(text "o_TwoSec" (rect 190 43 227 52)(font "Arial" ))
+		(line (pt 248 48)(pt 232 48))
+	)
+	(parameter
+		"WIDTH"
+		"12"
+		""
+		(type "PARAMETER_UNSIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 232 128))
+	)
+	(annotation_block (parameter)(rect 984 -168 1137 -144))
+)
+(connector
+	(pt 800 -392)
+	(pt 624 -392)
+)
+(connector
+	(pt 328 -96)
+	(pt 328 -184)
+)
+(connector
+	(pt 624 -392)
+	(pt 624 -96)
+)
+(connector
+	(pt 328 -184)
+	(pt 744 -184)
+)
+(connector
+	(pt 744 -184)
+	(pt 744 -112)
+)
+(connector
+	(pt 784 -112)
+	(pt 744 -112)
+)
+(connector
+	(pt 584 -96)
+	(pt 624 -96)
+)
+(connector
+	(pt 624 -96)
+	(pt 784 -96)
+)
+(connector
+	(pt 200 -96)
+	(pt 328 -96)
+)
+(connector
+	(pt 328 -96)
+	(pt 368 -96)
+)
+(junction (pt 624 -96))
+(junction (pt 328 -96))
