@@ -9,24 +9,46 @@ z2
 cModel Technology
 d/home/erick
 vCounter
-!s110 1574449471
+!s110 1574546569
 !i10b 1
-!s100 <;>[DJiKlhKF42]7GWi4A2
-I^6:5CC=NlK6U^TA@1A;7Z1
-VDg1SIo80bB@j0V0VzS_@n1
-d/home/erick/ENGC40/Modelsim/BlackJack
-w1574449468
+!s100 _?h2PZ_G7WQIP5kW7GUh^2
+I4i4ef05=Wj7kMSME99Ama2
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z1 d/home/erick/ENGC40/Modelsim/BlackJack
+w1574544785
 8/home/erick/ENGC40/Modelsim/BlackJack/Counter.v
 F/home/erick/ENGC40/Modelsim/BlackJack/Counter.v
 L0 3
-OV;L;10.5b;63
+Z2 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1574449471.000000
+Z3 !s108 1574546569.000000
 !s107 /home/erick/ENGC40/Modelsim/BlackJack/Counter.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/erick/ENGC40/Modelsim/BlackJack/Counter.v|
 !i113 1
-o-work work
-tCvgOpt 0
+Z4 o-work work
+Z5 tCvgOpt 0
 n@counter
+vCounter_TB
+!s110 1574546570
+!i10b 1
+!s100 ZR5CSKI>9h><SP6c=B4[S0
+IkclGCY;JK01VUN@62i0cm1
+R0
+R1
+w1574546563
+8/home/erick/ENGC40/Modelsim/BlackJack/Counter_TB.v
+F/home/erick/ENGC40/Modelsim/BlackJack/Counter_TB.v
+L0 3
+R2
+r1
+!s85 0
+31
+R3
+!s107 /home/erick/ENGC40/Modelsim/BlackJack/Counter_TB.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/erick/ENGC40/Modelsim/BlackJack/Counter_TB.v|
+!i113 1
+R4
+R5
+n@counter_@t@b
