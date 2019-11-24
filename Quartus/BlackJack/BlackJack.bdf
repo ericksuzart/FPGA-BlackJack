@@ -223,6 +223,35 @@ refer to the applicable agreement for further details.
 	)
 	(annotation_block (parameter)(rect 1032 -152 1185 -128))
 )
+(symbol
+	(rect 384 72 584 152)
+	(text "Nxt_Addr" (rect 5 0 45 9)(font "Arial" ))
+	(text "inst2" (rect 8 64 29 74)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Addr_i[5..0]" (rect 0 0 48 9)(font "Arial" ))
+		(text "Addr_i[5..0]" (rect 21 27 69 36)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "Count[11..0]" (rect 0 0 51 9)(font "Arial" ))
+		(text "Count[11..0]" (rect 21 43 72 52)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 200 32)
+		(output)
+		(text "Addr_j[5..0]" (rect 0 0 48 9)(font "Arial" ))
+		(text "Addr_j[5..0]" (rect 139 27 187 36)(font "Arial" ))
+		(line (pt 200 32)(pt 184 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 184 64))
+	)
+)
 (connector
 	(pt 200 -96)
 	(pt 368 -96)
