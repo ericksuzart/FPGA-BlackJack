@@ -21,7 +21,7 @@ refer to the applicable agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 32 -104 200 -88)
+	(rect -600 344 -432 360)
 	(text "INPUT" (rect 125 0 150 7)(font "Arial" (font_size 6)))
 	(text "inclk0" (rect 5 0 30 9)(font "Arial" ))
 	(pt 168 8)
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 	(text "VCC" (rect 128 7 145 14)(font "Arial" (font_size 6)))
 )
 (symbol
-	(rect 368 -160 584 -16)
+	(rect -272 480 -56 624)
 	(text "PLL" (rect 98 0 123 14)(font "Arial" (font_size 10)))
 	(text "inst" (rect 8 131 24 140)(font "Arial" ))
 	(port
@@ -84,7 +84,7 @@ refer to the applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 864 136 1080 264)
+	(rect 768 248 984 376)
 	(text "RAM" (rect 95 0 126 14)(font "Arial" (font_size 10)))
 	(text "inst1" (rect 8 115 28 124)(font "Arial" ))
 	(port
@@ -168,7 +168,7 @@ refer to the applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 832 -128 1080 -16)
+	(rect 40 512 288 624)
 	(text "Counter" (rect 5 0 39 9)(font "Arial" ))
 	(text "inst" (rect 8 96 24 105)(font "Arial" ))
 	(port
@@ -203,14 +203,14 @@ refer to the applicable agreement for further details.
 		(pt 248 32)
 		(output)
 		(text "o_Count[WIDTH-1..0]" (rect 0 0 90 9)(font "Arial" ))
-		(text "o_Count[WIDTH-1..0]" (rect 151 27 227 36)(font "Arial" ))
+		(text "o_Count[WIDTH-1..0]" (rect 151 27 241 36)(font "Arial" ))
 		(line (pt 248 32)(pt 232 32)(line_width 3))
 	)
 	(port
 		(pt 248 48)
 		(output)
 		(text "o_TwoSec" (rect 0 0 44 9)(font "Arial" ))
-		(text "o_TwoSec" (rect 190 43 227 52)(font "Arial" ))
+		(text "o_TwoSec" (rect 190 43 234 52)(font "Arial" ))
 		(line (pt 248 48)(pt 232 48))
 	)
 	(parameter
@@ -221,18 +221,18 @@ refer to the applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 232 96))
 	)
-	(annotation_block (parameter)(rect 1032 -152 1185 -128))
+	(annotation_block (parameter)(rect 240 488 393 512))
 )
 (symbol
-	(rect 384 72 584 152)
-	(text "Nxt_Addr" (rect 5 0 45 9)(font "Arial" ))
-	(text "inst2" (rect 8 64 29 74)(font "Intel Clear" ))
+	(rect 448 496 696 624)
+	(text "Nxt_Addr" (rect 13 0 53 9)(font "Arial" ))
+	(text "inst2" (rect 16 64 37 73)(font "Arial" ))
 	(port
-		(pt 0 32)
+		(pt 96 0)
 		(input)
-		(text "Addr_i[5..0]" (rect 0 0 48 9)(font "Arial" ))
-		(text "Addr_i[5..0]" (rect 21 27 69 36)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
+		(text "Addr_i[5..0]" (rect 8 0 56 9)(font "Arial" ))
+		(text "Addr_i[5..0]" (rect 88 25 97 73)(font "Arial" )(vertical))
+		(line (pt 96 0)(pt 96 16)(line_width 3))
 	)
 	(port
 		(pt 0 48)
@@ -242,21 +242,219 @@ refer to the applicable agreement for further details.
 		(line (pt 0 48)(pt 16 48)(line_width 3))
 	)
 	(port
-		(pt 200 32)
+		(pt 152 0)
 		(output)
-		(text "Addr_j[5..0]" (rect 0 0 48 9)(font "Arial" ))
-		(text "Addr_j[5..0]" (rect 139 27 187 36)(font "Arial" ))
-		(line (pt 200 32)(pt 184 32)(line_width 3))
+		(text "Addr_j[5..0]" (rect 40 0 88 9)(font "Arial" ))
+		(text "Addr_j[5..0]" (rect 144 23 153 71)(font "Arial" )(vertical))
+		(line (pt 152 0)(pt 152 16)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 184 64))
+		(rectangle (rect 16 16 232 104))
 	)
 )
-(connector
-	(pt 200 -96)
-	(pt 368 -96)
+(symbol
+	(rect 456 224 704 424)
+	(text "Shuffler" (rect 13 8 46 17)(font "Arial" ))
+	(text "inst3" (rect 16 136 37 145)(font "Arial" ))
+	(port
+		(pt 0 40)
+		(input)
+		(text "i_MemData[3..0]" (rect 0 8 69 17)(font "Arial" ))
+		(text "i_MemData[3..0]" (rect 21 35 90 44)(font "Arial" ))
+		(line (pt 0 40)(pt 16 40)(line_width 3))
+	)
+	(port
+		(pt 0 56)
+		(input)
+		(text "i_ActShuffler" (rect 0 8 54 17)(font "Arial" ))
+		(text "i_ActShuffler" (rect 21 51 75 60)(font "Arial" ))
+		(line (pt 0 56)(pt 16 56))
+	)
+	(port
+		(pt 144 200)
+		(input)
+		(text "i_Addr_J[5..0]" (rect 0 8 59 17)(font "Arial" ))
+		(text "i_Addr_J[5..0]" (rect 136 115 145 174)(font "Arial" )(vertical))
+		(line (pt 144 200)(pt 144 183)(line_width 3))
+	)
+	(port
+		(pt 0 88)
+		(input)
+		(text "clk" (rect 0 8 11 17)(font "Arial" ))
+		(text "clk" (rect 21 83 32 92)(font "Arial" ))
+		(line (pt 0 88)(pt 16 88))
+	)
+	(port
+		(pt 248 168)
+		(output)
+		(text "o_Shuffled" (rect 16 8 62 17)(font "Arial" ))
+		(text "o_Shuffled" (rect 189 163 235 172)(font "Arial" ))
+		(line (pt 248 168)(pt 232 168))
+	)
+	(port
+		(pt 248 56)
+		(output)
+		(text "o_Data[3..0]" (rect 16 8 67 17)(font "Arial" ))
+		(text "o_Data[3..0]" (rect 184 51 235 60)(font "Arial" ))
+		(line (pt 248 56)(pt 232 56)(line_width 3))
+	)
+	(port
+		(pt 248 88)
+		(output)
+		(text "o_Address[5..0]" (rect 16 8 82 17)(font "Arial" ))
+		(text "o_Address[5..0]" (rect 172 83 238 92)(font "Arial" ))
+		(line (pt 248 88)(pt 232 88)(line_width 3))
+	)
+	(port
+		(pt 248 136)
+		(output)
+		(text "o_MemClk" (rect 16 8 62 17)(font "Arial" ))
+		(text "o_MemClk" (rect 189 131 235 140)(font "Arial" ))
+		(line (pt 248 136)(pt 232 136))
+	)
+	(port
+		(pt 248 72)
+		(output)
+		(text "o_Write" (rect 16 8 50 17)(font "Arial" ))
+		(text "o_Write" (rect 199 67 233 76)(font "Arial" ))
+		(line (pt 248 72)(pt 232 72))
+	)
+	(port
+		(pt 88 200)
+		(output)
+		(text "vo_Addr_I[5..0]" (rect 8 56 72 65)(font "Arial" ))
+		(text "vo_Addr_I[5..0]" (rect 80 112 89 176)(font "Arial" )(vertical))
+		(line (pt 88 200)(pt 88 184)(line_width 3))
+	)
+	(parameter
+		"Start"
+		"0000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"InitOutputs"
+		"0001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"I_ReadMemOut"
+		"0010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"I_StoreMemOut"
+		"0011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"GetNxtAddr"
+		"0100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"J_ReadMemOut"
+		"0101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"J_StoreMemOut"
+		"0110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"J_WriteMemAddr"
+		"0111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"ChangeAddr"
+		"1000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"I_WriteMemAddr"
+		"1001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"IfState"
+		"1010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"IncreaseAddr"
+		"1011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Shuffled"
+		"1100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 24 24 224 184))
+	)
+	(annotation_block (parameter)(rect 496 56 680 224))
 )
 (connector
-	(pt 584 -96)
-	(pt 832 -96)
+	(pt -56 544)
+	(pt 40 544)
+)
+(connector
+	(pt 288 544)
+	(pt 448 544)
+	(bus)
+)
+(connector
+	(pt 984 280)
+	(pt 1008 280)
+	(bus)
+)
+(connector
+	(pt 408 264)
+	(pt 456 264)
+	(bus)
+)
+(connector
+	(pt 704 280)
+	(pt 768 280)
+	(bus)
+)
+(connector
+	(pt 704 312)
+	(pt 768 312)
+	(bus)
+)
+(connector
+	(pt 704 360)
+	(pt 768 360)
+)
+(connector
+	(pt 704 296)
+	(pt 768 296)
+)
+(connector
+	(pt 544 424)
+	(pt 544 496)
+	(bus)
+)
+(connector
+	(pt 600 424)
+	(pt 600 496)
+	(bus)
+)
+(connector
+	(pt 408 40)
+	(pt 1008 40)
+	(bus)
+)
+(connector
+	(pt 1008 280)
+	(pt 1008 40)
+	(bus)
+)
+(connector
+	(pt 408 264)
+	(pt 408 40)
+	(bus)
 )
