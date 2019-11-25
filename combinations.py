@@ -1,5 +1,7 @@
 #! /usr/bin/env python
 
+# Made by: Erick
+
 
 if __name__ == "__main__":
     RawConb = ["0 1 2 3 4 5",
@@ -936,7 +938,10 @@ if __name__ == "__main__":
     cf.append(nc[0])
 
     '''
-        Comparo a posição inicial da minha lista com as demais posições do vetor que contém todas as combinações possíveis. Se elas forem distintas em pelo menos 2 bits eu adiciono esse valor a minha lista de combinações finais.
+        Comparo a posição inicial da minha lista com as demais posições do vetor
+        que contém todas as combinações possíveis. Se elas forem distintas em
+        pelo menos 2 bits eu adiciono esse valor a minha lista de combinações
+        finais.
     '''
     i = 0
     while i < 51:
