@@ -33,15 +33,15 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 48)
 		(input)
-		(text "i_RstCounter" (rect 0 0 54 12)(font "Arial" ))
-		(text "i_RstCounter" (rect 21 43 75 55)(font "Arial" ))
+		(text "i_ActCounter" (rect 0 0 54 12)(font "Arial" ))
+		(text "i_ActCounter" (rect 21 43 75 55)(font "Arial" ))
 		(line (pt 0 48)(pt 16 48)(line_width 1))
 	)
 	(port
 		(pt 0 64)
 		(input)
-		(text "i_ActCounter" (rect 0 0 54 12)(font "Arial" ))
-		(text "i_ActCounter" (rect 21 59 75 71)(font "Arial" ))
+		(text "RstCounter" (rect 0 0 47 12)(font "Arial" ))
+		(text "RstCounter" (rect 21 59 68 71)(font "Arial" ))
 		(line (pt 0 64)(pt 16 64)(line_width 1))
 	)
 	(port
