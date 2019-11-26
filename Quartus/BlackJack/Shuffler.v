@@ -52,12 +52,16 @@ begin
     begin
         A_State <= F_State;
 
-        if (F_State == IncreaseAddr)
-            vo_Addr_I <= vo_Addr_I + 1;
-        if(F_State == I_StoreMemOut)
-            vc_Data_I <= i_MemData;
-        if(F_State == J_StoreMemOut)
-            vc_Data_J = i_MemData;
+        case (F_State)
+            IncreaseAddr :
+                vo_Addr_I <= vo_Addr_I + 1;
+            
+            I_StoreMemOut :
+                vc_Data_I <= i_MemData;
+
+            J_StoreMemOut :
+                vc_Data_J = i_MemData;
+        endcase
     end
 end
 
@@ -65,36 +69,50 @@ end
 always @(*)
 begin
     case (A_State)
-        Start           :   F_State = InitOutputs;
+        Start :
+            F_State = InitOutputs;
 
-        InitOutputs     :   F_State = I_ReadMemOut;
+        InitOutputs :
+            F_State = I_ReadMemOut;
 
-        I_ReadMemOut    :   F_State = I_StoreMemOut;
+        I_ReadMemOut :
+            F_State = I_StoreMemOut;
 
-        I_StoreMemOut   :   F_State = GetNxtAddr;
+        I_StoreMemOut :
+            F_State = GetNxtAddr;
 
-        GetNxtAddr      :   F_State = J_ReadMemOut;
+        GetNxtAddr :
+            F_State = J_ReadMemOut;
 
-        J_ReadMemOut    :   F_State = J_StoreMemOut;
+        J_ReadMemOut :
+            F_State = J_StoreMemOut;
 
-        J_StoreMemOut   :   F_State = J_WriteMemAddr;
+        J_StoreMemOut :
+            F_State = J_WriteMemAddr;
 
-        J_WriteMemAddr  :   F_State = ChangeAddr;
+        J_WriteMemAddr :
+            F_State = ChangeAddr;
 
-        ChangeAddr      :   F_State = I_WriteMemAddr;
+        ChangeAddr :
+            F_State = I_WriteMemAddr;
 
-        I_WriteMemAddr  :   F_State = IfState;
+        I_WriteMemAddr :
+            F_State = IfState;
 
-        IfState         :   if (vo_Addr_I < 51)
-                                F_State = IncreaseAddr;
-                            else
-                                F_State = Shuffled;
+        IfState :
+            if (vo_Addr_I < 51)
+                F_State = IncreaseAddr;
+            else
+                F_State = Shuffled;
 
-        IncreaseAddr    :   F_State = InitOutputs;
+        IncreaseAddr :
+            F_State = InitOutputs;
 
-        Shuffled        :   F_State = Shuffled;
+        Shuffled :
+            F_State = Shuffled;
 
-        default         :   F_State = Start;
+        default : 
+            F_State = Start;
     endcase
 end
 
@@ -106,53 +124,63 @@ begin
     o_MemClk = 0;
     o_Write = 0;
     case (A_State)
-        InitOutputs     :   o_Address = vo_Addr_I;
+        InitOutputs :
+            o_Address = vo_Addr_I;
 
-        I_ReadMemOut    :   begin
-                                o_MemClk = 1;
-                                o_Address = vo_Addr_I;
-                            end
+        I_ReadMemOut :
+            begin
+                o_MemClk = 1;
+                o_Address = vo_Addr_I;
+            end
 
-        I_StoreMemOut   :   o_Address = vo_Addr_I;
-                            // vc_Data_I = i_MemData; Clocked
+        I_StoreMemOut :
+            o_Address = vo_Addr_I;
+            // vc_Data_I = i_MemData; Clocked
 
-        GetNxtAddr      :   o_Address = i_Addr_J;
+        GetNxtAddr :
+            o_Address = i_Addr_J;
 
-        J_ReadMemOut    :   begin
-                                o_MemClk = 1;
-                                o_Address = i_Addr_J;
-                            end
+        J_ReadMemOut :
+            begin
+                o_MemClk = 1;
+                o_Address = i_Addr_J;
+            end
 
-        J_StoreMemOut   :   begin
-                                o_Data = vc_Data_I;
-                                o_MemClk = 0;
-                                o_Write = 1;
-                                o_Address = i_Addr_J;
-                                // vc_Data_J = i_MemData; Clocked
-                            end
+        J_StoreMemOut :
+            begin
+                o_Data = vc_Data_I;
+                o_MemClk = 0;
+                o_Write = 1;
+                o_Address = i_Addr_J;
+                // vc_Data_J = i_MemData; Clocked
+            end
 
-        J_WriteMemAddr  :   begin
-                                o_Data = vc_Data_I;
-                                o_MemClk = 1;
-                                o_Write = 1;
-                                o_Address = i_Addr_J;
-                            end
+        J_WriteMemAddr :
+            begin
+                o_Data = vc_Data_I;
+                o_MemClk = 1;
+                o_Write = 1;
+                o_Address = i_Addr_J;
+            end
 
-        ChangeAddr      :   begin
-                                o_Data = vc_Data_J;
-                                o_MemClk = 0;
-                                o_Write = 1;
-                                o_Address = vo_Addr_I;
-                            end
+        ChangeAddr :
+            begin
+                o_Data = vc_Data_J;
+                o_MemClk = 0;
+                o_Write = 1;
+                o_Address = vo_Addr_I;
+            end
 
-        I_WriteMemAddr  :   begin
-                                o_Data = vc_Data_J;
-                                o_MemClk = 1;
-                                o_Write = 1;
-                                o_Address = vo_Addr_I;
-                            end
+        I_WriteMemAddr :
+            begin
+                o_Data = vc_Data_J;
+                o_MemClk = 1;
+                o_Write = 1;
+                o_Address = vo_Addr_I;
+            end
 
-        Shuffled        :   o_Shuffled = 1;
+        Shuffled :
+            o_Shuffled = 1;
     endcase
 end
 

@@ -84,7 +84,7 @@ refer to the applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 768 248 984 376)
+	(rect 1280 248 1496 376)
 	(text "RAM" (rect 95 0 126 14)(font "Arial" (font_size 10)))
 	(text "inst1" (rect 8 115 28 124)(font "Arial" ))
 	(port
@@ -396,6 +396,232 @@ refer to the applicable agreement for further details.
 	)
 	(annotation_block (parameter)(rect 496 56 680 224))
 )
+(symbol
+	(rect 1296 464 1496 544)
+	(text "CardEvaluator" (rect 134 71 195 80)(font "Arial" ))
+	(text "inst4" (rect 171 6 192 16)(font "Intel Clear" ))
+	(port
+		(pt 200 48)
+		(input)
+		(text "i_Card[3..0]" (rect 0 0 49 9)(font "Arial" ))
+		(text "i_Card[3..0]" (rect 130 44 179 53)(font "Arial" ))
+		(line (pt 200 48)(pt 184 48)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(output)
+		(text "o_Value[3..0]" (rect 0 0 56 9)(font "Arial" ))
+		(text "o_Value[3..0]" (rect 12 44 68 53)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 184 64))
+	)
+	(rotate180)
+)
+(symbol
+	(rect 872 280 1128 424)
+	(text "MemAcessMux" (rect 5 0 69 9)(font "Arial" ))
+	(text "inst7" (rect 8 128 29 138)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "ActShuffler" (rect 0 0 47 9)(font "Arial" ))
+		(text "ActShuffler" (rect 21 27 68 36)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "i_ShufflerAddr[5..0]" (rect 0 0 81 9)(font "Arial" ))
+		(text "i_ShufflerAddr[5..0]" (rect 21 43 102 52)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "i_AdderAddress[5..0]" (rect 0 0 88 9)(font "Arial" ))
+		(text "i_AdderAddress[5..0]" (rect 21 59 109 68)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "i_ShufflerClk" (rect 0 0 54 9)(font "Arial" ))
+		(text "i_ShufflerClk" (rect 21 75 75 84)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "i_AdderClk" (rect 0 0 47 9)(font "Arial" ))
+		(text "i_AdderClk" (rect 21 91 68 100)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 256 32)
+		(output)
+		(text "o_Address[5..0]" (rect 0 0 66 9)(font "Arial" ))
+		(text "o_Address[5..0]" (rect 180 27 246 36)(font "Arial" ))
+		(line (pt 256 32)(pt 240 32)(line_width 3))
+	)
+	(port
+		(pt 256 48)
+		(output)
+		(text "o_MemClk" (rect 0 0 46 9)(font "Arial" ))
+		(text "o_MemClk" (rect 197 43 243 52)(font "Arial" ))
+		(line (pt 256 48)(pt 240 48))
+	)
+	(drawing
+		(rectangle (rect 16 16 240 128))
+	)
+)
+(symbol
+	(rect 1296 576 1512 720)
+	(text "CardAdder" (rect 5 0 51 9)(font "Arial" ))
+	(text "inst5" (rect 8 128 29 137)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "i_Card[3..0]" (rect 0 0 49 9)(font "Arial" ))
+		(text "i_Card[3..0]" (rect 21 27 70 36)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "i_Value[3..0]" (rect 0 0 53 9)(font "Arial" ))
+		(text "i_Value[3..0]" (rect 21 43 74 52)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "i_Card2P" (rect 0 0 40 9)(font "Arial" ))
+		(text "i_Card2P" (rect 21 59 61 68)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "i_Card2D" (rect 0 0 40 9)(font "Arial" ))
+		(text "i_Card2D" (rect 21 75 61 84)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "i_Reset" (rect 0 0 34 9)(font "Arial" ))
+		(text "i_Reset" (rect 21 91 55 100)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "i_Clock" (rect 0 0 31 9)(font "Arial" ))
+		(text "i_Clock" (rect 21 107 52 116)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 216 32)
+		(output)
+		(text "o_Address[5..0]" (rect 0 0 66 9)(font "Arial" ))
+		(text "o_Address[5..0]" (rect 140 27 195 36)(font "Arial" ))
+		(line (pt 216 32)(pt 200 32)(line_width 3))
+	)
+	(port
+		(pt 216 48)
+		(output)
+		(text "o_MemClk" (rect 0 0 46 9)(font "Arial" ))
+		(text "o_MemClk" (rect 157 43 195 52)(font "Arial" ))
+		(line (pt 216 48)(pt 200 48))
+	)
+	(port
+		(pt 216 64)
+		(output)
+		(text "DealerHnd" (rect 0 0 46 9)(font "Arial" ))
+		(text "DealerHnd" (rect 157 59 195 68)(font "Arial" ))
+		(line (pt 216 64)(pt 200 64))
+	)
+	(port
+		(pt 216 80)
+		(output)
+		(text "PlayerHnd" (rect 0 0 44 9)(font "Arial" ))
+		(text "PlayerHnd" (rect 158 75 195 84)(font "Arial" ))
+		(line (pt 216 80)(pt 200 80))
+	)
+	(port
+		(pt 216 96)
+		(output)
+		(text "o_CardOK" (rect 0 0 46 9)(font "Arial" ))
+		(text "o_CardOK" (rect 157 91 195 100)(font "Arial" ))
+		(line (pt 216 96)(pt 200 96))
+	)
+	(parameter
+		"Start"
+		"0000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Wait_FSM"
+		"0001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"ReadMem"
+		"0010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Value2Dealer"
+		"0011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Value2Player"
+		"0100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"DealerWithAce"
+		"0101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"DealerWithFace"
+		"0110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"PlayerWithAce"
+		"0111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"PlayerWithFace"
+		"1000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"PlusTenDealer"
+		"1001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"PlusTenPlayer"
+		"1010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"CardOK"
+		"1011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 200 128))
+	)
+	(annotation_block (parameter)(rect 1336 720 1512 880))
+)
 (connector
 	(pt -56 544)
 	(pt 40 544)
@@ -406,32 +632,9 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 984 280)
-	(pt 1008 280)
-	(bus)
-)
-(connector
 	(pt 408 264)
 	(pt 456 264)
 	(bus)
-)
-(connector
-	(pt 704 280)
-	(pt 768 280)
-	(bus)
-)
-(connector
-	(pt 704 312)
-	(pt 768 312)
-	(bus)
-)
-(connector
-	(pt 704 360)
-	(pt 768 360)
-)
-(connector
-	(pt 704 296)
-	(pt 768 296)
 )
 (connector
 	(pt 544 424)
@@ -444,17 +647,220 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 408 40)
-	(pt 1008 40)
-	(bus)
-)
-(connector
-	(pt 1008 280)
-	(pt 1008 40)
-	(bus)
-)
-(connector
 	(pt 408 264)
 	(pt 408 40)
 	(bus)
 )
+(connector
+	(pt 1496 280)
+	(pt 1520 280)
+	(bus)
+)
+(connector
+	(pt 408 40)
+	(pt 1520 40)
+	(bus)
+)
+(connector
+	(pt 1496 512)
+	(pt 1520 512)
+	(bus)
+)
+(connector
+	(pt 1520 560)
+	(pt 1280 560)
+	(bus)
+)
+(connector
+	(pt 1296 608)
+	(pt 1280 608)
+	(bus)
+)
+(connector
+	(pt 1280 608)
+	(pt 1280 560)
+	(bus)
+)
+(connector
+	(pt 1296 512)
+	(pt 1264 512)
+	(bus)
+)
+(connector
+	(pt 1264 512)
+	(pt 1264 624)
+	(bus)
+)
+(connector
+	(pt 1264 624)
+	(pt 1296 624)
+	(bus)
+)
+(connector
+	(pt 1520 40)
+	(pt 1520 280)
+	(bus)
+)
+(connector
+	(pt 1520 280)
+	(pt 1520 512)
+	(bus)
+)
+(connector
+	(pt 1520 512)
+	(pt 1520 560)
+	(bus)
+)
+(connector
+	(pt 856 296)
+	(pt 704 296)
+)
+(connector
+	(pt 856 296)
+	(pt 856 256)
+)
+(connector
+	(pt 1280 296)
+	(pt 1144 296)
+)
+(connector
+	(pt 1144 296)
+	(pt 1144 256)
+)
+(connector
+	(pt 856 256)
+	(pt 1144 256)
+)
+(connector
+	(pt 1280 280)
+	(pt 1160 280)
+	(bus)
+)
+(connector
+	(pt 1160 280)
+	(pt 1160 240)
+	(bus)
+)
+(connector
+	(pt 704 280)
+	(pt 840 280)
+	(bus)
+)
+(connector
+	(pt 840 280)
+	(pt 840 240)
+	(bus)
+)
+(connector
+	(pt 1160 240)
+	(pt 840 240)
+	(bus)
+)
+(connector
+	(pt 720 312)
+	(pt 704 312)
+	(bus)
+)
+(connector
+	(pt 720 312)
+	(pt 720 328)
+	(bus)
+)
+(connector
+	(pt 720 328)
+	(pt 872 328)
+	(bus)
+)
+(connector
+	(pt 872 360)
+	(pt 704 360)
+)
+(connector
+	(pt 1512 608)
+	(pt 1536 608)
+	(bus)
+)
+(connector
+	(pt 1536 608)
+	(pt 1536 448)
+	(bus)
+)
+(connector
+	(pt 1536 448)
+	(pt 808 448)
+	(bus)
+)
+(connector
+	(pt 808 448)
+	(pt 808 344)
+	(bus)
+)
+(connector
+	(pt 808 344)
+	(pt 872 344)
+	(bus)
+)
+(connector
+	(pt 1128 312)
+	(pt 1280 312)
+	(bus)
+)
+(connector
+	(pt 1280 360)
+	(pt 1160 360)
+)
+(connector
+	(pt 1128 328)
+	(pt 1160 328)
+)
+(connector
+	(pt 1160 328)
+	(pt 1160 360)
+)
+(connector
+	(pt 872 376)
+	(pt 856 376)
+)
+(connector
+	(pt 856 376)
+	(pt 856 432)
+)
+(connector
+	(pt 856 432)
+	(pt 1552 432)
+)
+(connector
+	(pt 440 280)
+	(pt 440 440)
+)
+(connector
+	(pt 440 440)
+	(pt 768 440)
+)
+(connector
+	(pt 768 440)
+	(pt 768 312)
+)
+(connector
+	(pt 768 312)
+	(pt 872 312)
+)
+(connector
+	(pt 1552 432)
+	(pt 1552 624)
+)
+(connector
+	(pt 1552 624)
+	(pt 1512 624)
+)
+(connector
+	(pt 456 280)
+	(pt 440 280)
+)
+(connector
+	(pt 440 280)
+	(pt 176 280)
+)
+(junction (pt 1520 280))
+(junction (pt 1520 512))
+(junction (pt 440 280))

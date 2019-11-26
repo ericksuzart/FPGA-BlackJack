@@ -1,9 +1,9 @@
 module EdgeDetector
-#(parameter type = 1)
+#(parameter Type = 1)
 (
     input sig,  // Input signal for which edge has to be detected
     input clk,  // Input signal for clock
-    output detect // Output signal that gives a pulse when edge occurs
+    output reg detect // Output signal that gives a pulse when edge occurs
 );           
     reg sig_dly; // Internal signal to store the delayed version of signal
  
@@ -17,9 +17,14 @@ module EdgeDetector
     sig Assign statement assigns the evaluated expression in the RHS to the
     internal net pe
 */
-    case (type) // 1 = Rising edge 0 = Faling edge
-        1 : assign detect = sig & ~sig_dly;
-        0 : assign detect = ~sig & sig_dly;
-    endcase
+
+    always @(*) 
+    begin
+        case (Type) 
+            1 : detect = sig & ~sig_dly; // 1 = Rising edge 
+            0 : detect = ~sig & sig_dly; // 0 = Faling edge
+        endcase
+    end
+
 
 endmodule // EdgeDetector

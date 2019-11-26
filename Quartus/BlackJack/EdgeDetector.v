@@ -20,9 +20,9 @@ module EdgeDetector
 
     always @(*) 
     begin
-        case (Type) // 1 = Rising edge 0 = Faling edge
-            1 : detect = sig & ~sig_dly;
-            0 : detect = ~sig & sig_dly;
+        case (Type) 
+            1 : detect = sig & ~sig_dly; // 1 = Rising edge 
+            0 : detect = ~sig & sig_dly; // 0 = Faling edge
         endcase
     end
 
