@@ -50,7 +50,7 @@ begin
     end
     else
     begin
-        F_State <= A_State;
+        A_State <= F_State;
 
         if (F_State == IncreaseAddr)
             vo_Addr_I <= vo_Addr_I + 1;
