@@ -5,7 +5,7 @@ module Nxt_Addr_TB;
     parameter WIDTH = 12;
 
     // Counter DUV input ports
-    reg	clock_2kHz;
+    reg	clk;
     reg	RstCounter;     // Ativa em alto
     reg ActCounter;     // Ativa em alto
     reg Reset;          // Ativa em baixo
@@ -27,11 +27,11 @@ module Nxt_Addr_TB;
     // reg [6*52-1:0] out_Addr_j;
     reg [5:0] First_Addr_j;
     reg [5:0] Second_Addr_j;
-    reg [WIDTH-1:0] a; // Random number
+    reg seed; // Random number
 
     Counter #(.WIDTH(WIDTH)) C_DUV 
         (
-            .clk_2K(clock_2kHz),
+            .clk_2K(clk),
             .i_RstCounter(RstCounter),
             .i_ActCounter(ActCounter),
             .i_Reset(Reset),
@@ -41,17 +41,17 @@ module Nxt_Addr_TB;
 
     Nxt_Addr NA_DUV
         (
-            .Addr_i(Addr_i),
-            .Count(o_Counter),
-            .Addr_j(Addr_j)
+            .a_i(Addr_i),
+            .cnt(o_Counter),
+            .a_j(Addr_j)
         );
 
-    always #5 clock_2kHz = !clock_2kHz;
+    always #5 clk = !clk;
 
     initial
     begin
         // Iniciar as variáveis
-        clock_2kHz = 0;
+        clk = 0;
         RstCounter = 0;
         ActCounter = 0;
         Reset = 1;
@@ -60,9 +60,9 @@ module Nxt_Addr_TB;
         // Resetar o contador
         #5 RstCounter = 1;
         #5 RstCounter = 0;
-        #200 test_Counter;
+        #200 PlayerReset;
         #100 test_Nxt_Addr;
-	    #50 test_Counter;
+	    #50 PlayerReset;
 	    #50 test_Nxt_Addr;
         #5000
         $stop;
@@ -74,56 +74,55 @@ module Nxt_Addr_TB;
         $stop;
     end
 
-    task test_TwoSec;
+    task TwoSecAct;
         begin
             $display("%g - A função TwoSecond está sendo testada\n", $time);
 
             // Zerar o contador
-            RstCounter = 1;
-            #5 RstCounter = 0;
+            @(posedge clk) RstCounter = 1;
+            @(posedge clk) RstCounter = 0;
 
             // Contar até 4095
             repeat(2**(WIDTH))
             begin
-                @(posedge clock_2kHz);
+                @(posedge clk);
                 ActCounter = 1;
                 RstCounter = 0;
                 Reset = 1;
             end
 
             // Verificar se a a saída está como o esperado
-            @(posedge clock_2kHz); // Pulso de clock para estabilizar a saída
+            @(posedge clk); // Pulso de clock para estabilizar a saída
             if (TwoSec)
                 $display("%g - A função TwoSecond está funcionando corretamente\n", $time);
             else
                 $display("%g - A função TwoSecond não está funcionando corretamente\n", $time);
-            @(posedge clock_2kHz); // Pulso de clock para zerar o ActCounter
+            @(posedge clk); // Pulso de clock para zerar o ActCounter
             ActCounter = 0;
         end
     endtask
 
-    task test_Counter;
+    task PlayerReset;
         begin
             $display("%g - O contador está sendo testado com relação ao reset\n", $time);
 
             // Inicizalizar o contador de checagem
-            r_Contador = o_Counter;
+            Reset = 0;
+            @(posedge clk);
+            @(negedge clk) r_Contador = o_Counter;
 
             // Testar um input randomico de reset
-            a = $random;
-
-            repeat(a)
+            repeat($urandom%5000)
             begin
-                @(negedge clock_2kHz)
-                Reset = 0;
+                @(posedge clk)
                 RstCounter = 0;
                 ActCounter = 0;
-                @(posedge clock_2kHz);
                 r_Contador = r_Contador + 1;
             end
 
+
             // Verifica se a saída está como o esperado
-            @(posedge clock_2kHz);
+            @(posedge clk);
             if (r_Contador == o_Counter)
                 $display("%g - O contador, quando ativo no reset, está funcionando corretamente\n", $time);
             else
@@ -137,7 +136,7 @@ module Nxt_Addr_TB;
         begin
             $display("%g > Testando o módulo NxtAddr.", $time);
 
-            @(negedge clock_2kHz);
+            @(negedge clk);
             c = 0;
             Addr_i = 0;
             #1 First_Addr_j <= Addr_j;
@@ -146,7 +145,7 @@ module Nxt_Addr_TB;
             begin
                 $display("%g > Addr_i = %d | Addr_j = %d", $time, Addr_i, Addr_j);
 
-                @(negedge clock_2kHz);
+                @(negedge clk);
                 Addr_i <= Addr_i + 1;
                 First_Addr_j <= Addr_j;
                 #1 Second_Addr_j <= Addr_j;
