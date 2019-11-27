@@ -20,7 +20,7 @@ refer to the applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 232 160)
+	(rect 16 16 240 160)
 	(text "CardAdder" (rect 5 0 51 12)(font "Arial" ))
 	(text "inst" (rect 8 128 20 140)(font "Arial" ))
 	(port
@@ -66,39 +66,39 @@ refer to the applicable agreement for further details.
 		(line (pt 0 112)(pt 16 112)(line_width 1))
 	)
 	(port
-		(pt 216 32)
+		(pt 224 32)
 		(output)
 		(text "o_Address[5..0]" (rect 0 0 66 12)(font "Arial" ))
-		(text "o_Address[5..0]" (rect 129 27 195 39)(font "Arial" ))
-		(line (pt 216 32)(pt 200 32)(line_width 3))
+		(text "o_Address[5..0]" (rect 137 27 203 39)(font "Arial" ))
+		(line (pt 224 32)(pt 208 32)(line_width 3))
 	)
 	(port
-		(pt 216 48)
+		(pt 224 48)
 		(output)
 		(text "o_MemClk" (rect 0 0 44 12)(font "Arial" ))
-		(text "o_MemClk" (rect 151 43 195 55)(font "Arial" ))
-		(line (pt 216 48)(pt 200 48)(line_width 1))
+		(text "o_MemClk" (rect 159 43 203 55)(font "Arial" ))
+		(line (pt 224 48)(pt 208 48)(line_width 1))
 	)
 	(port
-		(pt 216 64)
+		(pt 224 64)
 		(output)
-		(text "o_DealerHnd" (rect 0 0 53 12)(font "Arial" ))
-		(text "o_DealerHnd" (rect 142 59 195 71)(font "Arial" ))
-		(line (pt 216 64)(pt 200 64)(line_width 1))
+		(text "o_DealerHnd[5..0]" (rect 0 0 73 12)(font "Arial" ))
+		(text "o_DealerHnd[5..0]" (rect 130 59 203 71)(font "Arial" ))
+		(line (pt 224 64)(pt 208 64)(line_width 3))
 	)
 	(port
-		(pt 216 80)
+		(pt 224 80)
 		(output)
-		(text "o_PlayerHnd" (rect 0 0 53 12)(font "Arial" ))
-		(text "o_PlayerHnd" (rect 142 75 195 87)(font "Arial" ))
-		(line (pt 216 80)(pt 200 80)(line_width 1))
+		(text "o_PlayerHnd[5..0]" (rect 0 0 73 12)(font "Arial" ))
+		(text "o_PlayerHnd[5..0]" (rect 130 75 203 87)(font "Arial" ))
+		(line (pt 224 80)(pt 208 80)(line_width 3))
 	)
 	(port
-		(pt 216 96)
+		(pt 224 96)
 		(output)
 		(text "o_CardOK" (rect 0 0 44 12)(font "Arial" ))
-		(text "o_CardOK" (rect 151 91 195 103)(font "Arial" ))
-		(line (pt 216 96)(pt 200 96)(line_width 1))
+		(text "o_CardOK" (rect 159 91 203 103)(font "Arial" ))
+		(line (pt 224 96)(pt 208 96)(line_width 1))
 	)
 	(parameter
 		"Start"
@@ -161,7 +161,7 @@ refer to the applicable agreement for further details.
 		""
 		(type "PARAMETER_UNSIGNED_BIN")	)
 	(drawing
-		(rectangle (rect 16 16 200 128)(line_width 1))
+		(rectangle (rect 16 16 208 128)(line_width 1))
 	)
-	(annotation_block (parameter)(rect 232 -64 332 16))
+	(annotation_block (parameter)(rect 240 -64 340 16))
 )

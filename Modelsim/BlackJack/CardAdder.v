@@ -12,8 +12,8 @@ module CardAdder
     // ----- Outputs ----
     output [5:0] o_Address,
     output reg o_MemClk,
-    output o_DealerHnd,
-    output o_PlayerHnd,
+    output [5:0] o_DealerHnd,
+    output [5:0] o_PlayerHnd,
     output reg o_CardOK
 );
 
@@ -118,7 +118,10 @@ always @(*)
 begin
     case (A_State)
         Start:
-            F_State = Wait_FSM;
+            if (pe_Reset)
+                F_State = Start;
+            else
+                F_State = Wait_FSM;
 
         Wait_FSM :
             if (i_Card2D || i_Card2P)
