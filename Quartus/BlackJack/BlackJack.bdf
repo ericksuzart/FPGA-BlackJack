@@ -35,6 +35,22 @@ refer to the applicable agreement for further details.
 	)
 	(text "VCC" (rect 128 7 145 14)(font "Arial" (font_size 6)))
 )
+(pin
+	(input)
+	(rect -600 288 -432 304)
+	(text "INPUT" (rect 125 0 150 7)(font "Arial" (font_size 6)))
+	(text "i_Reset" (rect 5 0 39 9)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 145 14)(font "Arial" (font_size 6)))
+)
 (symbol
 	(rect -272 480 -56 624)
 	(text "PLL" (rect 98 0 123 14)(font "Arial" (font_size 10)))
@@ -539,15 +555,15 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 216 64)
 		(output)
-		(text "DealerHnd" (rect 0 0 46 9)(font "Arial" ))
-		(text "DealerHnd" (rect 157 59 195 68)(font "Arial" ))
+		(text "o_DealerHnd" (rect 0 0 56 9)(font "Arial" ))
+		(text "o_DealerHnd" (rect 148 59 195 68)(font "Arial" ))
 		(line (pt 216 64)(pt 200 64))
 	)
 	(port
 		(pt 216 80)
 		(output)
-		(text "PlayerHnd" (rect 0 0 44 9)(font "Arial" ))
-		(text "PlayerHnd" (rect 158 75 195 84)(font "Arial" ))
+		(text "o_PlayerHnd" (rect 0 0 55 9)(font "Arial" ))
+		(text "o_PlayerHnd" (rect 149 75 195 84)(font "Arial" ))
 		(line (pt 216 80)(pt 200 80))
 	)
 	(port
@@ -861,6 +877,48 @@ refer to the applicable agreement for further details.
 	(pt 440 280)
 	(pt 176 280)
 )
+(connector
+	(pt -432 352)
+	(pt -352 352)
+)
+(connector
+	(pt -272 544)
+	(pt -352 544)
+)
+(connector
+	(pt -352 312)
+	(pt 456 312)
+)
+(connector
+	(pt -352 312)
+	(pt -352 352)
+)
+(connector
+	(pt -352 352)
+	(pt -352 544)
+)
+(connector
+	(pt -352 544)
+	(pt -352 688)
+)
+(connector
+	(pt -352 688)
+	(pt 1296 688)
+)
+(connector
+	(pt 16 592)
+	(pt 16 296)
+)
+(connector
+	(pt 40 592)
+	(pt 16 592)
+)
+(connector
+	(pt -432 296)
+	(pt 16 296)
+)
 (junction (pt 1520 280))
 (junction (pt 1520 512))
 (junction (pt 440 280))
+(junction (pt -352 352))
+(junction (pt -352 544))
