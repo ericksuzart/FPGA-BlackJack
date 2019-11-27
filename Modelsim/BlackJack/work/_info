@@ -9,7 +9,7 @@ z2
 cModel Technology
 d/home/erick
 vCounter
-Z0 !s110 1574816823
+Z0 !s110 1574826607
 !i10b 1
 !s100 ]dEIV^GSbG0MgGk@KKDKT2
 IDMIdPCPT;E_R>]NgMAaoB0
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1574816823.000000
+Z4 !s108 1574826607.000000
 !s107 /home/erick/ENGC40/Modelsim/BlackJack/Counter.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/erick/ENGC40/Modelsim/BlackJack/Counter.v|
 !i113 1
@@ -33,11 +33,11 @@ n@counter
 vCounter_TB
 R0
 !i10b 1
-!s100 Z:UO@Z5imG2lf;^Ri]4^O3
-IgQ[BC9bIPo[3gm6^MD9l33
+!s100 IYW@ENJMdnn4<cEJVd8ec3
+I0LAG]QiT:zeQ@JJKQLzFY0
 R1
 R2
-w1574816819
+w1574826602
 8/home/erick/ENGC40/Modelsim/BlackJack/Counter_TB.v
 F/home/erick/ENGC40/Modelsim/BlackJack/Counter_TB.v
 L0 3
@@ -59,7 +59,7 @@ R0
 IQm_doHEZXMG_4@<1ci:@10
 R1
 R2
-w1574802559
+w1574826200
 8/home/erick/ENGC40/Modelsim/BlackJack/EdgeDetector.v
 F/home/erick/ENGC40/Modelsim/BlackJack/EdgeDetector.v
 L0 1
@@ -77,11 +77,11 @@ n@edge@detector
 vNxt_Addr
 R0
 !i10b 1
-!s100 zNl@oEJmUH:@J:eo0AoL<3
-I4ADGV^TCKkCeQk^iV3?1O3
+!s100 FOZh@c9Z9]N5Io0U0hM^T2
+IT34TNcP@3UMlm^3T1`Lzz1
 R1
 R2
-w1574640637
+w1574818383
 8/home/erick/ENGC40/Modelsim/BlackJack/Nxt_Addr.v
 F/home/erick/ENGC40/Modelsim/BlackJack/Nxt_Addr.v
 L0 1
@@ -99,11 +99,11 @@ n@nxt_@addr
 vNxt_Addr_TB
 R0
 !i10b 1
-!s100 8BWiEJTnE]1H:;Je67O1_2
-I8<<?=5hG7m:^6_eXT5A5R1
+!s100 Cg;ATIXfQb>BziaTg_Ni@1
+I1SQP<mF]5PX4@S>YC3Bik0
 R1
 R2
-w1574638828
+w1574823076
 8/home/erick/ENGC40/Modelsim/BlackJack/Nxt_Addr_TB.v
 F/home/erick/ENGC40/Modelsim/BlackJack/Nxt_Addr_TB.v
 L0 3
