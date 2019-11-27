@@ -10,8 +10,9 @@ add wave -noupdate -radix unsigned /Counter_TB/DUV/o_Count
 add wave -noupdate /Counter_TB/DUV/o_TwoSec
 add wave -noupdate -divider {Test variables}
 add wave -noupdate -radix unsigned /Counter_TB/r_Contador
+add wave -noupdate /Counter_TB/DUV/ne_Reset
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {77787 ns} 0}
+WaveRestoreCursors {{Cursor 1} {10725 ns} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
@@ -27,4 +28,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {0 ns} {128 ns}
+WaveRestoreZoom {10680 ns} {10808 ns}
