@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Nov 27 15:10:26 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : BlackJack
+Top-level Entity Name : BlackJack
+Family : Cyclone IV E
+Total logic elements : 2,506
+    Total combinational functions : 2,464
+    Dedicated logic registers : 212
+Total registers : 212
+Total pins : 39
+Total virtual pins : 0
+Total memory bits : 256
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

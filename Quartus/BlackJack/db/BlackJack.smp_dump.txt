@@ -1,0 +1,53 @@
+
+State Machine - |BlackJack|CardAdder:FSM_CardAdder|A_State
+Name A_State.CardOK A_State.PlusTenPlayer A_State.PlusTenDealer A_State.PlayerWithFace A_State.PlayerWithAce A_State.DealerWithFace A_State.DealerWithAce A_State.Value2Player A_State.Value2Dealer A_State.ReadMem A_State.Wait_FSM A_State.Start 
+A_State.Start 0 0 0 0 0 0 0 0 0 0 0 0 
+A_State.Wait_FSM 0 0 0 0 0 0 0 0 0 0 1 1 
+A_State.ReadMem 0 0 0 0 0 0 0 0 0 1 0 1 
+A_State.Value2Dealer 0 0 0 0 0 0 0 0 1 0 0 1 
+A_State.Value2Player 0 0 0 0 0 0 0 1 0 0 0 1 
+A_State.DealerWithAce 0 0 0 0 0 0 1 0 0 0 0 1 
+A_State.DealerWithFace 0 0 0 0 0 1 0 0 0 0 0 1 
+A_State.PlayerWithAce 0 0 0 0 1 0 0 0 0 0 0 1 
+A_State.PlayerWithFace 0 0 0 1 0 0 0 0 0 0 0 1 
+A_State.PlusTenDealer 0 0 1 0 0 0 0 0 0 0 0 1 
+A_State.PlusTenPlayer 0 1 0 0 0 0 0 0 0 0 0 1 
+A_State.CardOK 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |BlackJack|Shuffler:FSM_Embaralhador|A_State
+Name A_State.Shuffled A_State.IncreaseAddr A_State.IfState A_State.I_WriteMemAddr A_State.ChangeAddr A_State.J_WriteMemAddr A_State.J_StoreMemOut A_State.J_ReadMemOut A_State.GetNxtAddr A_State.I_StoreMemOut A_State.I_ReadMemOut A_State.InitOutputs A_State.Start 
+A_State.Start 0 0 0 0 0 0 0 0 0 0 0 0 0 
+A_State.InitOutputs 0 0 0 0 0 0 0 0 0 0 0 1 1 
+A_State.I_ReadMemOut 0 0 0 0 0 0 0 0 0 0 1 0 1 
+A_State.I_StoreMemOut 0 0 0 0 0 0 0 0 0 1 0 0 1 
+A_State.GetNxtAddr 0 0 0 0 0 0 0 0 1 0 0 0 1 
+A_State.J_ReadMemOut 0 0 0 0 0 0 0 1 0 0 0 0 1 
+A_State.J_StoreMemOut 0 0 0 0 0 0 1 0 0 0 0 0 1 
+A_State.J_WriteMemAddr 0 0 0 0 0 1 0 0 0 0 0 0 1 
+A_State.ChangeAddr 0 0 0 0 1 0 0 0 0 0 0 0 1 
+A_State.I_WriteMemAddr 0 0 0 1 0 0 0 0 0 0 0 0 1 
+A_State.IfState 0 0 1 0 0 0 0 0 0 0 0 0 1 
+A_State.IncreaseAddr 0 1 0 0 0 0 0 0 0 0 0 0 1 
+A_State.Shuffled 1 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |BlackJack|BlackJackController:FSM_Global|A_State
+Name A_State.DealerBlackJack A_State.Measurement A_State.LoseState A_State.TieState A_State.WinState A_State.CardToDealer A_State.CardToPlayer A_State.DealerStay A_State.PlayerStay A_State.DealerHit A_State.PlayerHit A_State.DealerTurn A_State.PlayerTurn A_State.DealerWith2Card A_State.PlayerWith2Card A_State.DealerWith1Card A_State.PlayerWith1Card A_State.ShuffleDeck A_State.Start 
+A_State.Start 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+A_State.ShuffleDeck 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+A_State.PlayerWith1Card 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+A_State.DealerWith1Card 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+A_State.PlayerWith2Card 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+A_State.DealerWith2Card 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+A_State.PlayerTurn 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+A_State.DealerTurn 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+A_State.PlayerHit 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+A_State.DealerHit 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+A_State.PlayerStay 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+A_State.DealerStay 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+A_State.CardToPlayer 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+A_State.CardToDealer 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+A_State.WinState 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+A_State.TieState 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+A_State.LoseState 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+A_State.Measurement 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+A_State.DealerBlackJack 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

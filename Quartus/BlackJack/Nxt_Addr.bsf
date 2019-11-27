@@ -22,7 +22,7 @@ refer to the applicable agreement for further details.
 (symbol
 	(rect 64 64 312 192)
 	(text "Nxt_Addr" (rect 13 0 53 9)(font "Arial" ))
-	(text "inst" (rect 16 64 32 73)(font "Arial" ))
+	(text "inst" (rect 16 112 32 121)(font "Arial" ))
 	(port
 		(pt 96 0)
 		(input)

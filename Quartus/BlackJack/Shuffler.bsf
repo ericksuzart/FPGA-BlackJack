@@ -20,9 +20,9 @@ refer to the applicable agreement for further details.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 56 56 304 256)
+	(rect 64 64 312 264)
 	(text "Shuffler" (rect 13 8 46 17)(font "Arial" ))
-	(text "inst" (rect 16 136 32 145)(font "Arial" ))
+	(text "inst" (rect 144 8 160 17)(font "Arial" ))
 	(port
 		(pt 0 40)
 		(input)
@@ -55,35 +55,35 @@ refer to the applicable agreement for further details.
 		(pt 248 168)
 		(output)
 		(text "o_Shuffled" (rect 16 8 62 17)(font "Arial" ))
-		(text "o_Shuffled" (rect 189 163 227 172)(font "Arial" ))
+		(text "o_Shuffled" (rect 189 163 235 172)(font "Arial" ))
 		(line (pt 248 168)(pt 232 168))
 	)
 	(port
 		(pt 248 56)
 		(output)
 		(text "o_Data[3..0]" (rect 16 8 67 17)(font "Arial" ))
-		(text "o_Data[3..0]" (rect 184 51 227 60)(font "Arial" ))
+		(text "o_Data[3..0]" (rect 184 51 235 60)(font "Arial" ))
 		(line (pt 248 56)(pt 232 56)(line_width 3))
 	)
 	(port
 		(pt 248 88)
 		(output)
 		(text "o_Address[5..0]" (rect 16 8 82 17)(font "Arial" ))
-		(text "o_Address[5..0]" (rect 172 83 227 92)(font "Arial" ))
+		(text "o_Address[5..0]" (rect 172 83 238 92)(font "Arial" ))
 		(line (pt 248 88)(pt 232 88)(line_width 3))
 	)
 	(port
 		(pt 248 136)
 		(output)
 		(text "o_MemClk" (rect 16 8 62 17)(font "Arial" ))
-		(text "o_MemClk" (rect 189 131 227 140)(font "Arial" ))
+		(text "o_MemClk" (rect 189 131 235 140)(font "Arial" ))
 		(line (pt 248 136)(pt 232 136))
 	)
 	(port
 		(pt 248 72)
 		(output)
 		(text "o_Write" (rect 16 8 50 17)(font "Arial" ))
-		(text "o_Write" (rect 199 67 227 76)(font "Arial" ))
+		(text "o_Write" (rect 199 67 233 76)(font "Arial" ))
 		(line (pt 248 72)(pt 232 72))
 	)
 	(port
@@ -161,5 +161,5 @@ refer to the applicable agreement for further details.
 	(drawing
 		(rectangle (rect 24 24 224 184))
 	)
-	(annotation_block (parameter)(rect 248 -152 432 16))
+	(annotation_block (parameter)(rect 304 -112 488 56))
 )

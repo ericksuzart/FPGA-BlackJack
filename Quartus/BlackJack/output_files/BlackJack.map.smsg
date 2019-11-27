@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at Shuffler.v(44): always construct contains both blocking and non-blocking assignments File: /home/erick/ENGC40/Quartus/BlackJack/Shuffler.v Line: 44
