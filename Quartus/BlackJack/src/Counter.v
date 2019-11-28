@@ -11,7 +11,7 @@ module Counter
     // -----------------------------------------------
     output [WIDTH-1:0] o_Count, // Saida do contador
     output wire o_TwoSec,       // Output que indica se passaram 2 segundos
-    output RstOK                // Indica se o contador foi resetado com Sucesso para a FSM global
+    output reg o_RstOK          // Indica se o contador foi resetado com Sucesso para a FSM global
 );
 
     // Registrador para armazenar o numero do contador
@@ -22,16 +22,24 @@ module Counter
     begin
         if (!i_Reset)
             r_Count <= 0;
+
         else if (!i_Reset)
             r_Count <= r_Count + 1;
-        else if (i_Reset && i_RstCounter)
+
+        else if (i_RstCounter)
+        begin
             r_Count <= 0;
-        else if (i_Reset && !i_RstCounter && i_ActCounter && r_Count < 2**(WIDTH) - 1)
+            o_RstOK <= 1;
+        end
+
+        // O operador ~& faz um NAND no contador, e retorna 0 caso todos os bits
+        // dele forem 1
+        else if (i_ActCounter && ~&r_Count)
             r_Count <= r_Count + 1;
     end
 
     // Atribuição ternária da saída o_TwoSec
-    assign o_TwoSec = 1? (i_ActCounter && i_Reset && !i_RstCounter && r_Count == 2**(WIDTH) - 1): 0;
+    assign o_TwoSec = 1? (i_ActCounter && i_Reset && !i_RstCounter && &r_Count): 0;
 
     // Atribuição da saída como a saída do registrador
     assign o_Count = r_Count;
