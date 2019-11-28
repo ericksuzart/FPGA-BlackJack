@@ -3,21 +3,21 @@
 module CardAdder
 (
     // ----- Inputs -----
-    input [3:0] i_Card,
-    input [3:0] i_Value,
-    input i_Card2P,
-    input i_Card2D,
-    input i_Reset,
-    input i_Clock,
+    input [3:0] i_Card,         // Código da carta obtido da memória
+    input [3:0] i_Value,        // Valor da carta obtido do Evaluador
+    input i_Card2P,             // Input que indica se deve ser adicionada carta ao player
+    input i_Card2D,             // Input que indica se deve ser adicionada carta ao dealer
+    input i_Reset,              // Entrada de reset (Posedge)
+    input i_Clock,              // Entrada do clock
     // ----- Outputs ----
-    output [5:0] o_Address,
-    output reg o_MemClk,
-    output [5:0] o_DealerHnd,
-    output [5:0] o_PlayerHnd,
-    output reg o_CardOK
+    output [5:0] o_Address,     // Saída de endereço para a memória
+    output reg o_MemClk,        // Clock da memória
+    output [5:0] o_DealerHnd,   // Saída indicando quanto tem na mão do dealer
+    output [5:0] o_PlayerHnd,   // Saída indicando quanto tem na mão do player
+    output reg o_CardOK         // Saída indicando que a carta foi adicionada com sucesso
 );
 
-// Hand holder
+// Registrador para armazenar a mão do player/dealer
 reg [5:0] vc_HndD, vc_HndP;
 
 // Ace holders
@@ -32,17 +32,7 @@ reg [3:0] A_State, F_State;
 // Address holder
 reg [5:0] r_Addr;
 
-// Reset Posedge detector
-wire pe_Reset;
-
-EdgeDetector #(.Type(1)) PosEdgeDetector
-(
-    .sig(i_Reset),
-    .clk(i_Clock),
-    .detect(pe_Reset)
-);
-
-
+// Codificação dos estados
 parameter   Start           = 4'b 0000,
             Wait_FSM        = 4'b 0001,
             ReadMem         = 4'b 0010,
@@ -60,7 +50,7 @@ parameter   Start           = 4'b 0000,
 // Clocked block
 always @(posedge i_Clock)
 begin
-    if(pe_Reset)
+    if(i_Reset)
     begin
         A_State <= Start;
         r_Addr <= 0;
@@ -118,7 +108,7 @@ always @(*)
 begin
     case (A_State)
         Start:
-            if (pe_Reset)
+            if (i_Reset)
                 F_State = Start;
             else
                 F_State = Wait_FSM;
