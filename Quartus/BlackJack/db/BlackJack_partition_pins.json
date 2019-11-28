@@ -12,6 +12,26 @@
 					"strict" : false
 				},
 				{
+					"name" : "o_ResetState",
+					"strict" : false
+				},
+				{
+					"name" : "o_StayState",
+					"strict" : false
+				},
+				{
+					"name" : "o_StayDown",
+					"strict" : false
+				},
+				{
+					"name" : "o_HitState",
+					"strict" : false
+				},
+				{
+					"name" : "o_HitDown",
+					"strict" : false
+				},
+				{
 					"name" : "DealerHndDisplayD[0]",
 					"strict" : false
 				},
@@ -68,10 +88,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "i_Reset",
-					"strict" : false
-				},
-				{
 					"name" : "inclk0",
 					"strict" : false
 				},
@@ -81,6 +97,10 @@
 				},
 				{
 					"name" : "i_Hit",
+					"strict" : false
+				},
+				{
+					"name" : "i_Reset",
 					"strict" : false
 				},
 				{

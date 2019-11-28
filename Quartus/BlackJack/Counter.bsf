@@ -65,6 +65,13 @@ refer to the applicable agreement for further details.
 		(text "o_TwoSec" (rect 185 43 227 55)(font "Arial" ))
 		(line (pt 248 48)(pt 232 48)(line_width 1))
 	)
+	(port
+		(pt 248 64)
+		(output)
+		(text "o_RstOK" (rect 0 0 40 12)(font "Arial" ))
+		(text "o_RstOK" (rect 187 59 227 71)(font "Arial" ))
+		(line (pt 248 64)(pt 232 64)(line_width 1))
+	)
 	(parameter
 		"WIDTH"
 		"12"

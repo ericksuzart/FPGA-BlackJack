@@ -21,7 +21,7 @@ refer to the applicable agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect -600 344 -432 360)
+	(rect -888 552 -720 568)
 	(text "INPUT" (rect 125 0 150 7)(font "Arial" (font_size 6)))
 	(text "inclk0" (rect 5 0 30 9)(font "Arial" ))
 	(pt 168 8)
@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -600 248 -432 264)
+	(rect -880 136 -712 152)
 	(text "INPUT" (rect 125 0 150 7)(font "Arial" (font_size 6)))
 	(text "i_Reset" (rect 5 0 39 9)(font "Arial" ))
 	(pt 168 8)
@@ -53,7 +53,7 @@ refer to the applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -600 264 -432 280)
+	(rect -880 248 -712 264)
 	(text "INPUT" (rect 125 0 150 7)(font "Arial" (font_size 6)))
 	(text "i_Stay" (rect 5 0 32 9)(font "Arial" ))
 	(pt 168 8)
@@ -69,7 +69,7 @@ refer to the applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -600 280 -432 296)
+	(rect -880 368 -712 384)
 	(text "INPUT" (rect 125 0 150 7)(font "Arial" (font_size 6)))
 	(text "i_Hit" (rect 5 0 25 9)(font "Arial" ))
 	(pt 168 8)
@@ -259,6 +259,86 @@ refer to the applicable agreement for further details.
 		(line (pt 78 12)(pt 82 8))
 	)
 )
+(pin
+	(output)
+	(rect -304 -32 -128 -16)
+	(text "OUTPUT" (rect 1 0 36 7)(font "Arial" (font_size 6)))
+	(text "o_ResetState" (rect 90 0 149 9)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect -304 -16 -128 0)
+	(text "OUTPUT" (rect 1 0 36 7)(font "Arial" (font_size 6)))
+	(text "o_StayState" (rect 90 0 141 10)(font "Intel Clear" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect -304 0 -128 16)
+	(text "OUTPUT" (rect 1 0 36 7)(font "Arial" (font_size 6)))
+	(text "o_StayDown" (rect 90 0 144 9)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect -304 16 -128 32)
+	(text "OUTPUT" (rect 1 0 36 7)(font "Arial" (font_size 6)))
+	(text "o_HitState" (rect 90 0 134 10)(font "Intel Clear" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect -304 32 -128 48)
+	(text "OUTPUT" (rect 1 0 36 7)(font "Arial" (font_size 6)))
+	(text "o_HitDown" (rect 90 0 137 10)(font "Intel Clear" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
 (symbol
 	(rect -336 496 -120 640)
 	(text "PLL" (rect 98 0 123 14)(font "Arial" (font_size 10)))
@@ -329,14 +409,14 @@ refer to the applicable agreement for further details.
 		(pt 192 32)
 		(output)
 		(text "displayu[0..6]" (rect 0 0 56 9)(font "Arial" ))
-		(text "displayu[0..6]" (rect 124 27 171 36)(font "Arial" ))
+		(text "displayu[0..6]" (rect 124 27 180 36)(font "Arial" ))
 		(line (pt 192 32)(pt 176 32)(line_width 3))
 	)
 	(port
 		(pt 192 48)
 		(output)
 		(text "displayd[0..6]" (rect 0 0 56 9)(font "Arial" ))
-		(text "displayd[0..6]" (rect 124 43 171 52)(font "Arial" ))
+		(text "displayd[0..6]" (rect 124 43 180 52)(font "Arial" ))
 		(line (pt 192 48)(pt 176 48)(line_width 3))
 	)
 	(drawing
@@ -365,340 +445,19 @@ refer to the applicable agreement for further details.
 		(pt 192 32)
 		(output)
 		(text "displayu[0..6]" (rect 0 0 56 9)(font "Arial" ))
-		(text "displayu[0..6]" (rect 124 27 171 36)(font "Arial" ))
+		(text "displayu[0..6]" (rect 124 27 180 36)(font "Arial" ))
 		(line (pt 192 32)(pt 176 32)(line_width 3))
 	)
 	(port
 		(pt 192 48)
 		(output)
 		(text "displayd[0..6]" (rect 0 0 56 9)(font "Arial" ))
-		(text "displayd[0..6]" (rect 124 43 171 52)(font "Arial" ))
+		(text "displayd[0..6]" (rect 124 43 180 52)(font "Arial" ))
 		(line (pt 192 48)(pt 176 48)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 176 64))
 	)
-)
-(symbol
-	(rect 40 528 288 640)
-	(text "Counter" (rect 5 0 39 9)(font "Arial" ))
-	(text "Contador" (rect 8 96 46 105)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk_2K" (rect 0 0 29 9)(font "Arial" ))
-		(text "clk_2K" (rect 21 27 50 36)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "i_ActCounter" (rect 0 0 55 9)(font "Arial" ))
-		(text "i_ActCounter" (rect 21 43 76 52)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "i_RstCounter" (rect 0 0 55 9)(font "Arial" ))
-		(text "i_RstCounter" (rect 21 59 76 68)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "i_Reset" (rect 0 0 34 9)(font "Arial" ))
-		(text "i_Reset" (rect 21 75 55 84)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80))
-	)
-	(port
-		(pt 248 32)
-		(output)
-		(text "o_Count[WIDTH-1..0]" (rect 0 0 90 9)(font "Arial" ))
-		(text "o_Count[WIDTH-1..0]" (rect 151 27 227 36)(font "Arial" ))
-		(line (pt 248 32)(pt 232 32)(line_width 3))
-	)
-	(port
-		(pt 248 48)
-		(output)
-		(text "o_TwoSec" (rect 0 0 44 9)(font "Arial" ))
-		(text "o_TwoSec" (rect 190 43 227 52)(font "Arial" ))
-		(line (pt 248 48)(pt 232 48))
-	)
-	(parameter
-		"WIDTH"
-		"12"
-		""
-		(type "PARAMETER_UNSIGNED_DEC")	)
-	(drawing
-		(rectangle (rect 16 16 232 96))
-	)
-	(annotation_block (parameter)(rect 136 704 289 728))
-)
-(symbol
-	(rect 8 208 240 480)
-	(text "BlackJackController" (rect 5 0 88 9)(font "Arial" ))
-	(text "FSM_Global" (rect 8 256 61 265)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "i_Clk" (rect 0 0 21 9)(font "Arial" ))
-		(text "i_Clk" (rect 21 27 42 36)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "i_Reset" (rect 0 0 34 9)(font "Arial" ))
-		(text "i_Reset" (rect 21 43 55 52)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "i_Stay" (rect 0 0 27 9)(font "Arial" ))
-		(text "i_Stay" (rect 21 59 48 68)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "i_Hit" (rect 0 0 20 9)(font "Arial" ))
-		(text "i_Hit" (rect 21 75 41 84)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "vi_TwoSec" (rect 0 0 47 9)(font "Arial" ))
-		(text "vi_TwoSec" (rect 21 91 68 100)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96))
-	)
-	(port
-		(pt 0 112)
-		(input)
-		(text "vi_Shuffled" (rect 0 0 47 9)(font "Arial" ))
-		(text "vi_Shuffled" (rect 21 107 68 116)(font "Arial" ))
-		(line (pt 0 112)(pt 16 112))
-	)
-	(port
-		(pt 0 128)
-		(input)
-		(text "vi_CardOK" (rect 0 0 48 9)(font "Arial" ))
-		(text "vi_CardOK" (rect 21 123 69 132)(font "Arial" ))
-		(line (pt 0 128)(pt 16 128))
-	)
-	(port
-		(pt 0 144)
-		(input)
-		(text "vi_HandP[5..0]" (rect 0 0 62 9)(font "Arial" ))
-		(text "vi_HandP[5..0]" (rect 21 139 83 148)(font "Arial" ))
-		(line (pt 0 144)(pt 16 144)(line_width 3))
-	)
-	(port
-		(pt 0 160)
-		(input)
-		(text "vi_HandD[5..0]" (rect 0 0 62 9)(font "Arial" ))
-		(text "vi_HandD[5..0]" (rect 21 155 83 164)(font "Arial" ))
-		(line (pt 0 160)(pt 16 160)(line_width 3))
-	)
-	(port
-		(pt 232 32)
-		(output)
-		(text "o_Win" (rect 0 0 27 9)(font "Arial" ))
-		(text "o_Win" (rect 189 27 211 36)(font "Arial" ))
-		(line (pt 232 32)(pt 216 32))
-	)
-	(port
-		(pt 232 48)
-		(output)
-		(text "o_Lose" (rect 0 0 33 9)(font "Arial" ))
-		(text "o_Lose" (rect 184 43 211 52)(font "Arial" ))
-		(line (pt 232 48)(pt 216 48))
-	)
-	(port
-		(pt 232 64)
-		(output)
-		(text "o_Tie" (rect 0 0 24 9)(font "Arial" ))
-		(text "o_Tie" (rect 191 59 211 68)(font "Arial" ))
-		(line (pt 232 64)(pt 216 64))
-	)
-	(port
-		(pt 232 80)
-		(output)
-		(text "o_Hit_P" (rect 0 0 34 9)(font "Arial" ))
-		(text "o_Hit_P" (rect 183 75 211 84)(font "Arial" ))
-		(line (pt 232 80)(pt 216 80))
-	)
-	(port
-		(pt 232 96)
-		(output)
-		(text "o_Hit_D" (rect 0 0 34 9)(font "Arial" ))
-		(text "o_Hit_D" (rect 183 91 211 100)(font "Arial" ))
-		(line (pt 232 96)(pt 216 96))
-	)
-	(port
-		(pt 232 112)
-		(output)
-		(text "o_Stay_P" (rect 0 0 41 9)(font "Arial" ))
-		(text "o_Stay_P" (rect 177 107 211 116)(font "Arial" ))
-		(line (pt 232 112)(pt 216 112))
-	)
-	(port
-		(pt 232 128)
-		(output)
-		(text "o_Stay_D" (rect 0 0 42 9)(font "Arial" ))
-		(text "o_Stay_D" (rect 176 123 211 132)(font "Arial" ))
-		(line (pt 232 128)(pt 216 128))
-	)
-	(port
-		(pt 232 144)
-		(output)
-		(text "o_ShwHnd_P" (rect 0 0 57 9)(font "Arial" ))
-		(text "o_ShwHnd_P" (rect 163 139 211 148)(font "Arial" ))
-		(line (pt 232 144)(pt 216 144))
-	)
-	(port
-		(pt 232 160)
-		(output)
-		(text "o_ShwHnd_D" (rect 0 0 59 9)(font "Arial" ))
-		(text "o_ShwHnd_D" (rect 162 155 211 164)(font "Arial" ))
-		(line (pt 232 160)(pt 216 160))
-	)
-	(port
-		(pt 232 176)
-		(output)
-		(text "vo_ActCounter" (rect 0 0 62 9)(font "Arial" ))
-		(text "vo_ActCounter" (rect 159 171 211 180)(font "Arial" ))
-		(line (pt 232 176)(pt 216 176))
-	)
-	(port
-		(pt 232 192)
-		(output)
-		(text "vo_RstCounter" (rect 0 0 63 9)(font "Arial" ))
-		(text "vo_RstCounter" (rect 158 187 211 196)(font "Arial" ))
-		(line (pt 232 192)(pt 216 192))
-	)
-	(port
-		(pt 232 208)
-		(output)
-		(text "vo_ActShuffler" (rect 0 0 61 9)(font "Arial" ))
-		(text "vo_ActShuffler" (rect 160 203 211 212)(font "Arial" ))
-		(line (pt 232 208)(pt 216 208))
-	)
-	(port
-		(pt 232 224)
-		(output)
-		(text "vo_Card2Player" (rect 0 0 68 9)(font "Arial" ))
-		(text "vo_Card2Player" (rect 154 219 211 228)(font "Arial" ))
-		(line (pt 232 224)(pt 216 224))
-	)
-	(port
-		(pt 232 240)
-		(output)
-		(text "vo_Card2Dealer" (rect 0 0 69 9)(font "Arial" ))
-		(text "vo_Card2Dealer" (rect 153 235 211 244)(font "Arial" ))
-		(line (pt 232 240)(pt 216 240))
-	)
-	(parameter
-		"Start"
-		"00000"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"ShuffleDeck"
-		"00001"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"PlayerWith1Card"
-		"00010"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"DealerWith1Card"
-		"00011"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"PlayerWith2Card"
-		"00100"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"DealerWith2Card"
-		"00101"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"PlayerTurn"
-		"00110"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"DealerTurn"
-		"00111"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"PlayerHit"
-		"01000"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"DealerHit"
-		"01001"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"PlayerStay"
-		"01010"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"DealerStay"
-		"01011"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"CardToPlayer"
-		"01100"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"CardToDealer"
-		"01101"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"WinState"
-		"01110"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"TieState"
-		"01111"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"LoseState"
-		"10000"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Measurement"
-		"10001"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"DealerBlackJack"
-		"10010"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(drawing
-		(rectangle (rect 16 16 216 256))
-	)
-	(annotation_block (parameter)(rect 48 -144 232 96))
 )
 (symbol
 	(rect 504 512 704 592)
@@ -722,7 +481,7 @@ refer to the applicable agreement for further details.
 		(pt 200 32)
 		(output)
 		(text "Addr_j[5..0]" (rect 0 0 48 9)(font "Arial" ))
-		(text "Addr_j[5..0]" (rect 139 27 179 36)(font "Arial" ))
+		(text "Addr_j[5..0]" (rect 139 27 187 36)(font "Arial" ))
 		(line (pt 200 32)(pt 184 32)(line_width 3))
 	)
 	(drawing
@@ -772,14 +531,14 @@ refer to the applicable agreement for further details.
 		(pt 256 32)
 		(output)
 		(text "o_Address[5..0]" (rect 0 0 66 9)(font "Arial" ))
-		(text "o_Address[5..0]" (rect 180 27 235 36)(font "Arial" ))
+		(text "o_Address[5..0]" (rect 180 27 246 36)(font "Arial" ))
 		(line (pt 256 32)(pt 240 32)(line_width 3))
 	)
 	(port
 		(pt 256 48)
 		(output)
 		(text "o_MemClk" (rect 0 0 46 9)(font "Arial" ))
-		(text "o_MemClk" (rect 197 43 235 52)(font "Arial" ))
+		(text "o_MemClk" (rect 197 43 243 52)(font "Arial" ))
 		(line (pt 256 48)(pt 240 48))
 	)
 	(drawing
@@ -885,7 +644,7 @@ refer to the applicable agreement for further details.
 		(pt 0 48)
 		(output)
 		(text "o_Value[3..0]" (rect 0 0 56 9)(font "Arial" ))
-		(text "o_Value[3..0]" (rect 21 44 68 53)(font "Arial" ))
+		(text "o_Value[3..0]" (rect 21 44 77 53)(font "Arial" ))
 		(line (pt 0 48)(pt 16 48)(line_width 3))
 	)
 	(drawing
@@ -943,35 +702,35 @@ refer to the applicable agreement for further details.
 		(pt 224 32)
 		(output)
 		(text "o_Address[5..0]" (rect 0 0 66 9)(font "Arial" ))
-		(text "o_Address[5..0]" (rect 148 27 203 36)(font "Arial" ))
+		(text "o_Address[5..0]" (rect 148 27 214 36)(font "Arial" ))
 		(line (pt 224 32)(pt 208 32)(line_width 3))
 	)
 	(port
 		(pt 224 48)
 		(output)
 		(text "o_MemClk" (rect 0 0 46 9)(font "Arial" ))
-		(text "o_MemClk" (rect 165 43 203 52)(font "Arial" ))
+		(text "o_MemClk" (rect 165 43 211 52)(font "Arial" ))
 		(line (pt 224 48)(pt 208 48))
 	)
 	(port
 		(pt 224 64)
 		(output)
 		(text "o_DealerHnd[5..0]" (rect 0 0 76 9)(font "Arial" ))
-		(text "o_DealerHnd[5..0]" (rect 139 59 203 68)(font "Arial" ))
+		(text "o_DealerHnd[5..0]" (rect 139 59 215 68)(font "Arial" ))
 		(line (pt 224 64)(pt 208 64)(line_width 3))
 	)
 	(port
 		(pt 224 80)
 		(output)
 		(text "o_PlayerHnd[5..0]" (rect 0 0 75 9)(font "Arial" ))
-		(text "o_PlayerHnd[5..0]" (rect 140 75 203 84)(font "Arial" ))
+		(text "o_PlayerHnd[5..0]" (rect 140 75 215 84)(font "Arial" ))
 		(line (pt 224 80)(pt 208 80)(line_width 3))
 	)
 	(port
 		(pt 224 96)
 		(output)
 		(text "o_CardOK" (rect 0 0 46 9)(font "Arial" ))
-		(text "o_CardOK" (rect 165 91 203 100)(font "Arial" ))
+		(text "o_CardOK" (rect 165 91 211 100)(font "Arial" ))
 		(line (pt 224 96)(pt 208 96))
 	)
 	(parameter
@@ -1037,7 +796,7 @@ refer to the applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 208 128))
 	)
-	(annotation_block (parameter)(rect 1344 840 1520 1000))
+	(annotation_block (parameter)(rect 1024 456 1200 616))
 )
 (symbol
 	(rect 456 232 688 376)
@@ -1075,42 +834,42 @@ refer to the applicable agreement for further details.
 		(pt 232 32)
 		(output)
 		(text "o_Shuffled" (rect 0 0 46 9)(font "Arial" ))
-		(text "o_Shuffled" (rect 173 27 211 36)(font "Arial" ))
+		(text "o_Shuffled" (rect 173 27 219 36)(font "Arial" ))
 		(line (pt 232 32)(pt 216 32))
 	)
 	(port
 		(pt 232 48)
 		(output)
 		(text "o_Data[3..0]" (rect 0 0 51 9)(font "Arial" ))
-		(text "o_Data[3..0]" (rect 168 43 211 52)(font "Arial" ))
+		(text "o_Data[3..0]" (rect 168 43 219 52)(font "Arial" ))
 		(line (pt 232 48)(pt 216 48)(line_width 3))
 	)
 	(port
 		(pt 232 64)
 		(output)
 		(text "o_Address[5..0]" (rect 0 0 66 9)(font "Arial" ))
-		(text "o_Address[5..0]" (rect 156 59 211 68)(font "Arial" ))
+		(text "o_Address[5..0]" (rect 156 59 222 68)(font "Arial" ))
 		(line (pt 232 64)(pt 216 64)(line_width 3))
 	)
 	(port
 		(pt 232 80)
 		(output)
 		(text "o_MemClk" (rect 0 0 46 9)(font "Arial" ))
-		(text "o_MemClk" (rect 173 75 211 84)(font "Arial" ))
+		(text "o_MemClk" (rect 173 75 219 84)(font "Arial" ))
 		(line (pt 232 80)(pt 216 80))
 	)
 	(port
 		(pt 232 96)
 		(output)
 		(text "o_Write" (rect 0 0 34 9)(font "Arial" ))
-		(text "o_Write" (rect 183 91 211 100)(font "Arial" ))
+		(text "o_Write" (rect 183 91 217 100)(font "Arial" ))
 		(line (pt 232 96)(pt 216 96))
 	)
 	(port
 		(pt 232 112)
 		(output)
 		(text "vo_Addr_I[5..0]" (rect 0 0 64 9)(font "Arial" ))
-		(text "vo_Addr_I[5..0]" (rect 157 107 211 116)(font "Arial" ))
+		(text "vo_Addr_I[5..0]" (rect 157 107 221 116)(font "Arial" ))
 		(line (pt 232 112)(pt 216 112)(line_width 3))
 	)
 	(parameter
@@ -1181,7 +940,471 @@ refer to the applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 216 128))
 	)
-	(annotation_block (parameter)(rect 552 -64 736 104))
+	(annotation_block (parameter)(rect 504 -72 688 96))
+)
+(symbol
+	(rect 8 208 240 480)
+	(text "BlackJackController" (rect 5 0 88 9)(font "Arial" ))
+	(text "FSM_Global" (rect 8 256 61 265)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "i_Clk" (rect 0 0 21 9)(font "Arial" ))
+		(text "i_Clk" (rect 21 27 42 36)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "i_Reset" (rect 0 0 34 9)(font "Arial" ))
+		(text "i_Reset" (rect 21 43 55 52)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "i_Stay" (rect 0 0 27 9)(font "Arial" ))
+		(text "i_Stay" (rect 21 59 48 68)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "i_Hit" (rect 0 0 20 9)(font "Arial" ))
+		(text "i_Hit" (rect 21 75 41 84)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "vi_TwoSec" (rect 0 0 47 9)(font "Arial" ))
+		(text "vi_TwoSec" (rect 21 91 68 100)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "vi_RstOK" (rect 0 0 41 9)(font "Arial" ))
+		(text "vi_RstOK" (rect 21 107 62 116)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "vi_Shuffled" (rect 0 0 47 9)(font "Arial" ))
+		(text "vi_Shuffled" (rect 21 123 68 132)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "vi_CardOK" (rect 0 0 48 9)(font "Arial" ))
+		(text "vi_CardOK" (rect 21 139 69 148)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "vi_HandP[5..0]" (rect 0 0 62 9)(font "Arial" ))
+		(text "vi_HandP[5..0]" (rect 21 155 83 164)(font "Arial" ))
+		(line (pt 0 160)(pt 16 160)(line_width 3))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "vi_HandD[5..0]" (rect 0 0 62 9)(font "Arial" ))
+		(text "vi_HandD[5..0]" (rect 21 171 83 180)(font "Arial" ))
+		(line (pt 0 176)(pt 16 176)(line_width 3))
+	)
+	(port
+		(pt 232 32)
+		(output)
+		(text "o_Win" (rect 0 0 27 9)(font "Arial" ))
+		(text "o_Win" (rect 189 27 216 36)(font "Arial" ))
+		(line (pt 232 32)(pt 216 32))
+	)
+	(port
+		(pt 232 48)
+		(output)
+		(text "o_Lose" (rect 0 0 33 9)(font "Arial" ))
+		(text "o_Lose" (rect 184 43 217 52)(font "Arial" ))
+		(line (pt 232 48)(pt 216 48))
+	)
+	(port
+		(pt 232 64)
+		(output)
+		(text "o_Tie" (rect 0 0 24 9)(font "Arial" ))
+		(text "o_Tie" (rect 191 59 215 68)(font "Arial" ))
+		(line (pt 232 64)(pt 216 64))
+	)
+	(port
+		(pt 232 80)
+		(output)
+		(text "o_Hit_P" (rect 0 0 34 9)(font "Arial" ))
+		(text "o_Hit_P" (rect 183 75 217 84)(font "Arial" ))
+		(line (pt 232 80)(pt 216 80))
+	)
+	(port
+		(pt 232 96)
+		(output)
+		(text "o_Hit_D" (rect 0 0 34 9)(font "Arial" ))
+		(text "o_Hit_D" (rect 183 91 217 100)(font "Arial" ))
+		(line (pt 232 96)(pt 216 96))
+	)
+	(port
+		(pt 232 112)
+		(output)
+		(text "o_Stay_P" (rect 0 0 41 9)(font "Arial" ))
+		(text "o_Stay_P" (rect 177 107 218 116)(font "Arial" ))
+		(line (pt 232 112)(pt 216 112))
+	)
+	(port
+		(pt 232 128)
+		(output)
+		(text "o_Stay_D" (rect 0 0 42 9)(font "Arial" ))
+		(text "o_Stay_D" (rect 176 123 218 132)(font "Arial" ))
+		(line (pt 232 128)(pt 216 128))
+	)
+	(port
+		(pt 232 144)
+		(output)
+		(text "o_ShwHnd_P" (rect 0 0 57 9)(font "Arial" ))
+		(text "o_ShwHnd_P" (rect 163 139 220 148)(font "Arial" ))
+		(line (pt 232 144)(pt 216 144))
+	)
+	(port
+		(pt 232 160)
+		(output)
+		(text "o_ShwHnd_D" (rect 0 0 59 9)(font "Arial" ))
+		(text "o_ShwHnd_D" (rect 162 155 221 164)(font "Arial" ))
+		(line (pt 232 160)(pt 216 160))
+	)
+	(port
+		(pt 232 176)
+		(output)
+		(text "vo_ActCounter" (rect 0 0 62 9)(font "Arial" ))
+		(text "vo_ActCounter" (rect 159 171 221 180)(font "Arial" ))
+		(line (pt 232 176)(pt 216 176))
+	)
+	(port
+		(pt 232 192)
+		(output)
+		(text "vo_RstCounter" (rect 0 0 63 9)(font "Arial" ))
+		(text "vo_RstCounter" (rect 158 187 221 196)(font "Arial" ))
+		(line (pt 232 192)(pt 216 192))
+	)
+	(port
+		(pt 232 208)
+		(output)
+		(text "vo_ActShuffler" (rect 0 0 61 9)(font "Arial" ))
+		(text "vo_ActShuffler" (rect 160 203 221 212)(font "Arial" ))
+		(line (pt 232 208)(pt 216 208))
+	)
+	(port
+		(pt 232 224)
+		(output)
+		(text "vo_Card2Player" (rect 0 0 68 9)(font "Arial" ))
+		(text "vo_Card2Player" (rect 154 219 222 228)(font "Arial" ))
+		(line (pt 232 224)(pt 216 224))
+	)
+	(port
+		(pt 232 240)
+		(output)
+		(text "vo_Card2Dealer" (rect 0 0 69 9)(font "Arial" ))
+		(text "vo_Card2Dealer" (rect 153 235 222 244)(font "Arial" ))
+		(line (pt 232 240)(pt 216 240))
+	)
+	(parameter
+		"Start"
+		"00000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"ShuffleDeck"
+		"00001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"PlayerWith1Card"
+		"00010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"DealerWith1Card"
+		"00011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"PlayerWith2Card"
+		"00100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"DealerWith2Card"
+		"00101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"PlayerTurn"
+		"00110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"DealerTurn"
+		"00111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"PlayerHit"
+		"01000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"DealerHit"
+		"01001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"PlayerStay"
+		"01010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"DealerStay"
+		"01011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"CardToPlayer"
+		"01100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"CardToDealer"
+		"01101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"WinState"
+		"01110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"TieState"
+		"01111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"LoseState"
+		"10000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Measurement"
+		"10001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"DealerBlackJack"
+		"10010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 216 256))
+	)
+	(annotation_block (parameter)(rect 48 -144 232 96))
+)
+(symbol
+	(rect 40 528 288 640)
+	(text "Counter" (rect 5 0 39 9)(font "Arial" ))
+	(text "Contador" (rect 8 96 46 105)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk_2K" (rect 0 0 29 9)(font "Arial" ))
+		(text "clk_2K" (rect 21 27 50 36)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "i_ActCounter" (rect 0 0 55 9)(font "Arial" ))
+		(text "i_ActCounter" (rect 21 43 76 52)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "i_RstCounter" (rect 0 0 55 9)(font "Arial" ))
+		(text "i_RstCounter" (rect 21 59 76 68)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "i_Reset" (rect 0 0 34 9)(font "Arial" ))
+		(text "i_Reset" (rect 21 75 55 84)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 248 32)
+		(output)
+		(text "o_Count[WIDTH-1..0]" (rect 0 0 90 9)(font "Arial" ))
+		(text "o_Count[WIDTH-1..0]" (rect 151 27 241 36)(font "Arial" ))
+		(line (pt 248 32)(pt 232 32)(line_width 3))
+	)
+	(port
+		(pt 248 48)
+		(output)
+		(text "o_TwoSec" (rect 0 0 44 9)(font "Arial" ))
+		(text "o_TwoSec" (rect 190 43 234 52)(font "Arial" ))
+		(line (pt 248 48)(pt 232 48))
+	)
+	(port
+		(pt 248 64)
+		(output)
+		(text "o_RstOK" (rect 0 0 40 9)(font "Arial" ))
+		(text "o_RstOK" (rect 194 59 234 68)(font "Arial" ))
+		(line (pt 248 64)(pt 232 64))
+	)
+	(parameter
+		"WIDTH"
+		"12"
+		""
+		(type "PARAMETER_UNSIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 232 96))
+	)
+	(annotation_block (parameter)(rect 368 672 521 696))
+)
+(symbol
+	(rect -672 96 -464 208)
+	(text "Debouncer" (rect 5 0 52 9)(font "Arial" ))
+	(text "ResetButtonDebouncer" (rect 8 96 108 106)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "i_Clk_2kHz" (rect 0 0 48 9)(font "Arial" ))
+		(text "i_Clk_2kHz" (rect 21 27 69 36)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "i_Button" (rect 0 0 35 9)(font "Arial" ))
+		(text "i_Button" (rect 21 43 56 52)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 208 32)
+		(output)
+		(text "o_State" (rect 0 0 34 9)(font "Arial" ))
+		(text "o_State" (rect 159 27 193 36)(font "Arial" ))
+		(line (pt 208 32)(pt 192 32))
+	)
+	(port
+		(pt 208 48)
+		(output)
+		(text "o_ButtonDown" (rect 0 0 62 9)(font "Arial" ))
+		(text "o_ButtonDown" (rect 135 43 197 52)(font "Arial" ))
+		(line (pt 208 48)(pt 192 48))
+	)
+	(port
+		(pt 208 64)
+		(output)
+		(text "o_ButtonUp" (rect 0 0 51 9)(font "Arial" ))
+		(text "o_ButtonUp" (rect 144 59 195 68)(font "Arial" ))
+		(line (pt 208 64)(pt 192 64))
+	)
+	(drawing
+		(rectangle (rect 16 16 192 96))
+	)
+)
+(symbol
+	(rect -672 208 -464 320)
+	(text "Debouncer" (rect 5 0 52 9)(font "Arial" ))
+	(text "HitButtonDebouncer" (rect 8 96 96 106)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "i_Clk_2kHz" (rect 0 0 48 9)(font "Arial" ))
+		(text "i_Clk_2kHz" (rect 21 27 69 36)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "i_Button" (rect 0 0 35 9)(font "Arial" ))
+		(text "i_Button" (rect 21 43 56 52)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 208 32)
+		(output)
+		(text "o_State" (rect 0 0 34 9)(font "Arial" ))
+		(text "o_State" (rect 159 27 193 36)(font "Arial" ))
+		(line (pt 208 32)(pt 192 32))
+	)
+	(port
+		(pt 208 48)
+		(output)
+		(text "o_ButtonDown" (rect 0 0 62 9)(font "Arial" ))
+		(text "o_ButtonDown" (rect 135 43 197 52)(font "Arial" ))
+		(line (pt 208 48)(pt 192 48))
+	)
+	(port
+		(pt 208 64)
+		(output)
+		(text "o_ButtonUp" (rect 0 0 51 9)(font "Arial" ))
+		(text "o_ButtonUp" (rect 144 59 195 68)(font "Arial" ))
+		(line (pt 208 64)(pt 192 64))
+	)
+	(drawing
+		(rectangle (rect 16 16 192 96))
+	)
+)
+(symbol
+	(rect -672 328 -464 440)
+	(text "Debouncer" (rect 5 0 52 9)(font "Arial" ))
+	(text "StayButtonDebouncer" (rect 8 96 103 106)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "i_Clk_2kHz" (rect 0 0 48 9)(font "Arial" ))
+		(text "i_Clk_2kHz" (rect 21 27 69 36)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "i_Button" (rect 0 0 35 9)(font "Arial" ))
+		(text "i_Button" (rect 21 43 56 52)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 208 32)
+		(output)
+		(text "o_State" (rect 0 0 34 9)(font "Arial" ))
+		(text "o_State" (rect 159 27 193 36)(font "Arial" ))
+		(line (pt 208 32)(pt 192 32))
+	)
+	(port
+		(pt 208 48)
+		(output)
+		(text "o_ButtonDown" (rect 0 0 62 9)(font "Arial" ))
+		(text "o_ButtonDown" (rect 135 43 197 52)(font "Arial" ))
+		(line (pt 208 48)(pt 192 48))
+	)
+	(port
+		(pt 208 64)
+		(output)
+		(text "o_ButtonUp" (rect 0 0 51 9)(font "Arial" ))
+		(text "o_ButtonUp" (rect 144 59 195 68)(font "Arial" ))
+		(line (pt 208 64)(pt 192 64))
+	)
+	(drawing
+		(rectangle (rect 16 16 192 96))
+	)
 )
 (connector
 	(pt 408 264)
@@ -1334,10 +1557,6 @@ refer to the applicable agreement for further details.
 	(pt 440 416)
 )
 (connector
-	(pt -40 608)
-	(pt 40 608)
-)
-(connector
 	(pt 40 592)
 	(pt 24 592)
 )
@@ -1378,44 +1597,8 @@ refer to the applicable agreement for further details.
 	(pt 8 496)
 )
 (connector
-	(pt 288 576)
-	(pt 304 576)
-)
-(connector
-	(pt 304 576)
-	(pt 304 656)
-)
-(connector
-	(pt -24 656)
-	(pt 304 656)
-)
-(connector
-	(pt -24 656)
-	(pt -24 304)
-)
-(connector
-	(pt -24 304)
-	(pt 8 304)
-)
-(connector
-	(pt -8 152)
-	(pt 736 152)
-)
-(connector
-	(pt -8 320)
-	(pt 8 320)
-)
-(connector
 	(pt 1520 672)
 	(pt 1536 672)
-)
-(connector
-	(pt -120 560)
-	(pt 40 560)
-)
-(connector
-	(pt 8 336)
-	(pt -56 336)
 )
 (connector
 	(pt 1520 640)
@@ -1438,16 +1621,6 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt -72 352)
-	(pt 8 352)
-	(bus)
-)
-(connector
-	(pt -88 368)
-	(pt 8 368)
-	(bus)
-)
-(connector
 	(pt 1296 640)
 	(pt 768 640)
 )
@@ -1456,24 +1629,12 @@ refer to the applicable agreement for further details.
 	(pt 752 656)
 )
 (connector
-	(pt -40 608)
-	(pt -40 672)
-)
-(connector
-	(pt -40 672)
-	(pt 1296 672)
-)
-(connector
 	(pt 752 656)
 	(pt 752 496)
 )
 (connector
 	(pt 768 480)
 	(pt 768 640)
-)
-(connector
-	(pt 240 368)
-	(pt 328 368)
 )
 (connector
 	(pt 240 352)
@@ -1490,30 +1651,6 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 1552 736)
 	(pt 1608 736)
-)
-(connector
-	(pt 1536 672)
-	(pt 1536 736)
-)
-(connector
-	(pt 1536 736)
-	(pt -56 736)
-)
-(connector
-	(pt -56 336)
-	(pt -56 736)
-)
-(connector
-	(pt 328 368)
-	(pt 328 752)
-)
-(connector
-	(pt 328 752)
-	(pt 1552 752)
-)
-(connector
-	(pt 1552 736)
-	(pt 1552 752)
 )
 (connector
 	(pt 248 240)
@@ -1600,18 +1737,6 @@ refer to the applicable agreement for further details.
 	(pt 312 -16)
 )
 (connector
-	(pt -8 152)
-	(pt -8 320)
-)
-(connector
-	(pt -432 272)
-	(pt 8 272)
-)
-(connector
-	(pt -432 288)
-	(pt 8 288)
-)
-(connector
 	(pt 1800 720)
 	(pt 1808 720)
 	(bus)
@@ -1672,42 +1797,6 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt -336 560)
-	(pt -384 560)
-)
-(connector
-	(pt 1296 688)
-	(pt -384 688)
-)
-(connector
-	(pt -432 352)
-	(pt -384 352)
-)
-(connector
-	(pt -384 352)
-	(pt -384 560)
-)
-(connector
-	(pt -384 560)
-	(pt -384 688)
-)
-(connector
-	(pt 392 192)
-	(pt -384 192)
-)
-(connector
-	(pt -384 240)
-	(pt 8 240)
-)
-(connector
-	(pt -384 192)
-	(pt -384 240)
-)
-(connector
-	(pt -384 240)
-	(pt -384 352)
-)
-(connector
 	(pt 408 264)
 	(pt 408 136)
 	(bus)
@@ -1715,26 +1804,6 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 408 136)
 	(pt 1520 136)
-	(bus)
-)
-(connector
-	(pt -72 120)
-	(pt 1576 120)
-	(bus)
-)
-(connector
-	(pt -72 352)
-	(pt -72 120)
-	(bus)
-)
-(connector
-	(pt -88 104)
-	(pt 1592 104)
-	(bus)
-)
-(connector
-	(pt -88 368)
-	(pt -88 104)
 	(bus)
 )
 (connector
@@ -1925,24 +1994,347 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt -40 256)
-	(pt -40 608)
+	(pt 1280 688)
+	(pt 1280 720)
 )
 (connector
-	(pt -432 256)
-	(pt -40 256)
+	(pt 1280 688)
+	(pt 1296 688)
 )
 (connector
-	(pt -40 256)
+	(pt 1264 704)
+	(pt 1264 672)
+)
+(connector
+	(pt 1264 672)
+	(pt 1296 672)
+)
+(connector
+	(pt 8 304)
+	(pt -48 304)
+)
+(connector
+	(pt 736 152)
+	(pt -32 152)
+)
+(connector
+	(pt 1576 120)
+	(pt -96 120)
+	(bus)
+)
+(connector
+	(pt 1592 104)
+	(pt -112 104)
+	(bus)
+)
+(connector
+	(pt 1264 704)
+	(pt -64 704)
+)
+(connector
+	(pt -112 104)
+	(pt -112 384)
+	(bus)
+)
+(connector
+	(pt 8 384)
+	(pt -112 384)
+	(bus)
+)
+(connector
+	(pt -96 368)
+	(pt -96 120)
+	(bus)
+)
+(connector
+	(pt 8 368)
+	(pt -96 368)
+	(bus)
+)
+(connector
+	(pt 8 352)
+	(pt -80 352)
+)
+(connector
+	(pt -32 336)
+	(pt -32 152)
+)
+(connector
+	(pt 8 336)
+	(pt -32 336)
+)
+(connector
+	(pt 8 320)
+	(pt -8 320)
+)
+(connector
+	(pt 240 368)
+	(pt 336 368)
+)
+(connector
+	(pt 288 576)
+	(pt 320 576)
+)
+(connector
+	(pt 288 592)
+	(pt 304 592)
+)
+(connector
+	(pt -8 320)
+	(pt -8 656)
+)
+(connector
+	(pt 304 592)
+	(pt 304 656)
+)
+(connector
+	(pt -8 656)
+	(pt 304 656)
+)
+(connector
+	(pt -48 304)
+	(pt -48 672)
+)
+(connector
+	(pt 320 576)
+	(pt 320 672)
+)
+(connector
+	(pt -48 672)
+	(pt 320 672)
+)
+(connector
+	(pt -104 744)
+	(pt -688 744)
+)
+(connector
+	(pt -104 744)
+	(pt -104 560)
+)
+(connector
+	(pt -120 560)
+	(pt -104 560)
+)
+(connector
+	(pt -104 560)
+	(pt 40 560)
+)
+(connector
+	(pt -64 256)
+	(pt -64 704)
+)
+(connector
+	(pt -688 128)
+	(pt -672 128)
+)
+(connector
+	(pt 8 272)
+	(pt -464 272)
+)
+(connector
+	(pt -672 360)
+	(pt -688 360)
+)
+(connector
+	(pt -688 744)
+	(pt -688 360)
+)
+(connector
+	(pt -712 144)
+	(pt -672 144)
+)
+(connector
+	(pt -712 256)
+	(pt -672 256)
+)
+(connector
+	(pt -712 376)
+	(pt -672 376)
+)
+(connector
+	(pt 40 608)
+	(pt 24 608)
+)
+(connector
+	(pt 24 608)
+	(pt 24 776)
+)
+(connector
+	(pt 1536 672)
+	(pt 1536 744)
+)
+(connector
+	(pt 1552 736)
+	(pt 1552 760)
+)
+(connector
+	(pt 1536 744)
+	(pt -80 744)
+)
+(connector
+	(pt -80 352)
+	(pt -80 744)
+)
+(connector
+	(pt 336 368)
+	(pt 336 760)
+)
+(connector
+	(pt 1552 760)
+	(pt 336 760)
+)
+(connector
+	(pt -672 240)
+	(pt -688 240)
+)
+(connector
+	(pt -688 360)
+	(pt -688 240)
+)
+(connector
+	(pt -688 240)
+	(pt -688 128)
+)
+(connector
+	(pt -464 128)
+	(pt -456 128)
+)
+(connector
+	(pt -464 240)
+	(pt -440 240)
+)
+(connector
+	(pt -464 376)
+	(pt -328 376)
+)
+(connector
+	(pt -464 360)
+	(pt -344 360)
+)
+(connector
+	(pt -440 240)
+	(pt -440 -8)
+)
+(connector
+	(pt -440 -8)
+	(pt -304 -8)
+)
+(connector
+	(pt -456 128)
+	(pt -456 -24)
+)
+(connector
+	(pt -456 -24)
+	(pt -304 -24)
+)
+(connector
+	(pt -328 376)
+	(pt -328 40)
+)
+(connector
+	(pt -328 40)
+	(pt -304 40)
+)
+(connector
+	(pt -344 360)
+	(pt -344 24)
+)
+(connector
+	(pt -344 24)
+	(pt -304 24)
+)
+(connector
+	(pt 392 192)
+	(pt -360 192)
+)
+(connector
+	(pt -360 240)
+	(pt 8 240)
+)
+(connector
+	(pt -360 560)
+	(pt -336 560)
+)
+(connector
+	(pt -360 192)
+	(pt -360 240)
+)
+(connector
+	(pt 1280 720)
+	(pt -360 720)
+)
+(connector
+	(pt -720 560)
+	(pt -360 560)
+)
+(connector
+	(pt -360 240)
+	(pt -360 560)
+)
+(connector
+	(pt -360 560)
+	(pt -360 720)
+)
+(connector
+	(pt -376 256)
+	(pt -376 160)
+)
+(connector
+	(pt -464 160)
+	(pt -376 160)
+)
+(connector
+	(pt -464 392)
+	(pt -376 392)
+)
+(connector
+	(pt -376 392)
+	(pt -376 288)
+)
+(connector
+	(pt 8 288)
+	(pt -376 288)
+)
+(connector
+	(pt -376 256)
+	(pt -64 256)
+)
+(connector
+	(pt -64 256)
 	(pt 8 256)
+)
+(connector
+	(pt -464 144)
+	(pt -400 144)
+)
+(connector
+	(pt -400 776)
+	(pt -400 144)
+)
+(connector
+	(pt 24 776)
+	(pt -400 776)
+)
+(connector
+	(pt -464 256)
+	(pt -424 256)
+)
+(connector
+	(pt -424 256)
+	(pt -424 8)
+)
+(connector
+	(pt -304 8)
+	(pt -424 8)
 )
 (junction (pt 1520 280))
 (junction (pt 1520 512))
 (junction (pt 440 416))
 (junction (pt 1576 656))
 (junction (pt 1592 640))
-(junction (pt -40 608))
-(junction (pt -384 352))
-(junction (pt -384 560))
-(junction (pt -384 240))
-(junction (pt -40 256))
+(junction (pt -64 256))
+(junction (pt -104 560))
+(junction (pt -688 360))
+(junction (pt -688 240))
+(junction (pt -360 240))
+(junction (pt -360 560))

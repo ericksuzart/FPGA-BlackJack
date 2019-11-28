@@ -4,17 +4,20 @@ inclk0 => BlackJackController:FSM_Global.i_Clk
 inclk0 => PLL:inst.inclk0
 inclk0 => Shuffler:FSM_Embaralhador.clk
 inclk0 => CardAdder:FSM_CardAdder.i_Clock
-i_Reset => BlackJackController:FSM_Global.i_Reset
-i_Reset => Counter:Contador.i_Reset
-i_Reset => CardAdder:FSM_CardAdder.i_Reset
-i_Stay => BlackJackController:FSM_Global.i_Stay
-i_Hit => BlackJackController:FSM_Global.i_Hit
+i_Reset => Debouncer:ResetButtonDebouncer.i_Button
+i_Stay => Debouncer:HitButtonDebouncer.i_Button
+i_Hit => Debouncer:StayButtonDebouncer.i_Button
 o_Lose <= BlackJackController:FSM_Global.o_Lose
 o_Tie <= BlackJackController:FSM_Global.o_Tie
 o_Hit_P <= BlackJackController:FSM_Global.o_Hit_P
 o_Hit_D <= BlackJackController:FSM_Global.o_Hit_D
 o_Stay_P <= BlackJackController:FSM_Global.o_Stay_P
 o_Stay_D <= BlackJackController:FSM_Global.o_Stay_D
+o_ResetState <= Debouncer:ResetButtonDebouncer.o_State
+o_StayState <= Debouncer:HitButtonDebouncer.o_State
+o_StayDown <= Debouncer:HitButtonDebouncer.o_ButtonDown
+o_HitState <= Debouncer:StayButtonDebouncer.o_State
+o_HitDown <= Debouncer:StayButtonDebouncer.o_ButtonDown
 DealerHndDisplayD[6] <= displaydecoder:DealerHand.displayd[6]
 DealerHndDisplayD[5] <= displaydecoder:DealerHand.displayd[5]
 DealerHndDisplayD[4] <= displaydecoder:DealerHand.displayd[4]
@@ -46,13 +49,43 @@ PlayerHndDisplayU[0] <= displaydecoder:PlayerHand.displayu[0]
 
 
 |BlackJack|BlackJackController:FSM_Global
-i_Clk => i_Clk.IN1
-i_Reset => i_Reset.IN1
-i_Stay => always1.IN0
+i_Clk => vc_FirstTurn.CLK
+i_Clk => vc_HitPlayer.CLK
+i_Clk => A_State~1.DATAIN
+i_Reset => A_State.OUTPUTSELECT
+i_Reset => A_State.OUTPUTSELECT
+i_Reset => A_State.OUTPUTSELECT
+i_Reset => A_State.OUTPUTSELECT
+i_Reset => A_State.OUTPUTSELECT
+i_Reset => A_State.OUTPUTSELECT
+i_Reset => A_State.OUTPUTSELECT
+i_Reset => A_State.OUTPUTSELECT
+i_Reset => A_State.OUTPUTSELECT
+i_Reset => A_State.OUTPUTSELECT
+i_Reset => A_State.OUTPUTSELECT
+i_Reset => A_State.OUTPUTSELECT
+i_Reset => A_State.OUTPUTSELECT
+i_Reset => A_State.OUTPUTSELECT
+i_Reset => A_State.OUTPUTSELECT
+i_Reset => A_State.OUTPUTSELECT
+i_Reset => A_State.OUTPUTSELECT
+i_Reset => A_State.OUTPUTSELECT
+i_Reset => A_State.OUTPUTSELECT
+i_Reset => vc_HitPlayer.OUTPUTSELECT
+i_Reset => vc_FirstTurn.OUTPUTSELECT
+i_Reset => Selector4.IN4
+i_Reset => Selector4.IN5
+i_Reset => Selector4.IN6
+i_Reset => Selector4.IN7
+i_Reset => Selector19.IN2
+i_Reset => Selector20.IN3
+i_Reset => Selector5.IN4
+i_Reset => Selector18.IN3
+i_Stay => F_State.DATAA
+i_Stay => F_State.DATAA
 i_Hit => F_State.OUTPUTSELECT
 i_Hit => F_State.OUTPUTSELECT
-i_Hit => Selector16.IN5
-i_Hit => always1.IN1
+i_Hit => F_State.DATAA
 o_Win <= o_Win.DB_MAX_OUTPUT_PORT_TYPE
 o_Lose <= o_Lose.DB_MAX_OUTPUT_PORT_TYPE
 o_Tie <= o_Tie.DB_MAX_OUTPUT_PORT_TYPE
@@ -76,6 +109,12 @@ vi_TwoSec => Selector14.IN4
 vi_TwoSec => F_State.OUTPUTSELECT
 vi_TwoSec => F_State.OUTPUTSELECT
 vi_TwoSec => Selector13.IN3
+vi_RstOK => F_State.OUTPUTSELECT
+vi_RstOK => F_State.OUTPUTSELECT
+vi_RstOK => Selector11.IN3
+vi_RstOK => F_State.OUTPUTSELECT
+vi_RstOK => F_State.OUTPUTSELECT
+vi_RstOK => F_State.OUTPUTSELECT
 vo_ActCounter <= WideOr20.DB_MAX_OUTPUT_PORT_TYPE
 vo_RstCounter <= vo_RstCounter.DB_MAX_OUTPUT_PORT_TYPE
 vi_Shuffled => Selector6.IN5
@@ -88,7 +127,7 @@ vi_CardOK => Selector10.IN6
 vi_CardOK => Selector12.IN5
 vi_CardOK => Selector13.IN5
 vi_CardOK => Selector17.IN4
-vi_CardOK => Selector16.IN3
+vi_CardOK => Selector16.IN4
 vi_CardOK => Selector9.IN3
 vi_CardOK => Selector8.IN3
 vi_CardOK => Selector7.IN3
@@ -157,41 +196,17 @@ vo_Card2Player <= WideOr18.DB_MAX_OUTPUT_PORT_TYPE
 vo_Card2Dealer <= WideOr19.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|BlackJack|BlackJackController:FSM_Global|EdgeDetector:PosEdgeDetector
-sig => detect.IN1
-sig => sig_dly.DATAIN
-clk => sig_dly.CLK
-detect <= detect.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|BlackJack|Counter:Contador
-clk_2K => clk_2K.IN1
-i_ActCounter => always0.IN1
-i_ActCounter => o_TwoSec.IN0
-i_RstCounter => always0.IN0
-i_RstCounter => always0.IN0
-i_RstCounter => o_TwoSec.IN1
-i_Reset => i_Reset.IN1
-o_Count[0] <= r_Count[0].DB_MAX_OUTPUT_PORT_TYPE
-o_Count[1] <= r_Count[1].DB_MAX_OUTPUT_PORT_TYPE
-o_Count[2] <= r_Count[2].DB_MAX_OUTPUT_PORT_TYPE
-o_Count[3] <= r_Count[3].DB_MAX_OUTPUT_PORT_TYPE
-o_Count[4] <= r_Count[4].DB_MAX_OUTPUT_PORT_TYPE
-o_Count[5] <= r_Count[5].DB_MAX_OUTPUT_PORT_TYPE
-o_Count[6] <= r_Count[6].DB_MAX_OUTPUT_PORT_TYPE
-o_Count[7] <= r_Count[7].DB_MAX_OUTPUT_PORT_TYPE
-o_Count[8] <= r_Count[8].DB_MAX_OUTPUT_PORT_TYPE
-o_Count[9] <= r_Count[9].DB_MAX_OUTPUT_PORT_TYPE
-o_Count[10] <= r_Count[10].DB_MAX_OUTPUT_PORT_TYPE
-o_Count[11] <= r_Count[11].DB_MAX_OUTPUT_PORT_TYPE
-o_TwoSec <= o_TwoSec.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|BlackJack|Counter:Contador|EdgeDetector:NegEdgeDetector
-sig => sig_dly.DATAIN
-sig => detect.IN1
-clk => sig_dly.CLK
-detect <= detect.DB_MAX_OUTPUT_PORT_TYPE
+|BlackJack|Debouncer:ResetButtonDebouncer
+i_Clk_2kHz => o_State~reg0.CLK
+i_Clk_2kHz => r_Counter[0].CLK
+i_Clk_2kHz => r_Counter[1].CLK
+i_Clk_2kHz => r_Counter[2].CLK
+i_Clk_2kHz => r_Sync1.CLK
+i_Clk_2kHz => r_Sync0.CLK
+i_Button => r_Sync0.DATAIN
+o_State <= o_State~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_ButtonDown <= o_ButtonDown.DB_MAX_OUTPUT_PORT_TYPE
+o_ButtonUp <= o_ButtonUp.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |BlackJack|PLL:inst
@@ -267,6 +282,105 @@ clk[3] <= pll1.CLK3
 clk[4] <= pll1.CLK4
 inclk[0] => pll1.CLK
 inclk[1] => pll1.CLK1
+
+
+|BlackJack|Debouncer:HitButtonDebouncer
+i_Clk_2kHz => o_State~reg0.CLK
+i_Clk_2kHz => r_Counter[0].CLK
+i_Clk_2kHz => r_Counter[1].CLK
+i_Clk_2kHz => r_Counter[2].CLK
+i_Clk_2kHz => r_Sync1.CLK
+i_Clk_2kHz => r_Sync0.CLK
+i_Button => r_Sync0.DATAIN
+o_State <= o_State~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_ButtonDown <= o_ButtonDown.DB_MAX_OUTPUT_PORT_TYPE
+o_ButtonUp <= o_ButtonUp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BlackJack|Debouncer:StayButtonDebouncer
+i_Clk_2kHz => o_State~reg0.CLK
+i_Clk_2kHz => r_Counter[0].CLK
+i_Clk_2kHz => r_Counter[1].CLK
+i_Clk_2kHz => r_Counter[2].CLK
+i_Clk_2kHz => r_Sync1.CLK
+i_Clk_2kHz => r_Sync0.CLK
+i_Button => r_Sync0.DATAIN
+o_State <= o_State~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_ButtonDown <= o_ButtonDown.DB_MAX_OUTPUT_PORT_TYPE
+o_ButtonUp <= o_ButtonUp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BlackJack|Counter:Contador
+clk_2K => o_RstOK~reg0.CLK
+clk_2K => r_Count[0].CLK
+clk_2K => r_Count[1].CLK
+clk_2K => r_Count[2].CLK
+clk_2K => r_Count[3].CLK
+clk_2K => r_Count[4].CLK
+clk_2K => r_Count[5].CLK
+clk_2K => r_Count[6].CLK
+clk_2K => r_Count[7].CLK
+clk_2K => r_Count[8].CLK
+clk_2K => r_Count[9].CLK
+clk_2K => r_Count[10].CLK
+clk_2K => r_Count[11].CLK
+i_ActCounter => always0.IN1
+i_ActCounter => o_TwoSec.IN0
+i_RstCounter => r_Count.OUTPUTSELECT
+i_RstCounter => r_Count.OUTPUTSELECT
+i_RstCounter => r_Count.OUTPUTSELECT
+i_RstCounter => r_Count.OUTPUTSELECT
+i_RstCounter => r_Count.OUTPUTSELECT
+i_RstCounter => r_Count.OUTPUTSELECT
+i_RstCounter => r_Count.OUTPUTSELECT
+i_RstCounter => r_Count.OUTPUTSELECT
+i_RstCounter => r_Count.OUTPUTSELECT
+i_RstCounter => r_Count.OUTPUTSELECT
+i_RstCounter => r_Count.OUTPUTSELECT
+i_RstCounter => r_Count.OUTPUTSELECT
+i_RstCounter => o_RstOK.OUTPUTSELECT
+i_RstCounter => o_TwoSec.IN1
+i_Reset => o_TwoSec.IN1
+i_Reset => r_Count.OUTPUTSELECT
+i_Reset => r_Count.OUTPUTSELECT
+i_Reset => r_Count.OUTPUTSELECT
+i_Reset => r_Count.OUTPUTSELECT
+i_Reset => r_Count.OUTPUTSELECT
+i_Reset => r_Count.OUTPUTSELECT
+i_Reset => r_Count.OUTPUTSELECT
+i_Reset => r_Count.OUTPUTSELECT
+i_Reset => r_Count.OUTPUTSELECT
+i_Reset => r_Count.OUTPUTSELECT
+i_Reset => r_Count.OUTPUTSELECT
+i_Reset => r_Count.OUTPUTSELECT
+i_Reset => o_RstOK.OUTPUTSELECT
+i_Reset => r_Count.OUTPUTSELECT
+i_Reset => r_Count.OUTPUTSELECT
+i_Reset => r_Count.OUTPUTSELECT
+i_Reset => r_Count.OUTPUTSELECT
+i_Reset => r_Count.OUTPUTSELECT
+i_Reset => r_Count.OUTPUTSELECT
+i_Reset => r_Count.OUTPUTSELECT
+i_Reset => r_Count.OUTPUTSELECT
+i_Reset => r_Count.OUTPUTSELECT
+i_Reset => r_Count.OUTPUTSELECT
+i_Reset => r_Count.OUTPUTSELECT
+i_Reset => r_Count.OUTPUTSELECT
+i_Reset => o_RstOK~reg0.ENA
+o_Count[0] <= r_Count[0].DB_MAX_OUTPUT_PORT_TYPE
+o_Count[1] <= r_Count[1].DB_MAX_OUTPUT_PORT_TYPE
+o_Count[2] <= r_Count[2].DB_MAX_OUTPUT_PORT_TYPE
+o_Count[3] <= r_Count[3].DB_MAX_OUTPUT_PORT_TYPE
+o_Count[4] <= r_Count[4].DB_MAX_OUTPUT_PORT_TYPE
+o_Count[5] <= r_Count[5].DB_MAX_OUTPUT_PORT_TYPE
+o_Count[6] <= r_Count[6].DB_MAX_OUTPUT_PORT_TYPE
+o_Count[7] <= r_Count[7].DB_MAX_OUTPUT_PORT_TYPE
+o_Count[8] <= r_Count[8].DB_MAX_OUTPUT_PORT_TYPE
+o_Count[9] <= r_Count[9].DB_MAX_OUTPUT_PORT_TYPE
+o_Count[10] <= r_Count[10].DB_MAX_OUTPUT_PORT_TYPE
+o_Count[11] <= r_Count[11].DB_MAX_OUTPUT_PORT_TYPE
+o_TwoSec <= o_TwoSec.DB_MAX_OUTPUT_PORT_TYPE
+o_RstOK <= o_RstOK~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |BlackJack|Shuffler:FSM_Embaralhador
@@ -1270,8 +1384,65 @@ i_Card2P => F_State.PlusTenPlayer.IN0
 i_Card2D => F_State.PlusTenPlayer.IN1
 i_Card2D => F_State.Value2Dealer.DATAA
 i_Card2D => F_State.Value2Player.DATAA
-i_Reset => i_Reset.IN1
-i_Clock => i_Clock.IN1
+i_Reset => A_State.OUTPUTSELECT
+i_Reset => A_State.OUTPUTSELECT
+i_Reset => A_State.OUTPUTSELECT
+i_Reset => A_State.OUTPUTSELECT
+i_Reset => A_State.OUTPUTSELECT
+i_Reset => A_State.OUTPUTSELECT
+i_Reset => A_State.OUTPUTSELECT
+i_Reset => A_State.OUTPUTSELECT
+i_Reset => A_State.OUTPUTSELECT
+i_Reset => A_State.OUTPUTSELECT
+i_Reset => A_State.OUTPUTSELECT
+i_Reset => A_State.OUTPUTSELECT
+i_Reset => r_Addr.OUTPUTSELECT
+i_Reset => r_Addr.OUTPUTSELECT
+i_Reset => r_Addr.OUTPUTSELECT
+i_Reset => r_Addr.OUTPUTSELECT
+i_Reset => r_Addr.OUTPUTSELECT
+i_Reset => r_Addr.OUTPUTSELECT
+i_Reset => vc_HndD.OUTPUTSELECT
+i_Reset => vc_HndD.OUTPUTSELECT
+i_Reset => vc_HndD.OUTPUTSELECT
+i_Reset => vc_HndD.OUTPUTSELECT
+i_Reset => vc_HndD.OUTPUTSELECT
+i_Reset => vc_HndD.OUTPUTSELECT
+i_Reset => vc_HndP.OUTPUTSELECT
+i_Reset => vc_HndP.OUTPUTSELECT
+i_Reset => vc_HndP.OUTPUTSELECT
+i_Reset => vc_HndP.OUTPUTSELECT
+i_Reset => vc_HndP.OUTPUTSELECT
+i_Reset => vc_HndP.OUTPUTSELECT
+i_Reset => vc_Ace_D.OUTPUTSELECT
+i_Reset => vc_Ace_P.OUTPUTSELECT
+i_Reset => vc_Face_D.OUTPUTSELECT
+i_Reset => vc_Face_P.OUTPUTSELECT
+i_Reset => Selector32.IN3
+i_Reset => Selector30.IN2
+i_Clock => vc_Face_P.CLK
+i_Clock => vc_Face_D.CLK
+i_Clock => vc_Ace_P.CLK
+i_Clock => vc_Ace_D.CLK
+i_Clock => vc_HndP[0].CLK
+i_Clock => vc_HndP[1].CLK
+i_Clock => vc_HndP[2].CLK
+i_Clock => vc_HndP[3].CLK
+i_Clock => vc_HndP[4].CLK
+i_Clock => vc_HndP[5].CLK
+i_Clock => vc_HndD[0].CLK
+i_Clock => vc_HndD[1].CLK
+i_Clock => vc_HndD[2].CLK
+i_Clock => vc_HndD[3].CLK
+i_Clock => vc_HndD[4].CLK
+i_Clock => vc_HndD[5].CLK
+i_Clock => r_Addr[0].CLK
+i_Clock => r_Addr[1].CLK
+i_Clock => r_Addr[2].CLK
+i_Clock => r_Addr[3].CLK
+i_Clock => r_Addr[4].CLK
+i_Clock => r_Addr[5].CLK
+i_Clock => A_State~1.DATAIN
 o_Address[0] <= r_Addr[0].DB_MAX_OUTPUT_PORT_TYPE
 o_Address[1] <= r_Addr[1].DB_MAX_OUTPUT_PORT_TYPE
 o_Address[2] <= r_Addr[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -1292,13 +1463,6 @@ o_PlayerHnd[3] <= vc_HndP[3].DB_MAX_OUTPUT_PORT_TYPE
 o_PlayerHnd[4] <= vc_HndP[4].DB_MAX_OUTPUT_PORT_TYPE
 o_PlayerHnd[5] <= vc_HndP[5].DB_MAX_OUTPUT_PORT_TYPE
 o_CardOK <= o_CardOK.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|BlackJack|CardAdder:FSM_CardAdder|EdgeDetector:PosEdgeDetector
-sig => detect.IN1
-sig => sig_dly.DATAIN
-clk => sig_dly.CLK
-detect <= detect.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |BlackJack|CardEvaluator:CardEvaluatorDecoder
