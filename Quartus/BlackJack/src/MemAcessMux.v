@@ -16,12 +16,12 @@ module MemAcessMux
     always @(*)
     begin
         case (ActShuffler)
-            1 :
+            1'b 1 :
                 begin
                     o_Address = i_ShufflerAddr;
                     o_MemClk = i_ShufflerClk;
                 end
-            0 :
+            1'b 0 :
                 begin
                     o_Address = i_AdderAddress;
                     o_MemClk = i_AdderClk;

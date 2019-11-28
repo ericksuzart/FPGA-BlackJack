@@ -228,8 +228,8 @@ begin
             else if (vi_HandP == vi_HandD)
                 F_State = TieState;
 
-        default :
-            F_State = Start;
+        // default :
+        //     F_State = Start;
     endcase
 end
 

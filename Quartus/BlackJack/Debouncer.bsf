@@ -40,8 +40,8 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 208 32)
 		(output)
-		(text "o_State" (rect 0 0 30 12)(font "Arial" ))
-		(text "o_State" (rect 157 27 187 39)(font "Arial" ))
+		(text "o_ButtonDeb" (rect 0 0 51 12)(font "Arial" ))
+		(text "o_ButtonDeb" (rect 136 27 187 39)(font "Arial" ))
 		(line (pt 208 32)(pt 192 32)(line_width 1))
 	)
 	(port

@@ -12,79 +12,79 @@
 					"strict" : false
 				},
 				{
-					"name" : "o_ResetState",
+					"name" : "w_ResetDeb",
 					"strict" : false
 				},
 				{
-					"name" : "o_StayState",
+					"name" : "w_HitDeb",
 					"strict" : false
 				},
 				{
-					"name" : "o_StayDown",
+					"name" : "w_HitNE",
 					"strict" : false
 				},
 				{
-					"name" : "o_HitState",
+					"name" : "w_StayDeb",
 					"strict" : false
 				},
 				{
-					"name" : "o_HitDown",
+					"name" : "w_StayNE",
 					"strict" : false
 				},
 				{
-					"name" : "DealerHndDisplayD[0]",
+					"name" : "PlayerHndDisplayD[0]",
 					"strict" : false
 				},
 				{
-					"name" : "DealerHndDisplayD[1]",
+					"name" : "PlayerHndDisplayD[1]",
 					"strict" : false
 				},
 				{
-					"name" : "DealerHndDisplayD[2]",
+					"name" : "PlayerHndDisplayD[2]",
 					"strict" : false
 				},
 				{
-					"name" : "DealerHndDisplayD[3]",
+					"name" : "PlayerHndDisplayD[3]",
 					"strict" : false
 				},
 				{
-					"name" : "DealerHndDisplayD[4]",
+					"name" : "PlayerHndDisplayD[4]",
 					"strict" : false
 				},
 				{
-					"name" : "DealerHndDisplayD[5]",
+					"name" : "PlayerHndDisplayD[5]",
 					"strict" : false
 				},
 				{
-					"name" : "DealerHndDisplayD[6]",
+					"name" : "PlayerHndDisplayD[6]",
 					"strict" : false
 				},
 				{
-					"name" : "DealerHndDisplayU[0]",
+					"name" : "PlayerHndDisplayU[0]",
 					"strict" : false
 				},
 				{
-					"name" : "DealerHndDisplayU[1]",
+					"name" : "PlayerHndDisplayU[1]",
 					"strict" : false
 				},
 				{
-					"name" : "DealerHndDisplayU[2]",
+					"name" : "PlayerHndDisplayU[2]",
 					"strict" : false
 				},
 				{
-					"name" : "DealerHndDisplayU[3]",
+					"name" : "PlayerHndDisplayU[3]",
 					"strict" : false
 				},
 				{
-					"name" : "DealerHndDisplayU[4]",
+					"name" : "PlayerHndDisplayU[4]",
 					"strict" : false
 				},
 				{
-					"name" : "DealerHndDisplayU[5]",
+					"name" : "PlayerHndDisplayU[5]",
 					"strict" : false
 				},
 				{
-					"name" : "DealerHndDisplayU[6]",
+					"name" : "PlayerHndDisplayU[6]",
 					"strict" : false
 				},
 				{
@@ -92,7 +92,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "i_Stay",
+					"name" : "i_Reset",
 					"strict" : false
 				},
 				{
@@ -100,7 +100,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "i_Reset",
+					"name" : "i_Stay",
 					"strict" : false
 				},
 				{
