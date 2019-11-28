@@ -14,10 +14,10 @@ reg [0:6]displayd; //envia a informação para o display das dezenas
 
 always @(*) //display de unidades
 	begin
-		if (enable==1'b0) //liga o display com nível baixo
+		if (enable==1'b1) //liga o display com nível baixo
 			case(hand)
-				//6'b000000: displayu = 7'b0000001; numero 0
-				//6'b000001: displayu = 7'b1001111; numero 1
+				6'b000000: displayu = 7'b0000001; // numero 0
+				6'b000001: displayu = 7'b1001111; // numero 1
 				6'b000010: displayu = 7'b0010010; // numero 2
 				6'b000011: displayu = 7'b0000110; // numero 3
 				6'b000100: displayu = 7'b1001100; // numero 4
@@ -64,10 +64,10 @@ always @(*) //display de unidades
 	end	
 always @(*) //display de dezenas
 	begin
-		if (enable==1'b0) //liga o display com nível baixo
+		if (enable==1'b1) //liga o display com nível baixo
 			case(hand)
-				//6'b000000: displayd = 7'b0000001; numero 0
-				//6'b000001: displayd = 7'b0000001; numero 1
+				6'b000000: displayd = 7'b0000001; // numero 0
+				6'b000001: displayd = 7'b0000001; // numero 1
 				6'b000010: displayd = 7'b0000001; // numero 2
 				6'b000011: displayd = 7'b0000001; // numero 3
 				6'b000100: displayd = 7'b0000001; // numero 4

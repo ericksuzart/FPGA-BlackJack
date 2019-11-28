@@ -14,7 +14,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
-// CREATED		"Thu Nov 28 01:26:55 2019"
+// CREATED		"Thu Nov 28 02:33:24 2019"
 
 module BlackJack(
 	inclk0,

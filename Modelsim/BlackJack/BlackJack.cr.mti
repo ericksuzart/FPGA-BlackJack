@@ -1,78 +1,115 @@
-/home/erick/ENGC40/Modelsim/BlackJack/displaydecoder.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/displaydecoder.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module displaydecoder
-
-Top level modules:
-	displaydecoder
-
-} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/Counter_TB.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/Counter_TB.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module Counter_TB
-
-Top level modules:
-	Counter_TB
-
-} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/CardEvaluator.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/CardEvaluator.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module CardEvaluator
-
-Top level modules:
-	CardEvaluator
-
-} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/Shuffler.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/Shuffler.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module Shuffler
-
-Top level modules:
-	Shuffler
-
-} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/CardAdder.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/CardAdder.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module CardAdder
-
-Top level modules:
-	CardAdder
-
-} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/BlackJackController.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/BlackJackController.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module BlackJackController
-
-Top level modules:
-	BlackJackController
-
-} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/Nxt_Addr.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/Nxt_Addr.v
+/home/erick/ENGC40/Modelsim/BlackJack/src/Nxt_Addr.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/Nxt_Addr.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module Nxt_Addr
 
 Top level modules:
 	Nxt_Addr
 
-} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/EdgeDetector.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/EdgeDetector.v
+} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/BlackJack.mif {0 {vcom -work work -2002 -explicit -stats=none /home/erick/ENGC40/Modelsim/BlackJack/BlackJack.mif
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+** Error: /home/erick/ENGC40/Modelsim/BlackJack/BlackJack.mif(17): near "WIDTH": syntax error
+
+} {4.0 5.0} {}} /home/erick/ENGC40/Modelsim/BlackJack/RAM.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/erick/ENGC40/Modelsim/BlackJack/RAM.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package altera_mf_components
+-- Compiling entity RAM
+-- Compiling architecture SYN of ram
+
+} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/PLL.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/erick/ENGC40/Modelsim/BlackJack/PLL.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity PLL
+-- Compiling architecture SYN of pll
+
+} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/CardEvaluator.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/CardEvaluator.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module CardEvaluator
+
+Top level modules:
+	CardEvaluator
+
+} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/BlackJack.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/BlackJack.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module BlackJack
+
+Top level modules:
+	BlackJack
+
+} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/EdgeDetector.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/EdgeDetector.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module EdgeDetector
 
 Top level modules:
 	EdgeDetector
 
-} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/Counter.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/Counter.v
+} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/CardAdder.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/CardAdder.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module Counter
+-- Compiling module CardAdder
 
 Top level modules:
-	Counter
+	CardAdder
 
-} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/MemAcessMux.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/MemAcessMux.v
+} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/BlackJackController.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/BlackJackController.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module BlackJackController
+
+Top level modules:
+	BlackJackController
+
+} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/BlackJack_inst.v {0 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/BlackJack_inst.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+** Error: (vlog-13069) /home/erick/ENGC40/Modelsim/BlackJack/src/BlackJack_inst.v(19): near "BlackJack_inst": syntax error, unexpected IDENTIFIER.
+** Error: /home/erick/ENGC40/Modelsim/BlackJack/src/BlackJack_inst.v(19): (vlog-13205) Syntax error found in the scope following 'BlackJack'. Is there a missing '::'?
+
+} {3.0 5.0} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/displaydecoder.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/displaydecoder.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module displaydecoder
+
+Top level modules:
+	displaydecoder
+
+} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/Counter_TB.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/Counter_TB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Counter_TB
+
+Top level modules:
+	Counter_TB
+
+} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/Shuffler.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/Shuffler.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Shuffler
+
+Top level modules:
+	Shuffler
+
+} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/Debouncer.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/Debouncer.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Debouncer
+
+Top level modules:
+	Debouncer
+
+} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/MemAcessMux.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/MemAcessMux.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module MemAcessMux
 
 Top level modules:
 	MemAcessMux
 
-} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/ClockSycn.v {0 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/ClockSycn.v
+} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/Counter.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/Counter.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-** Error: (vlog-13069) /home/erick/ENGC40/Modelsim/BlackJack/ClockSycn.v(3): near "reg": syntax error, unexpected reg, expecting "SystemVerilog keyword 'import'" or ';' or '#' or '('.
+-- Compiling module Counter
 
-} {3.0 4.0} {}} /home/erick/ENGC40/Modelsim/BlackJack/Nxt_Addr_TB.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/Nxt_Addr_TB.v
+Top level modules:
+	Counter
+
+} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/Nxt_Addr_TB.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/Nxt_Addr_TB.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module Nxt_Addr_TB
 
