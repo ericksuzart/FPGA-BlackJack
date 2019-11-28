@@ -133,15 +133,19 @@ begin
                 F_State = PlayerTurn;
 
         PlayerTurn :
-            if(i_Hit)
+            if (!vi_RstOK)
+                F_State = PlayerTurn;
+            else if(i_Hit) // uma das bordas de mudança do botão (posedge or negedge)
                 F_State = CardToPlayer;
-            else if (!i_Hit && i_Stay)
+            else if (i_Stay)
                 F_State = PlayerStay;
             else
                 F_State = PlayerTurn;
 
         DealerTurn :
-            if(vi_HandD <= 16)
+            if (!vi_RstOK)
+                F_State = DealerTurn;
+            else if(vi_HandD <= 16)
                 F_State = CardToDealer;
             else
                 F_State = DealerStay;
