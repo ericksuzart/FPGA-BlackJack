@@ -4,31 +4,11 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "o_Win",
-					"strict" : false
-				},
-				{
-					"name" : "o_Lose",
-					"strict" : false
-				},
-				{
-					"name" : "o_Tie",
-					"strict" : false
-				},
-				{
 					"name" : "o_Hit_P",
 					"strict" : false
 				},
 				{
-					"name" : "o_Hit_D",
-					"strict" : false
-				},
-				{
 					"name" : "o_Stay_P",
-					"strict" : false
-				},
-				{
-					"name" : "o_Stay_D",
 					"strict" : false
 				},
 				{

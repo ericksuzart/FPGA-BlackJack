@@ -12,12 +12,17 @@ module Counter_TB;
 
     // DUV output ports
     wire [WIDTH-1:0] o_Counter;
-    wire TwoSec;
+    wire TwoSec;    
 
     // Variáveis de teste
     reg [WIDTH-1:0] r_Contador;
     
     integer i;
+
+    Debouncer ResetButton
+        (
+            
+        );
 
     Counter #(.WIDTH(WIDTH)) DUV 
         (

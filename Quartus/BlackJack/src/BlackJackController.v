@@ -5,18 +5,18 @@ module BlackJackController
     input i_Clk,        // entrada do clock
 
     // Inputs físicos
-    input i_Reset,      // entrada do botão de reset
-    input i_Stay,       // entrada do botão de stay
-    input i_Hit,        // entrada do botão de hit
+    input i_Reset,              // entrada do botão de reset (Posedge)
+    input i_Stay,               // entrada do botão de stay (Posedge)
+    input i_Hit,                // entrada do botão de hit (Posedge)
     
     //  Outputs to leds
-    output reg o_Win,       // saída indicando vitória
-    output reg o_Lose,      // saída indicando derrota
-    output reg o_Tie,       // saída indicando empate
-    output reg o_Hit_P,     // saída que indica se o player deu hit
-    output reg o_Hit_D,     // saída que indica se o dealer deu hit
-    output reg o_Stay_P,    // saída que indica se o player deu stay
-    output reg o_Stay_D,    // saída que indica se o dealer deu stay
+    output reg o_Win,           // saída indicando vitória
+    output reg o_Lose,          // saída indicando derrota
+    output reg o_Tie,           // saída indicando empate
+    output reg o_Hit_P,         // saída que indica se o player deu hit
+    output reg o_Hit_D,         // saída que indica se o dealer deu hit
+    output reg o_Stay_P,        // saída que indica se o player deu stay
+    output reg o_Stay_D,        // saída que indica se o dealer deu stay
     
     // Saídas indicando se deve-se mostrar a mão do player/dealer
     output reg o_ShwHnd_P,
@@ -24,6 +24,7 @@ module BlackJackController
     
     // Variáveis de controle do contador
     input vi_TwoSec,            // indica se passaram 2 segundos
+    input vi_RstOK,             // indica se o contador foi zerado com sucesso
     output reg vo_ActCounter,   // sinal para ativar o contador
     output reg vo_RstCounter,   // sinal para zerar o contador
 
@@ -46,17 +47,7 @@ reg vc_FirstTurn;   // Indica se estamos no primeiro turno (1) ou no segundo (0)
 // State register
 reg [4:0] A_State, F_State;
 
-// Reset Posedge detector
-wire pe_Reset;
-
-EdgeDetector #(.Type(1)) PosEdgeDetector
-(
-    .sig(i_Reset),
-    .clk(i_Clk),
-    .detect(pe_Reset)
-);
-
-
+// Código de cada estado
 parameter   Start           = 5'b 00000, // estado 0
             ShuffleDeck     = 5'b 00001, // estado 1
             PlayerWith1Card = 5'b 00010, // estado 2
@@ -81,7 +72,7 @@ parameter   Start           = 5'b 00000, // estado 0
 // Clocked block
 always @(posedge i_Clk)
 begin
-    if(pe_Reset)
+    if(i_Reset)
     begin
         A_State <= Start;
         vc_HitPlayer <= 0;
@@ -106,7 +97,7 @@ always @(*)
 begin
     case (A_State)
         Start :
-            if(pe_Reset)
+            if(i_Reset)
                 F_State = Start;
             else
                 F_State = ShuffleDeck;
@@ -202,19 +193,19 @@ begin
                 F_State = CardToDealer;
 
         WinState :
-            if(pe_Reset)
+            if(i_Reset)
                 F_State = Start;
             else
                 F_State = WinState;
 
         TieState :
-            if(pe_Reset)
+            if(i_Reset)
                 F_State = Start;
             else
                 F_State = TieState;
 
         LoseState :
-            if(pe_Reset)
+            if(i_Reset)
                 F_State = Start;
             else
                 F_State = LoseState;
