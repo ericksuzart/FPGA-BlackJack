@@ -21,6 +21,8 @@ module Counter
     // Incrementa o contador a partir do clock de 2 kHz se i_ActCounter
     always @ (posedge clk_2K)
     begin
+        o_RstOK <= 0;
+
         if (i_ResetNeg)
             r_Count <= 0;
 
@@ -32,7 +34,6 @@ module Counter
             r_Count <= 0;
             o_RstOK <= 1;
         end
-
         // O operador ~& faz um NAND no contador, e retorna 0 caso todos os bits
         // dele forem 1
         else if ((i_ActCounter)&&(~&r_Count))

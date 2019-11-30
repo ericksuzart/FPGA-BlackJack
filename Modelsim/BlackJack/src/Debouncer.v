@@ -2,9 +2,9 @@
 
 module Debouncer
 (
-    input i_Clk_2kHz,       // Clock de 2kHz para diminuir o tamanho do r_Counter
+    input i_Clk,       // Clock de 2kHz para diminuir o tamanho do r_Counter
     input i_Button,         // Sinal cru do botão
-    output o_ButtonDeb, // Estado do botão (1 ou 0)
+    output o_ButtonDeb,     // Estado do botão (1 ou 0)
     output o_ButtonDown,    // Detecta borda de descida do sinal
     output o_ButtonUp       // Detecta borda de subida do sinal
 );
@@ -18,7 +18,7 @@ module Debouncer
     // initial	r_Intermediario = 1'b 1;
     // initial	r_ButtonSync = 1'b 1;
 
-    always @(posedge i_Clk_2kHz)
+    always @(posedge i_Clk)
     begin
         r_Intermediario <= i_Button;
         r_ButtonSync <= r_Intermediario;
@@ -30,14 +30,14 @@ module Debouncer
     EdgeDetector #(.Type(1)) PosEdge
     (
         .sig(r_ButtonSync),
-        .clk(i_Clk_2kHz),
+        .clk(i_Clk),
         .detect(o_ButtonUp)
     );
 
     EdgeDetector #(.Type(0)) NegEdge
     (
         .sig(r_ButtonSync),
-        .clk(i_Clk_2kHz),
+        .clk(i_Clk),
         .detect(o_ButtonDown)
     );
 
@@ -48,7 +48,7 @@ module Debouncer
     // initial	r_ButtonLast = 1'b 1;
     // initial	r_ButtonEvent = 1'b 0;
 
-    // always @(posedge i_Clk_2kHz)
+    // always @(posedge i_Clk)
     // begin
     //     r_ButtonLast <= r_ButtonSync;
     //     r_ButtonEvent <= (r_ButtonSync)&&(!r_ButtonLast);
@@ -68,7 +68,7 @@ module Debouncer
     // reg timer;
     // initial timer = {(6){1'b 1}}; // contador de 6 bits com tudo em 1
 
-    // always @(posedge i_Clk_2kHz)
+    // always @(posedge i_Clk)
     // begin
     //     if(r_ButtonEvent)
     //         timer = {(6){1'b 1}};
