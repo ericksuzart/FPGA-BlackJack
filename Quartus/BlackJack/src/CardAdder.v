@@ -120,7 +120,7 @@ begin
                 F_State = Wait_FSM;
 
         ReadMem :
-            if (r_Addr < 51)
+            if (r_Addr > 51)
                 F_State = Start;
             
             else if (i_Card2D)
@@ -181,9 +181,6 @@ begin
                 F_State = CardOK;
             else
                 F_State = Wait_FSM;
-
-        default :
-            F_State = Start;
     endcase
 end
 
