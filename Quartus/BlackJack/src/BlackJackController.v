@@ -48,25 +48,28 @@ reg vc_FirstTurn;   // Indica se estamos no primeiro turno (1) ou no segundo (0)
 reg [4:0] A_State, F_State;
 
 // Código de cada estado
-parameter   Start           = 5'b 00000, // estado 0
-            ShuffleDeck     = 5'b 00001, // estado 1
-            PlayerWith1Card = 5'b 00010, // estado 2
-            DealerWith1Card = 5'b 00011, // estado 3
-            PlayerWith2Card = 5'b 00100, // estado 4
-            DealerWith2Card = 5'b 00101, // estado 5
-            PlayerTurn      = 5'b 00110, // estado 6
-            DealerTurn      = 5'b 00111, // estado 7
-            PlayerHit       = 5'b 01000, // estado 8
-            DealerHit       = 5'b 01001, // estado 9
-            PlayerStay      = 5'b 01010, // estado 10
-            DealerStay      = 5'b 01011, // estado 11
-            CardToPlayer    = 5'b 01100, // estado 12
-            CardToDealer    = 5'b 01101, // estado 13
-            WinState        = 5'b 01110, // estado 14
-            TieState        = 5'b 01111, // estado 15
-            LoseState       = 5'b 10000, // estado 16
-            Measurement     = 5'b 10001, // estado 17
-            DealerBlackJack = 5'b 10010; // estado 18
+parameter   Start           = 5'b 00000,
+            ShuffleDeck     = 5'b 00001,
+            PlayerWith1Card = 5'b 00010,
+            D1_RstCardFSM   = 5'b 00011,         
+            DealerWith1Card = 5'b 00100,
+            P_RstCardFSM    = 5'b 00101,
+            PlayerWith2Card = 5'b 00110,
+            D2_RstCardFSM   = 5'b 00111,
+            DealerWith2Card = 5'b 01000,
+            PlayerTurn      = 5'b 01001,
+            DealerTurn      = 5'b 01010,
+            PlayerHit       = 5'b 01011,
+            DealerHit       = 5'b 01100,
+            PlayerStay      = 5'b 01101,
+            DealerStay      = 5'b 01110,
+            CardToPlayer    = 5'b 01111,
+            CardToDealer    = 5'b 10000,
+            WinState        = 5'b 10001,
+            TieState        = 5'b 10010,
+            LoseState       = 5'b 10011,
+            Measurement     = 5'b 10100,
+            DealerBlackJack = 5'b 10101;
 
 
 // Clocked block
@@ -112,17 +115,35 @@ begin
             if(!vi_CardOK)
                 F_State = PlayerWith1Card;
             else
+                F_State = D1_RstCardFSM;
+
+        D1_RstCardFSM :
+            if(vi_CardOK)
+                F_State = D1_RstCardFSM;
+            else
                 F_State = DealerWith1Card;
 
         DealerWith1Card :
             if(!vi_CardOK)
                 F_State = DealerWith1Card;
             else
+                F_State = P_RstCardFSM;
+
+        P_RstCardFSM :
+            if (vi_CardOK)
+                F_State = P_RstCardFSM;
+            else
                 F_State = PlayerWith2Card;
 
         PlayerWith2Card :
             if(!vi_CardOK)
                 F_State = PlayerWith2Card;
+            else
+                F_State = D2_RstCardFSM;
+
+        D2_RstCardFSM :
+            if (vi_CardOK)
+                F_State = D2_RstCardFSM;
             else
                 F_State = DealerWith2Card;
 
