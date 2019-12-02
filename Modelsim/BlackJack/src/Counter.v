@@ -19,7 +19,7 @@ module Counter
     reg [WIDTH-1:0] r_Count;
 
     // Incrementa o contador a partir do clock de 2 kHz se i_ActCounter
-    always @ (posedge clk_2K)
+    always @ (posedge clk_2K or posedge i_ResetNeg)
     begin
         o_RstOK <= 0;
 
