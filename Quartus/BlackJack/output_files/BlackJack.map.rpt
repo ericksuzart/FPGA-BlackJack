@@ -1,5 +1,5 @@
 Analysis & Synthesis report for BlackJack
-Thu Nov 28 16:20:19 2019
+Mon Dec  2 15:43:07 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -28,12 +28,12 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  20. Parameter Settings for User Entity Instance: BlackJackController:FSM_Global
  21. Parameter Settings for User Entity Instance: Debouncer:ResetButtonDebouncer|EdgeDetector:PosEdge
  22. Parameter Settings for User Entity Instance: Debouncer:ResetButtonDebouncer|EdgeDetector:NegEdge
- 23. Parameter Settings for User Entity Instance: PLL:inst|altpll:altpll_component
- 24. Parameter Settings for User Entity Instance: Debouncer:HitButtonDebouncer|EdgeDetector:PosEdge
- 25. Parameter Settings for User Entity Instance: Debouncer:HitButtonDebouncer|EdgeDetector:NegEdge
- 26. Parameter Settings for User Entity Instance: Debouncer:StayButtonDebouncer|EdgeDetector:PosEdge
- 27. Parameter Settings for User Entity Instance: Debouncer:StayButtonDebouncer|EdgeDetector:NegEdge
- 28. Parameter Settings for User Entity Instance: Counter:Contador
+ 23. Parameter Settings for User Entity Instance: Debouncer:HitButtonDebouncer|EdgeDetector:PosEdge
+ 24. Parameter Settings for User Entity Instance: Debouncer:HitButtonDebouncer|EdgeDetector:NegEdge
+ 25. Parameter Settings for User Entity Instance: Debouncer:StayButtonDebouncer|EdgeDetector:PosEdge
+ 26. Parameter Settings for User Entity Instance: Debouncer:StayButtonDebouncer|EdgeDetector:NegEdge
+ 27. Parameter Settings for User Entity Instance: Counter:Contador
+ 28. Parameter Settings for User Entity Instance: PLL:inst|altpll:altpll_component
  29. Parameter Settings for User Entity Instance: Shuffler:FSM_Embaralhador
  30. Parameter Settings for User Entity Instance: RAM:RAM|altsyncram:altsyncram_component
  31. Parameter Settings for User Entity Instance: CardAdder:FSM_CardAdder
@@ -121,16 +121,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 28 16:20:19 2019       ;
+; Analysis & Synthesis Status        ; Successful - Mon Dec  2 15:43:07 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; BlackJack                                   ;
 ; Top-level Entity Name              ; BlackJack                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 1,385                                       ;
-;     Total combinational functions  ; 1,342                                       ;
-;     Dedicated logic registers      ; 202                                         ;
-; Total registers                    ; 202                                         ;
-; Total pins                         ; 44                                          ;
+; Total logic elements               ; 1,367                                       ;
+;     Total combinational functions  ; 1,324                                       ;
+;     Dedicated logic registers      ; 193                                         ;
+; Total registers                    ; 193                                         ;
+; Total pins                         ; 39                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 256                                         ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -318,23 +318,23 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 1,385                    ;
+; Estimated Total logic elements              ; 1,367                    ;
 ;                                             ;                          ;
-; Total combinational functions               ; 1342                     ;
+; Total combinational functions               ; 1324                     ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 393                      ;
-;     -- 3 input functions                    ; 374                      ;
-;     -- <=2 input functions                  ; 575                      ;
+;     -- 4 input functions                    ; 388                      ;
+;     -- 3 input functions                    ; 369                      ;
+;     -- <=2 input functions                  ; 567                      ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 925                      ;
+;     -- normal mode                          ; 907                      ;
 ;     -- arithmetic mode                      ; 417                      ;
 ;                                             ;                          ;
-; Total registers                             ; 202                      ;
-;     -- Dedicated logic registers            ; 202                      ;
+; Total registers                             ; 193                      ;
+;     -- Dedicated logic registers            ; 193                      ;
 ;     -- I/O registers                        ; 0                        ;
 ;                                             ;                          ;
-; I/O pins                                    ; 44                       ;
+; I/O pins                                    ; 39                       ;
 ; Total memory bits                           ; 256                      ;
 ;                                             ;                          ;
 ; Embedded Multiplier 9-bit elements          ; 0                        ;
@@ -344,8 +344,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 144                      ;
-; Total fan-out                               ; 4450                     ;
-; Average fan-out                             ; 2.70                     ;
+; Total fan-out                               ; 4372                     ;
+; Average fan-out                             ; 2.72                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -354,20 +354,16 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                   ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |BlackJack                                                                                                                              ; 1342 (2)            ; 202 (0)                   ; 256         ; 0            ; 0       ; 0         ; 44   ; 0            ; |BlackJack                                                                                                                                                                                                                                                                                                                                            ; BlackJack                         ; work         ;
-;    |BlackJackController:FSM_Global|                                                                                                     ; 16 (16)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|BlackJackController:FSM_Global                                                                                                                                                                                                                                                                                                             ; BlackJackController               ; work         ;
-;    |CardAdder:FSM_CardAdder|                                                                                                            ; 79 (79)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|CardAdder:FSM_CardAdder                                                                                                                                                                                                                                                                                                                    ; CardAdder                         ; work         ;
+; |BlackJack                                                                                                                              ; 1324 (2)            ; 193 (0)                   ; 256         ; 0            ; 0       ; 0         ; 39   ; 0            ; |BlackJack                                                                                                                                                                                                                                                                                                                                            ; BlackJack                         ; work         ;
+;    |BlackJackController:FSM_Global|                                                                                                     ; 9 (9)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|BlackJackController:FSM_Global                                                                                                                                                                                                                                                                                                             ; BlackJackController               ; work         ;
+;    |CardAdder:FSM_CardAdder|                                                                                                            ; 75 (75)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|CardAdder:FSM_CardAdder                                                                                                                                                                                                                                                                                                                    ; CardAdder                         ; work         ;
 ;    |CardEvaluator:CardEvaluatorDecoder|                                                                                                 ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|CardEvaluator:CardEvaluatorDecoder                                                                                                                                                                                                                                                                                                         ; CardEvaluator                     ; work         ;
-;    |Counter:Contador|                                                                                                                   ; 18 (18)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Counter:Contador                                                                                                                                                                                                                                                                                                                           ; Counter                           ; work         ;
-;    |Debouncer:HitButtonDebouncer|                                                                                                       ; 3 (1)               ; 3 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Debouncer:HitButtonDebouncer                                                                                                                                                                                                                                                                                                               ; Debouncer                         ; work         ;
-;       |EdgeDetector:NegEdge|                                                                                                            ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Debouncer:HitButtonDebouncer|EdgeDetector:NegEdge                                                                                                                                                                                                                                                                                          ; EdgeDetector                      ; work         ;
-;    |Debouncer:ResetButtonDebouncer|                                                                                                     ; 3 (1)               ; 3 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Debouncer:ResetButtonDebouncer                                                                                                                                                                                                                                                                                                             ; Debouncer                         ; work         ;
+;    |Counter:Contador|                                                                                                                   ; 17 (17)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Counter:Contador                                                                                                                                                                                                                                                                                                                           ; Counter                           ; work         ;
+;    |Debouncer:ResetButtonDebouncer|                                                                                                     ; 2 (0)               ; 3 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Debouncer:ResetButtonDebouncer                                                                                                                                                                                                                                                                                                             ; Debouncer                         ; work         ;
 ;       |EdgeDetector:NegEdge|                                                                                                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Debouncer:ResetButtonDebouncer|EdgeDetector:NegEdge                                                                                                                                                                                                                                                                                        ; EdgeDetector                      ; work         ;
 ;       |EdgeDetector:PosEdge|                                                                                                            ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Debouncer:ResetButtonDebouncer|EdgeDetector:PosEdge                                                                                                                                                                                                                                                                                        ; EdgeDetector                      ; work         ;
-;    |Debouncer:StayButtonDebouncer|                                                                                                      ; 3 (1)               ; 3 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Debouncer:StayButtonDebouncer                                                                                                                                                                                                                                                                                                              ; Debouncer                         ; work         ;
-;       |EdgeDetector:NegEdge|                                                                                                            ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Debouncer:StayButtonDebouncer|EdgeDetector:NegEdge                                                                                                                                                                                                                                                                                         ; EdgeDetector                      ; work         ;
 ;    |MemAcessMux:MemAcessMux|                                                                                                            ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|MemAcessMux:MemAcessMux                                                                                                                                                                                                                                                                                                                    ; MemAcessMux                       ; work         ;
-;    |Nxt_Addr:NxtAddr_Decoder|                                                                                                           ; 938 (424)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder                                                                                                                                                                                                                                                                                                                   ; Nxt_Addr                          ; work         ;
+;    |Nxt_Addr:NxtAddr_Decoder|                                                                                                           ; 940 (424)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder                                                                                                                                                                                                                                                                                                                   ; Nxt_Addr                          ; work         ;
 ;       |lpm_divide:Mod0|                                                                                                                 ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod0                                                                                                                                                                                                                                                                                                   ; lpm_divide                        ; work         ;
 ;          |lpm_divide_m9m:auto_generated|                                                                                                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod0|lpm_divide_m9m:auto_generated                                                                                                                                                                                                                                                                     ; lpm_divide_m9m                    ; work         ;
 ;             |sign_div_unsign_bkh:divider|                                                                                               ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod0|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                                                                                                                                                                                                                                         ; sign_div_unsign_bkh               ; work         ;
@@ -572,18 +568,18 @@ refer to the applicable agreement for further details.
 ;          |lpm_divide_m9m:auto_generated|                                                                                                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod8|lpm_divide_m9m:auto_generated                                                                                                                                                                                                                                                                     ; lpm_divide_m9m                    ; work         ;
 ;             |sign_div_unsign_bkh:divider|                                                                                               ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod8|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                                                                                                                                                                                                                                         ; sign_div_unsign_bkh               ; work         ;
 ;                |alt_u_div_a4f:divider|                                                                                                  ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod8|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider                                                                                                                                                                                                                   ; alt_u_div_a4f                     ; work         ;
-;       |lpm_divide:Mod9|                                                                                                                 ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod9                                                                                                                                                                                                                                                                                                   ; lpm_divide                        ; work         ;
-;          |lpm_divide_m9m:auto_generated|                                                                                                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod9|lpm_divide_m9m:auto_generated                                                                                                                                                                                                                                                                     ; lpm_divide_m9m                    ; work         ;
-;             |sign_div_unsign_bkh:divider|                                                                                               ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod9|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                                                                                                                                                                                                                                         ; sign_div_unsign_bkh               ; work         ;
-;                |alt_u_div_a4f:divider|                                                                                                  ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod9|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider                                                                                                                                                                                                                   ; alt_u_div_a4f                     ; work         ;
+;       |lpm_divide:Mod9|                                                                                                                 ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod9                                                                                                                                                                                                                                                                                                   ; lpm_divide                        ; work         ;
+;          |lpm_divide_m9m:auto_generated|                                                                                                ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod9|lpm_divide_m9m:auto_generated                                                                                                                                                                                                                                                                     ; lpm_divide_m9m                    ; work         ;
+;             |sign_div_unsign_bkh:divider|                                                                                               ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod9|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                                                                                                                                                                                                                                         ; sign_div_unsign_bkh               ; work         ;
+;                |alt_u_div_a4f:divider|                                                                                                  ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod9|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider                                                                                                                                                                                                                   ; alt_u_div_a4f                     ; work         ;
 ;    |PLL:inst|                                                                                                                           ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|PLL:inst                                                                                                                                                                                                                                                                                                                                   ; PLL                               ; work         ;
 ;       |altpll:altpll_component|                                                                                                         ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|PLL:inst|altpll:altpll_component                                                                                                                                                                                                                                                                                                           ; altpll                            ; work         ;
 ;          |PLL_altpll:auto_generated|                                                                                                    ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|PLL:inst|altpll:altpll_component|PLL_altpll:auto_generated                                                                                                                                                                                                                                                                                 ; PLL_altpll                        ; work         ;
-;    |RAM:RAM|                                                                                                                            ; 49 (0)              ; 29 (0)                    ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|RAM:RAM                                                                                                                                                                                                                                                                                                                                    ; RAM                               ; work         ;
-;       |altsyncram:altsyncram_component|                                                                                                 ; 49 (0)              ; 29 (0)                    ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|RAM:RAM|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                                    ; altsyncram                        ; work         ;
-;          |altsyncram_55u3:auto_generated|                                                                                               ; 49 (0)              ; 29 (0)                    ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|RAM:RAM|altsyncram:altsyncram_component|altsyncram_55u3:auto_generated                                                                                                                                                                                                                                                                     ; altsyncram_55u3                   ; work         ;
+;    |RAM:RAM|                                                                                                                            ; 48 (0)              ; 29 (0)                    ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|RAM:RAM                                                                                                                                                                                                                                                                                                                                    ; RAM                               ; work         ;
+;       |altsyncram:altsyncram_component|                                                                                                 ; 48 (0)              ; 29 (0)                    ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|RAM:RAM|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                                    ; altsyncram                        ; work         ;
+;          |altsyncram_55u3:auto_generated|                                                                                               ; 48 (0)              ; 29 (0)                    ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|RAM:RAM|altsyncram:altsyncram_component|altsyncram_55u3:auto_generated                                                                                                                                                                                                                                                                     ; altsyncram_55u3                   ; work         ;
 ;             |altsyncram_thr2:altsyncram1|                                                                                               ; 0 (0)               ; 0 (0)                     ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|RAM:RAM|altsyncram:altsyncram_component|altsyncram_55u3:auto_generated|altsyncram_thr2:altsyncram1                                                                                                                                                                                                                                         ; altsyncram_thr2                   ; work         ;
-;             |sld_mod_ram_rom:mgl_prim2|                                                                                                 ; 49 (28)             ; 29 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|RAM:RAM|altsyncram:altsyncram_component|altsyncram_55u3:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                                                                           ; sld_mod_ram_rom                   ; work         ;
+;             |sld_mod_ram_rom:mgl_prim2|                                                                                                 ; 48 (27)             ; 29 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|RAM:RAM|altsyncram:altsyncram_component|altsyncram_55u3:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                                                                           ; sld_mod_ram_rom                   ; work         ;
 ;                |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|                                                                     ; 21 (21)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|RAM:RAM|altsyncram:altsyncram_component|altsyncram_55u3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr                                                                                                                                                                                        ; sld_rom_sr                        ; work         ;
 ;    |Shuffler:FSM_Embaralhador|                                                                                                          ; 47 (47)             ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Shuffler:FSM_Embaralhador                                                                                                                                                                                                                                                                                                                  ; Shuffler                          ; work         ;
 ;    |displaydecoder:PlayerHand|                                                                                                          ; 46 (46)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|displaydecoder:PlayerHand                                                                                                                                                                                                                                                                                                                  ; displaydecoder                    ; work         ;
@@ -667,31 +663,31 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |BlackJack|BlackJackController:FSM_Global|A_State                                                                                                                                                                                                                                                                                                                                                                                         ;
-+-------------------------+-------------------------+---------------------+-------------------+------------------+------------------+----------------------+----------------------+--------------------+--------------------+-------------------+-------------------+--------------------+--------------------+-------------------------+-------------------------+-------------------------+-------------------------+---------------------+---------------+
-; Name                    ; A_State.DealerBlackJack ; A_State.Measurement ; A_State.LoseState ; A_State.TieState ; A_State.WinState ; A_State.CardToDealer ; A_State.CardToPlayer ; A_State.DealerStay ; A_State.PlayerStay ; A_State.DealerHit ; A_State.PlayerHit ; A_State.DealerTurn ; A_State.PlayerTurn ; A_State.DealerWith2Card ; A_State.PlayerWith2Card ; A_State.DealerWith1Card ; A_State.PlayerWith1Card ; A_State.ShuffleDeck ; A_State.Start ;
-+-------------------------+-------------------------+---------------------+-------------------+------------------+------------------+----------------------+----------------------+--------------------+--------------------+-------------------+-------------------+--------------------+--------------------+-------------------------+-------------------------+-------------------------+-------------------------+---------------------+---------------+
-; A_State.Start           ; 0                       ; 0                   ; 0                 ; 0                ; 0                ; 0                    ; 0                    ; 0                  ; 0                  ; 0                 ; 0                 ; 0                  ; 0                  ; 0                       ; 0                       ; 0                       ; 0                       ; 0                   ; 0             ;
-; A_State.ShuffleDeck     ; 0                       ; 0                   ; 0                 ; 0                ; 0                ; 0                    ; 0                    ; 0                  ; 0                  ; 0                 ; 0                 ; 0                  ; 0                  ; 0                       ; 0                       ; 0                       ; 0                       ; 1                   ; 1             ;
-; A_State.PlayerWith1Card ; 0                       ; 0                   ; 0                 ; 0                ; 0                ; 0                    ; 0                    ; 0                  ; 0                  ; 0                 ; 0                 ; 0                  ; 0                  ; 0                       ; 0                       ; 0                       ; 1                       ; 0                   ; 1             ;
-; A_State.DealerWith1Card ; 0                       ; 0                   ; 0                 ; 0                ; 0                ; 0                    ; 0                    ; 0                  ; 0                  ; 0                 ; 0                 ; 0                  ; 0                  ; 0                       ; 0                       ; 1                       ; 0                       ; 0                   ; 1             ;
-; A_State.PlayerWith2Card ; 0                       ; 0                   ; 0                 ; 0                ; 0                ; 0                    ; 0                    ; 0                  ; 0                  ; 0                 ; 0                 ; 0                  ; 0                  ; 0                       ; 1                       ; 0                       ; 0                       ; 0                   ; 1             ;
-; A_State.DealerWith2Card ; 0                       ; 0                   ; 0                 ; 0                ; 0                ; 0                    ; 0                    ; 0                  ; 0                  ; 0                 ; 0                 ; 0                  ; 0                  ; 1                       ; 0                       ; 0                       ; 0                       ; 0                   ; 1             ;
-; A_State.PlayerTurn      ; 0                       ; 0                   ; 0                 ; 0                ; 0                ; 0                    ; 0                    ; 0                  ; 0                  ; 0                 ; 0                 ; 0                  ; 1                  ; 0                       ; 0                       ; 0                       ; 0                       ; 0                   ; 1             ;
-; A_State.DealerTurn      ; 0                       ; 0                   ; 0                 ; 0                ; 0                ; 0                    ; 0                    ; 0                  ; 0                  ; 0                 ; 0                 ; 1                  ; 0                  ; 0                       ; 0                       ; 0                       ; 0                       ; 0                   ; 1             ;
-; A_State.PlayerHit       ; 0                       ; 0                   ; 0                 ; 0                ; 0                ; 0                    ; 0                    ; 0                  ; 0                  ; 0                 ; 1                 ; 0                  ; 0                  ; 0                       ; 0                       ; 0                       ; 0                       ; 0                   ; 1             ;
-; A_State.DealerHit       ; 0                       ; 0                   ; 0                 ; 0                ; 0                ; 0                    ; 0                    ; 0                  ; 0                  ; 1                 ; 0                 ; 0                  ; 0                  ; 0                       ; 0                       ; 0                       ; 0                       ; 0                   ; 1             ;
-; A_State.PlayerStay      ; 0                       ; 0                   ; 0                 ; 0                ; 0                ; 0                    ; 0                    ; 0                  ; 1                  ; 0                 ; 0                 ; 0                  ; 0                  ; 0                       ; 0                       ; 0                       ; 0                       ; 0                   ; 1             ;
-; A_State.DealerStay      ; 0                       ; 0                   ; 0                 ; 0                ; 0                ; 0                    ; 0                    ; 1                  ; 0                  ; 0                 ; 0                 ; 0                  ; 0                  ; 0                       ; 0                       ; 0                       ; 0                       ; 0                   ; 1             ;
-; A_State.CardToPlayer    ; 0                       ; 0                   ; 0                 ; 0                ; 0                ; 0                    ; 1                    ; 0                  ; 0                  ; 0                 ; 0                 ; 0                  ; 0                  ; 0                       ; 0                       ; 0                       ; 0                       ; 0                   ; 1             ;
-; A_State.CardToDealer    ; 0                       ; 0                   ; 0                 ; 0                ; 0                ; 1                    ; 0                    ; 0                  ; 0                  ; 0                 ; 0                 ; 0                  ; 0                  ; 0                       ; 0                       ; 0                       ; 0                       ; 0                   ; 1             ;
-; A_State.WinState        ; 0                       ; 0                   ; 0                 ; 0                ; 1                ; 0                    ; 0                    ; 0                  ; 0                  ; 0                 ; 0                 ; 0                  ; 0                  ; 0                       ; 0                       ; 0                       ; 0                       ; 0                   ; 1             ;
-; A_State.TieState        ; 0                       ; 0                   ; 0                 ; 1                ; 0                ; 0                    ; 0                    ; 0                  ; 0                  ; 0                 ; 0                 ; 0                  ; 0                  ; 0                       ; 0                       ; 0                       ; 0                       ; 0                   ; 1             ;
-; A_State.LoseState       ; 0                       ; 0                   ; 1                 ; 0                ; 0                ; 0                    ; 0                    ; 0                  ; 0                  ; 0                 ; 0                 ; 0                  ; 0                  ; 0                       ; 0                       ; 0                       ; 0                       ; 0                   ; 1             ;
-; A_State.Measurement     ; 0                       ; 1                   ; 0                 ; 0                ; 0                ; 0                    ; 0                    ; 0                  ; 0                  ; 0                 ; 0                 ; 0                  ; 0                  ; 0                       ; 0                       ; 0                       ; 0                       ; 0                   ; 1             ;
-; A_State.DealerBlackJack ; 1                       ; 0                   ; 0                 ; 0                ; 0                ; 0                    ; 0                    ; 0                  ; 0                  ; 0                 ; 0                 ; 0                  ; 0                  ; 0                       ; 0                       ; 0                       ; 0                       ; 0                   ; 1             ;
-+-------------------------+-------------------------+---------------------+-------------------+------------------+------------------+----------------------+----------------------+--------------------+--------------------+-------------------+-------------------+--------------------+--------------------+-------------------------+-------------------------+-------------------------+-------------------------+---------------------+---------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |BlackJack|BlackJackController:FSM_Global|A_State                                                                                                                                                                                                                                                                                                                                                                                       ;
++-------------------------+-------------------------+---------------------+-------------------+------------------+------------------+----------------------+----------------------+--------------------+--------------------+-------------------+-------------------+-----------------------+--------------------+----------------------+-------------------------+-----------------------+-------------------------+---------------------+---------------+
+; Name                    ; A_State.DealerBlackJack ; A_State.Measurement ; A_State.LoseState ; A_State.TieState ; A_State.WinState ; A_State.CardToDealer ; A_State.CardToPlayer ; A_State.DealerStay ; A_State.PlayerStay ; A_State.DealerHit ; A_State.PlayerHit ; A_State.D2_RstCardFSM ; A_State.PlayerTurn ; A_State.P_RstCardFSM ; A_State.PlayerWith2Card ; A_State.D1_RstCardFSM ; A_State.PlayerWith1Card ; A_State.ShuffleDeck ; A_State.Start ;
++-------------------------+-------------------------+---------------------+-------------------+------------------+------------------+----------------------+----------------------+--------------------+--------------------+-------------------+-------------------+-----------------------+--------------------+----------------------+-------------------------+-----------------------+-------------------------+---------------------+---------------+
+; A_State.Start           ; 0                       ; 0                   ; 0                 ; 0                ; 0                ; 0                    ; 0                    ; 0                  ; 0                  ; 0                 ; 0                 ; 0                     ; 0                  ; 0                    ; 0                       ; 0                     ; 0                       ; 0                   ; 0             ;
+; A_State.ShuffleDeck     ; 0                       ; 0                   ; 0                 ; 0                ; 0                ; 0                    ; 0                    ; 0                  ; 0                  ; 0                 ; 0                 ; 0                     ; 0                  ; 0                    ; 0                       ; 0                     ; 0                       ; 1                   ; 1             ;
+; A_State.PlayerWith1Card ; 0                       ; 0                   ; 0                 ; 0                ; 0                ; 0                    ; 0                    ; 0                  ; 0                  ; 0                 ; 0                 ; 0                     ; 0                  ; 0                    ; 0                       ; 0                     ; 1                       ; 0                   ; 1             ;
+; A_State.D1_RstCardFSM   ; 0                       ; 0                   ; 0                 ; 0                ; 0                ; 0                    ; 0                    ; 0                  ; 0                  ; 0                 ; 0                 ; 0                     ; 0                  ; 0                    ; 0                       ; 1                     ; 0                       ; 0                   ; 1             ;
+; A_State.PlayerWith2Card ; 0                       ; 0                   ; 0                 ; 0                ; 0                ; 0                    ; 0                    ; 0                  ; 0                  ; 0                 ; 0                 ; 0                     ; 0                  ; 0                    ; 1                       ; 0                     ; 0                       ; 0                   ; 1             ;
+; A_State.P_RstCardFSM    ; 0                       ; 0                   ; 0                 ; 0                ; 0                ; 0                    ; 0                    ; 0                  ; 0                  ; 0                 ; 0                 ; 0                     ; 0                  ; 1                    ; 0                       ; 0                     ; 0                       ; 0                   ; 1             ;
+; A_State.PlayerTurn      ; 0                       ; 0                   ; 0                 ; 0                ; 0                ; 0                    ; 0                    ; 0                  ; 0                  ; 0                 ; 0                 ; 0                     ; 1                  ; 0                    ; 0                       ; 0                     ; 0                       ; 0                   ; 1             ;
+; A_State.D2_RstCardFSM   ; 0                       ; 0                   ; 0                 ; 0                ; 0                ; 0                    ; 0                    ; 0                  ; 0                  ; 0                 ; 0                 ; 1                     ; 0                  ; 0                    ; 0                       ; 0                     ; 0                       ; 0                   ; 1             ;
+; A_State.PlayerHit       ; 0                       ; 0                   ; 0                 ; 0                ; 0                ; 0                    ; 0                    ; 0                  ; 0                  ; 0                 ; 1                 ; 0                     ; 0                  ; 0                    ; 0                       ; 0                     ; 0                       ; 0                   ; 1             ;
+; A_State.DealerHit       ; 0                       ; 0                   ; 0                 ; 0                ; 0                ; 0                    ; 0                    ; 0                  ; 0                  ; 1                 ; 0                 ; 0                     ; 0                  ; 0                    ; 0                       ; 0                     ; 0                       ; 0                   ; 1             ;
+; A_State.PlayerStay      ; 0                       ; 0                   ; 0                 ; 0                ; 0                ; 0                    ; 0                    ; 0                  ; 1                  ; 0                 ; 0                 ; 0                     ; 0                  ; 0                    ; 0                       ; 0                     ; 0                       ; 0                   ; 1             ;
+; A_State.DealerStay      ; 0                       ; 0                   ; 0                 ; 0                ; 0                ; 0                    ; 0                    ; 1                  ; 0                  ; 0                 ; 0                 ; 0                     ; 0                  ; 0                    ; 0                       ; 0                     ; 0                       ; 0                   ; 1             ;
+; A_State.CardToPlayer    ; 0                       ; 0                   ; 0                 ; 0                ; 0                ; 0                    ; 1                    ; 0                  ; 0                  ; 0                 ; 0                 ; 0                     ; 0                  ; 0                    ; 0                       ; 0                     ; 0                       ; 0                   ; 1             ;
+; A_State.CardToDealer    ; 0                       ; 0                   ; 0                 ; 0                ; 0                ; 1                    ; 0                    ; 0                  ; 0                  ; 0                 ; 0                 ; 0                     ; 0                  ; 0                    ; 0                       ; 0                     ; 0                       ; 0                   ; 1             ;
+; A_State.WinState        ; 0                       ; 0                   ; 0                 ; 0                ; 1                ; 0                    ; 0                    ; 0                  ; 0                  ; 0                 ; 0                 ; 0                     ; 0                  ; 0                    ; 0                       ; 0                     ; 0                       ; 0                   ; 1             ;
+; A_State.TieState        ; 0                       ; 0                   ; 0                 ; 1                ; 0                ; 0                    ; 0                    ; 0                  ; 0                  ; 0                 ; 0                 ; 0                     ; 0                  ; 0                    ; 0                       ; 0                     ; 0                       ; 0                   ; 1             ;
+; A_State.LoseState       ; 0                       ; 0                   ; 1                 ; 0                ; 0                ; 0                    ; 0                    ; 0                  ; 0                  ; 0                 ; 0                 ; 0                     ; 0                  ; 0                    ; 0                       ; 0                     ; 0                       ; 0                   ; 1             ;
+; A_State.Measurement     ; 0                       ; 1                   ; 0                 ; 0                ; 0                ; 0                    ; 0                    ; 0                  ; 0                  ; 0                 ; 0                 ; 0                     ; 0                  ; 0                    ; 0                       ; 0                     ; 0                       ; 0                   ; 1             ;
+; A_State.DealerBlackJack ; 1                       ; 0                   ; 0                 ; 0                ; 0                ; 0                    ; 0                    ; 0                  ; 0                  ; 0                 ; 0                 ; 0                     ; 0                  ; 0                    ; 0                       ; 0                     ; 0                       ; 0                   ; 1             ;
++-------------------------+-------------------------+---------------------+-------------------+------------------+------------------+----------------------+----------------------+--------------------+--------------------+-------------------+-------------------+-----------------------+--------------------+----------------------+-------------------------+-----------------------+-------------------------+---------------------+---------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------+
@@ -711,7 +707,6 @@ Encoding Type:  One-Hot
 ; CardAdder:FSM_CardAdder|F_State.PlusTenDealer_404   ; CardAdder:FSM_CardAdder|Selector33      ; yes                    ;
 ; CardEvaluator:CardEvaluatorDecoder|o_Value[2]       ; CardEvaluator:CardEvaluatorDecoder|Mux4 ; yes                    ;
 ; CardEvaluator:CardEvaluatorDecoder|o_Value[3]       ; CardEvaluator:CardEvaluatorDecoder|Mux4 ; yes                    ;
-; CardAdder:FSM_CardAdder|F_State.CardOK_378          ; CardAdder:FSM_CardAdder|Selector33      ; yes                    ;
 ; Shuffler:FSM_Embaralhador|o_Data[0]                 ; Shuffler:FSM_Embaralhador|WideOr4       ; yes                    ;
 ; Shuffler:FSM_Embaralhador|o_Address[0]              ; Shuffler:FSM_Embaralhador|o_Address     ; yes                    ;
 ; Shuffler:FSM_Embaralhador|o_Address[1]              ; Shuffler:FSM_Embaralhador|o_Address     ; yes                    ;
@@ -729,6 +724,7 @@ Encoding Type:  One-Hot
 ; Nxt_Addr:NxtAddr_Decoder|Addr_j[3]                  ; Nxt_Addr:NxtAddr_Decoder|Mux6           ; yes                    ;
 ; Nxt_Addr:NxtAddr_Decoder|Addr_j[4]                  ; Nxt_Addr:NxtAddr_Decoder|Mux6           ; yes                    ;
 ; Nxt_Addr:NxtAddr_Decoder|Addr_j[5]                  ; Nxt_Addr:NxtAddr_Decoder|Mux6           ; yes                    ;
+; CardAdder:FSM_CardAdder|F_State.CardOK_378          ; CardAdder:FSM_CardAdder|Selector33      ; yes                    ;
 ; CardAdder:FSM_CardAdder|F_State.Wait_FSM_502        ; CardAdder:FSM_CardAdder|Selector33      ; yes                    ;
 ; CardAdder:FSM_CardAdder|F_State.Start_515           ; CardAdder:FSM_CardAdder|Selector33      ; yes                    ;
 ; Number of user-specified and inferred latches = 32  ;                                         ;                        ;
@@ -741,13 +737,15 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +---------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------+
 ; Register name                                                                                                                   ; Reason for Removal                                                      ;
 +---------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------+
-; Counter:Contador|o_RstOK                                                                                                        ; Stuck at VCC due to stuck port data_in                                  ;
-; Debouncer:StayButtonDebouncer|EdgeDetector:PosEdge|sig_dly                                                                      ; Merged with Debouncer:StayButtonDebouncer|EdgeDetector:NegEdge|sig_dly  ;
-; Debouncer:HitButtonDebouncer|EdgeDetector:PosEdge|sig_dly                                                                       ; Merged with Debouncer:HitButtonDebouncer|EdgeDetector:NegEdge|sig_dly   ;
 ; Debouncer:ResetButtonDebouncer|EdgeDetector:PosEdge|sig_dly                                                                     ; Merged with Debouncer:ResetButtonDebouncer|EdgeDetector:NegEdge|sig_dly ;
-; BlackJackController:FSM_Global|vc_FirstTurn                                                                                     ; Stuck at VCC due to stuck port data_in                                  ;
+; Debouncer:HitButtonDebouncer|EdgeDetector:PosEdge|sig_dly                                                                       ; Lost fanout                                                             ;
+; Debouncer:HitButtonDebouncer|r_ButtonSync                                                                                       ; Lost fanout                                                             ;
+; Debouncer:HitButtonDebouncer|r_Intermediario                                                                                    ; Lost fanout                                                             ;
+; Debouncer:StayButtonDebouncer|EdgeDetector:PosEdge|sig_dly                                                                      ; Lost fanout                                                             ;
+; Debouncer:StayButtonDebouncer|r_ButtonSync                                                                                      ; Lost fanout                                                             ;
+; Debouncer:StayButtonDebouncer|r_Intermediario                                                                                   ; Lost fanout                                                             ;
+; BlackJackController:FSM_Global|vc_FirstTurn                                                                                     ; Lost fanout                                                             ;
 ; BlackJackController:FSM_Global|vc_HitPlayer                                                                                     ; Lost fanout                                                             ;
-; BlackJackController:FSM_Global|A_State.DealerTurn                                                                               ; Lost fanout                                                             ;
 ; BlackJackController:FSM_Global|A_State.Measurement                                                                              ; Lost fanout                                                             ;
 ; BlackJackController:FSM_Global|A_State.DealerBlackJack                                                                          ; Lost fanout                                                             ;
 ; CardAdder:FSM_CardAdder|A_State~2                                                                                               ; Lost fanout                                                             ;
@@ -765,29 +763,35 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; BlackJackController:FSM_Global|A_State~6                                                                                        ; Lost fanout                                                             ;
 ; BlackJackController:FSM_Global|A_State.TieState                                                                                 ; Merged with BlackJackController:FSM_Global|A_State.LoseState            ;
 ; BlackJackController:FSM_Global|A_State.WinState                                                                                 ; Merged with BlackJackController:FSM_Global|A_State.LoseState            ;
+; BlackJackController:FSM_Global|A_State.PlayerHit                                                                                ; Merged with BlackJackController:FSM_Global|A_State.DealerHit            ;
+; BlackJackController:FSM_Global|A_State.PlayerStay                                                                               ; Merged with BlackJackController:FSM_Global|A_State.DealerStay           ;
+; BlackJackController:FSM_Global|A_State.PlayerTurn                                                                               ; Merged with BlackJackController:FSM_Global|A_State.DealerStay           ;
+; BlackJackController:FSM_Global|A_State.CardToPlayer                                                                             ; Merged with BlackJackController:FSM_Global|A_State.CardToDealer         ;
 ; BlackJackController:FSM_Global|A_State.LoseState                                                                                ; Stuck at GND due to stuck port data_in                                  ;
 ; BlackJackController:FSM_Global|A_State.DealerStay                                                                               ; Stuck at GND due to stuck port data_in                                  ;
 ; BlackJackController:FSM_Global|A_State.CardToDealer                                                                             ; Stuck at GND due to stuck port data_in                                  ;
 ; BlackJackController:FSM_Global|A_State.DealerHit                                                                                ; Stuck at GND due to stuck port data_in                                  ;
 ; CardAdder:FSM_CardAdder|vc_HndD[0..5]                                                                                           ; Lost fanout                                                             ;
 ; RAM:RAM|altsyncram:altsyncram_component|altsyncram_55u3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[2] ; Stuck at GND due to stuck port data_in                                  ;
-; Total Number of Removed Registers = 35                                                                                          ;                                                                         ;
+; Total Number of Removed Registers = 41                                                                                          ;                                                                         ;
 +---------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                       ;
-+-----------------------------------------------------+---------------------------+---------------------------------------------------------------------------------+
-; Register name                                       ; Reason for Removal        ; Registers Removed due to This Register                                          ;
-+-----------------------------------------------------+---------------------------+---------------------------------------------------------------------------------+
-; BlackJackController:FSM_Global|A_State.LoseState    ; Stuck at GND              ; CardAdder:FSM_CardAdder|vc_HndD[0], CardAdder:FSM_CardAdder|vc_HndD[1],         ;
-;                                                     ; due to stuck port data_in ; CardAdder:FSM_CardAdder|vc_HndD[2], CardAdder:FSM_CardAdder|vc_HndD[3],         ;
-;                                                     ;                           ; CardAdder:FSM_CardAdder|vc_HndD[4]                                              ;
-; Counter:Contador|o_RstOK                            ; Stuck at VCC              ; BlackJackController:FSM_Global|vc_FirstTurn,                                    ;
-;                                                     ; due to stuck port data_in ; BlackJackController:FSM_Global|vc_HitPlayer, CardAdder:FSM_CardAdder|vc_HndD[5] ;
-; BlackJackController:FSM_Global|A_State.CardToDealer ; Stuck at GND              ; BlackJackController:FSM_Global|A_State.DealerHit                                ;
-;                                                     ; due to stuck port data_in ;                                                                                 ;
-+-----------------------------------------------------+---------------------------+---------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                      ;
++------------------------------------------------------------+---------------------------+-------------------------------------------------------------------------+
+; Register name                                              ; Reason for Removal        ; Registers Removed due to This Register                                  ;
++------------------------------------------------------------+---------------------------+-------------------------------------------------------------------------+
+; BlackJackController:FSM_Global|A_State.LoseState           ; Stuck at GND              ; CardAdder:FSM_CardAdder|vc_HndD[0], CardAdder:FSM_CardAdder|vc_HndD[1], ;
+;                                                            ; due to stuck port data_in ; CardAdder:FSM_CardAdder|vc_HndD[2], CardAdder:FSM_CardAdder|vc_HndD[3], ;
+;                                                            ;                           ; CardAdder:FSM_CardAdder|vc_HndD[4], CardAdder:FSM_CardAdder|vc_HndD[5]  ;
+; Debouncer:HitButtonDebouncer|EdgeDetector:PosEdge|sig_dly  ; Lost Fanouts              ; Debouncer:HitButtonDebouncer|r_ButtonSync,                              ;
+;                                                            ;                           ; Debouncer:HitButtonDebouncer|r_Intermediario                            ;
+; Debouncer:StayButtonDebouncer|EdgeDetector:PosEdge|sig_dly ; Lost Fanouts              ; Debouncer:StayButtonDebouncer|r_ButtonSync,                             ;
+;                                                            ;                           ; Debouncer:StayButtonDebouncer|r_Intermediario                           ;
+; BlackJackController:FSM_Global|A_State.CardToDealer        ; Stuck at GND              ; BlackJackController:FSM_Global|A_State.DealerHit                        ;
+;                                                            ; due to stuck port data_in ;                                                                         ;
++------------------------------------------------------------+---------------------------+-------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -795,12 +799,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 202   ;
-; Number of registers using Synchronous Clear  ; 48    ;
+; Total registers                              ; 193   ;
+; Number of registers using Synchronous Clear  ; 36    ;
 ; Number of registers using Synchronous Load   ; 21    ;
-; Number of registers using Asynchronous Clear ; 50    ;
+; Number of registers using Asynchronous Clear ; 62    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 125   ;
+; Number of registers using Clock Enable       ; 122   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -810,15 +814,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Inverted Register                                                                                                                                                                                                                                                                                                               ; Fan out ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; Debouncer:ResetButtonDebouncer|r_ButtonSync                                                                                                                                                                                                                                                                                     ; 28      ;
-; Debouncer:HitButtonDebouncer|r_ButtonSync                                                                                                                                                                                                                                                                                       ; 4       ;
-; Debouncer:StayButtonDebouncer|r_ButtonSync                                                                                                                                                                                                                                                                                      ; 5       ;
-; Debouncer:ResetButtonDebouncer|r_Intermediario                                                                                                                                                                                                                                                                                  ; 1       ;
-; Debouncer:HitButtonDebouncer|r_Intermediario                                                                                                                                                                                                                                                                                    ; 1       ;
-; Debouncer:StayButtonDebouncer|r_Intermediario                                                                                                                                                                                                                                                                                   ; 1       ;
 ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[2] ; 2       ;
 ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[1] ; 3       ;
-; Total number of inverted registers = 8                                                                                                                                                                                                                                                                                          ;         ;
+; Total number of inverted registers = 2                                                                                                                                                                                                                                                                                          ;         ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -827,19 +825,18 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |BlackJack|Shuffler:FSM_Embaralhador|vo_Addr_I[1]                                                                                                                              ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |BlackJack|RAM:RAM|altsyncram:altsyncram_component|altsyncram_55u3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[2]                                     ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |BlackJack|RAM:RAM|altsyncram:altsyncram_component|altsyncram_55u3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[3]                                                ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |BlackJack|RAM:RAM|altsyncram:altsyncram_component|altsyncram_55u3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[3]                                                ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |BlackJack|Shuffler:FSM_Embaralhador|vo_Addr_I[2]                                                                                                                              ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |BlackJack|RAM:RAM|altsyncram:altsyncram_component|altsyncram_55u3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[0]                                     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |BlackJack|RAM:RAM|altsyncram:altsyncram_component|altsyncram_55u3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[0]                                                ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |BlackJack|RAM:RAM|altsyncram:altsyncram_component|altsyncram_55u3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[5]                                                ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |BlackJack|CardAdder:FSM_CardAdder|r_Addr[2]                                                                                                                                   ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |BlackJack|RAM:RAM|altsyncram:altsyncram_component|altsyncram_55u3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[3] ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |BlackJack|CardAdder:FSM_CardAdder|vc_HndD[1]                                                                                                                                  ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |BlackJack|CardAdder:FSM_CardAdder|vc_HndP[3]                                                                                                                                  ;
-; 5:1                ; 12 bits   ; 36 LEs        ; 12 LEs               ; 24 LEs                 ; Yes        ; |BlackJack|Counter:Contador|r_Count[10]                                                                                                                                        ;
-; 26:1               ; 4 bits    ; 68 LEs        ; 48 LEs               ; 20 LEs                 ; Yes        ; |BlackJack|RAM:RAM|altsyncram:altsyncram_component|altsyncram_55u3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[3]      ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |BlackJack|CardAdder:FSM_CardAdder|F_State.Value2Dealer                                                                                                                        ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |BlackJack|BlackJackController:FSM_Global|F_State                                                                                                                              ;
-; 52:1               ; 6 bits    ; 204 LEs       ; 204 LEs              ; 0 LEs                  ; No         ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|Mux0                                                                                                                                       ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |BlackJack|Counter:Contador|r_Count[8]                                                                                                                                         ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |BlackJack|CardAdder:FSM_CardAdder|vc_HndD[5]                                                                                                                                  ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |BlackJack|CardAdder:FSM_CardAdder|vc_HndP[5]                                                                                                                                  ;
+; 26:1               ; 4 bits    ; 68 LEs        ; 48 LEs               ; 20 LEs                 ; Yes        ; |BlackJack|RAM:RAM|altsyncram:altsyncram_component|altsyncram_55u3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[0]      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |BlackJack|CardAdder:FSM_CardAdder|F_State.Value2Player                                                                                                                        ;
+; 52:1               ; 6 bits    ; 204 LEs       ; 204 LEs              ; 0 LEs                  ; No         ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|Mux1                                                                                                                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -860,8 +857,11 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Start           ; 00000 ; Unsigned Binary                                   ;
 ; ShuffleDeck     ; 00001 ; Unsigned Binary                                   ;
 ; PlayerWith1Card ; 00010 ; Unsigned Binary                                   ;
+; D1_RstCardFSM   ; 00011 ; Unsigned Binary                                   ;
 ; DealerWith1Card ; 00011 ; Unsigned Binary                                   ;
+; P_RstCardFSM    ; 00101 ; Unsigned Binary                                   ;
 ; PlayerWith2Card ; 00100 ; Unsigned Binary                                   ;
+; D2_RstCardFSM   ; 00111 ; Unsigned Binary                                   ;
 ; DealerWith2Card ; 00101 ; Unsigned Binary                                   ;
 ; PlayerTurn      ; 00110 ; Unsigned Binary                                   ;
 ; DealerTurn      ; 00111 ; Unsigned Binary                                   ;
@@ -897,6 +897,56 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------------------------------------------+
 ; Type           ; 0     ; Signed Integer                                                          ;
 +----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Debouncer:HitButtonDebouncer|EdgeDetector:PosEdge ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; Type           ; 1     ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Debouncer:HitButtonDebouncer|EdgeDetector:NegEdge ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; Type           ; 0     ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Debouncer:StayButtonDebouncer|EdgeDetector:PosEdge ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; Type           ; 1     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Debouncer:StayButtonDebouncer|EdgeDetector:NegEdge ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; Type           ; 0     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Counter:Contador ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; WIDTH          ; 12    ; Unsigned Integer                     ;
++----------------+-------+--------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1271,56 +1321,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; AUTO_CASCADE_CHAINS           ; ON                    ; AUTO_CASCADE          ;
 ; IGNORE_CASCADE_BUFFERS        ; OFF                   ; IGNORE_CASCADE        ;
 +-------------------------------+-----------------------+-----------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Debouncer:HitButtonDebouncer|EdgeDetector:PosEdge ;
-+----------------+-------+-----------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                  ;
-+----------------+-------+-----------------------------------------------------------------------+
-; Type           ; 1     ; Signed Integer                                                        ;
-+----------------+-------+-----------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Debouncer:HitButtonDebouncer|EdgeDetector:NegEdge ;
-+----------------+-------+-----------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                  ;
-+----------------+-------+-----------------------------------------------------------------------+
-; Type           ; 0     ; Signed Integer                                                        ;
-+----------------+-------+-----------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Debouncer:StayButtonDebouncer|EdgeDetector:PosEdge ;
-+----------------+-------+------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                   ;
-+----------------+-------+------------------------------------------------------------------------+
-; Type           ; 1     ; Signed Integer                                                         ;
-+----------------+-------+------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Debouncer:StayButtonDebouncer|EdgeDetector:NegEdge ;
-+----------------+-------+------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                   ;
-+----------------+-------+------------------------------------------------------------------------+
-; Type           ; 0     ; Signed Integer                                                         ;
-+----------------+-------+------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Counter:Contador ;
-+----------------+-------+--------------------------------------+
-; Parameter Name ; Value ; Type                                 ;
-+----------------+-------+--------------------------------------+
-; WIDTH          ; 12    ; Unsigned Integer                     ;
-+----------------+-------+--------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -2675,31 +2675,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 71                          ;
-; cycloneiii_ff         ; 115                         ;
+; boundary_port         ; 66                          ;
+; cycloneiii_ff         ; 106                         ;
 ;     CLR               ; 4                           ;
-;     ENA               ; 19                          ;
-;     ENA CLR           ; 6                           ;
+;     ENA               ; 16                          ;
+;     ENA CLR           ; 18                          ;
 ;     ENA CLR SLD       ; 6                           ;
-;     ENA SCLR          ; 29                          ;
+;     ENA SCLR          ; 17                          ;
 ;     ENA SCLR SLD      ; 5                           ;
 ;     SCLR              ; 2                           ;
-;     plain             ; 44                          ;
-; cycloneiii_lcell_comb ; 1224                        ;
+;     plain             ; 38                          ;
+; cycloneiii_lcell_comb ; 1203                        ;
 ;     arith             ; 409                         ;
 ;         2 data inputs ; 364                         ;
 ;         3 data inputs ; 45                          ;
-;     normal            ; 815                         ;
+;     normal            ; 794                         ;
 ;         0 data inputs ; 54                          ;
-;         1 data inputs ; 82                          ;
-;         2 data inputs ; 42                          ;
-;         3 data inputs ; 298                         ;
-;         4 data inputs ; 339                         ;
+;         1 data inputs ; 73                          ;
+;         2 data inputs ; 40                          ;
+;         3 data inputs ; 293                         ;
+;         4 data inputs ; 334                         ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 4                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 10.50                       ;
-; Average LUT depth     ; 7.21                        ;
+; Average LUT depth     ; 7.31                        ;
 +-----------------------+-----------------------------+
 
 
@@ -2718,7 +2718,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Nov 28 16:19:54 2019
+    Info: Processing started: Mon Dec  2 15:42:39 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off BlackJack -c BlackJack
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -2752,31 +2752,39 @@ Info (12021): Found 2 design units, including 1 entities, in source file RAM.vhd
     Info (12023): Found entity 1: RAM File: /home/erick/ENGC40/Quartus/BlackJack/RAM.vhd Line: 42
 Info (12127): Elaborating entity "BlackJack" for the top level hierarchy
 Info (12128): Elaborating entity "BlackJackController" for hierarchy "BlackJackController:FSM_Global"
-Warning (10240): Verilog HDL Always Construct warning at BlackJackController.v(98): inferring latch(es) for variable "F_State", which holds its previous value in one or more paths through the always construct File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Warning (10270): Verilog HDL Case Statement warning at BlackJackController.v(260): incomplete case statement has no default case item File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 260
-Info (10264): Verilog HDL Case Statement information at BlackJackController.v(260): all case item expressions in this case statement are onehot File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 260
-Info (10041): Inferred latch for "F_State.DealerBlackJack" at BlackJackController.v(98) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Info (10041): Inferred latch for "F_State.Measurement" at BlackJackController.v(98) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Info (10041): Inferred latch for "F_State.LoseState" at BlackJackController.v(98) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Info (10041): Inferred latch for "F_State.TieState" at BlackJackController.v(98) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Info (10041): Inferred latch for "F_State.WinState" at BlackJackController.v(98) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Info (10041): Inferred latch for "F_State.CardToDealer" at BlackJackController.v(98) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Info (10041): Inferred latch for "F_State.CardToPlayer" at BlackJackController.v(98) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Info (10041): Inferred latch for "F_State.DealerStay" at BlackJackController.v(98) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Info (10041): Inferred latch for "F_State.PlayerStay" at BlackJackController.v(98) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Info (10041): Inferred latch for "F_State.DealerHit" at BlackJackController.v(98) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Info (10041): Inferred latch for "F_State.PlayerHit" at BlackJackController.v(98) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Info (10041): Inferred latch for "F_State.DealerTurn" at BlackJackController.v(98) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Info (10041): Inferred latch for "F_State.PlayerTurn" at BlackJackController.v(98) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Info (10041): Inferred latch for "F_State.DealerWith2Card" at BlackJackController.v(98) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Info (10041): Inferred latch for "F_State.PlayerWith2Card" at BlackJackController.v(98) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Info (10041): Inferred latch for "F_State.DealerWith1Card" at BlackJackController.v(98) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Info (10041): Inferred latch for "F_State.PlayerWith1Card" at BlackJackController.v(98) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Info (10041): Inferred latch for "F_State.ShuffleDeck" at BlackJackController.v(98) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Info (10041): Inferred latch for "F_State.Start" at BlackJackController.v(98) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
+Warning (10272): Verilog HDL Case Statement warning at BlackJackController.v(126): case item expression covers a value already covered by a previous case item File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 126
+Warning (10272): Verilog HDL Case Statement warning at BlackJackController.v(150): case item expression covers a value already covered by a previous case item File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 150
+Warning (10272): Verilog HDL Case Statement warning at BlackJackController.v(166): case item expression covers a value already covered by a previous case item File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 166
+Warning (10240): Verilog HDL Always Construct warning at BlackJackController.v(101): inferring latch(es) for variable "F_State", which holds its previous value in one or more paths through the always construct File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Warning (10270): Verilog HDL Case Statement warning at BlackJackController.v(281): incomplete case statement has no default case item File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 281
+Info (10264): Verilog HDL Case Statement information at BlackJackController.v(281): all case item expressions in this case statement are onehot File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 281
+Info (10041): Inferred latch for "F_State.DealerBlackJack" at BlackJackController.v(101) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Info (10041): Inferred latch for "F_State.Measurement" at BlackJackController.v(101) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Info (10041): Inferred latch for "F_State.LoseState" at BlackJackController.v(101) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Info (10041): Inferred latch for "F_State.TieState" at BlackJackController.v(101) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Info (10041): Inferred latch for "F_State.WinState" at BlackJackController.v(101) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Info (10041): Inferred latch for "F_State.CardToDealer" at BlackJackController.v(101) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Info (10041): Inferred latch for "F_State.CardToPlayer" at BlackJackController.v(101) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Info (10041): Inferred latch for "F_State.DealerStay" at BlackJackController.v(101) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Info (10041): Inferred latch for "F_State.PlayerStay" at BlackJackController.v(101) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Info (10041): Inferred latch for "F_State.DealerHit" at BlackJackController.v(101) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Info (10041): Inferred latch for "F_State.PlayerHit" at BlackJackController.v(101) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Info (10041): Inferred latch for "F_State.DealerTurn" at BlackJackController.v(101) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Info (10041): Inferred latch for "F_State.PlayerTurn" at BlackJackController.v(101) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Info (10041): Inferred latch for "F_State.P_RstCardFSM" at BlackJackController.v(101) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Info (10041): Inferred latch for "F_State.PlayerWith2Card" at BlackJackController.v(101) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Info (10041): Inferred latch for "F_State.D1_RstCardFSM" at BlackJackController.v(101) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Info (10041): Inferred latch for "F_State.PlayerWith1Card" at BlackJackController.v(101) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Info (10041): Inferred latch for "F_State.ShuffleDeck" at BlackJackController.v(101) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Info (10041): Inferred latch for "F_State.Start" at BlackJackController.v(101) File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
 Info (12128): Elaborating entity "Debouncer" for hierarchy "Debouncer:ResetButtonDebouncer"
-Info (12128): Elaborating entity "EdgeDetector" for hierarchy "Debouncer:ResetButtonDebouncer|EdgeDetector:PosEdge" File: /home/erick/ENGC40/Quartus/BlackJack/src/Debouncer.v Line: 34
-Info (12128): Elaborating entity "EdgeDetector" for hierarchy "Debouncer:ResetButtonDebouncer|EdgeDetector:NegEdge" File: /home/erick/ENGC40/Quartus/BlackJack/src/Debouncer.v Line: 41
+Info (12128): Elaborating entity "EdgeDetector" for hierarchy "Debouncer:ResetButtonDebouncer|EdgeDetector:PosEdge" File: /home/erick/ENGC40/Quartus/BlackJack/src/Debouncer.v Line: 35
+Info (12128): Elaborating entity "EdgeDetector" for hierarchy "Debouncer:ResetButtonDebouncer|EdgeDetector:NegEdge" File: /home/erick/ENGC40/Quartus/BlackJack/src/Debouncer.v Line: 42
+Info (12128): Elaborating entity "Counter" for hierarchy "Counter:Contador"
+Warning (10230): Verilog HDL assignment warning at Counter.v(28): truncated value with size 32 to match size of target (12) File: /home/erick/ENGC40/Quartus/BlackJack/src/Counter.v Line: 28
+Warning (10230): Verilog HDL assignment warning at Counter.v(38): truncated value with size 32 to match size of target (12) File: /home/erick/ENGC40/Quartus/BlackJack/src/Counter.v Line: 38
+Warning (10230): Verilog HDL assignment warning at Counter.v(42): truncated value with size 32 to match size of target (1) File: /home/erick/ENGC40/Quartus/BlackJack/src/Counter.v Line: 42
+Warning (10230): Verilog HDL assignment warning at Counter.v(45): truncated value with size 32 to match size of target (1) File: /home/erick/ENGC40/Quartus/BlackJack/src/Counter.v Line: 45
 Info (12128): Elaborating entity "PLL" for hierarchy "PLL:inst"
 Info (12128): Elaborating entity "altpll" for hierarchy "PLL:inst|altpll:altpll_component" File: /home/erick/ENGC40/Quartus/BlackJack/PLL.vhd Line: 133
 Info (12130): Elaborated megafunction instantiation "PLL:inst|altpll:altpll_component" File: /home/erick/ENGC40/Quartus/BlackJack/PLL.vhd Line: 133
@@ -2838,10 +2846,6 @@ Info (12133): Instantiated megafunction "PLL:inst|altpll:altpll_component" with 
 Info (12021): Found 1 design units, including 1 entities, in source file db/PLL_altpll.v
     Info (12023): Found entity 1: PLL_altpll File: /home/erick/ENGC40/Quartus/BlackJack/db/PLL_altpll.v Line: 29
 Info (12128): Elaborating entity "PLL_altpll" for hierarchy "PLL:inst|altpll:altpll_component|PLL_altpll:auto_generated" File: /home/erick/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
-Info (12128): Elaborating entity "Counter" for hierarchy "Counter:Contador"
-Warning (10230): Verilog HDL assignment warning at Counter.v(28): truncated value with size 32 to match size of target (12) File: /home/erick/ENGC40/Quartus/BlackJack/src/Counter.v Line: 28
-Warning (10230): Verilog HDL assignment warning at Counter.v(39): truncated value with size 32 to match size of target (12) File: /home/erick/ENGC40/Quartus/BlackJack/src/Counter.v Line: 39
-Warning (10230): Verilog HDL assignment warning at Counter.v(43): truncated value with size 32 to match size of target (1) File: /home/erick/ENGC40/Quartus/BlackJack/src/Counter.v Line: 43
 Info (12128): Elaborating entity "Shuffler" for hierarchy "Shuffler:FSM_Embaralhador"
 Warning (10230): Verilog HDL assignment warning at Shuffler.v(57): truncated value with size 32 to match size of target (6) File: /home/erick/ENGC40/Quartus/BlackJack/src/Shuffler.v Line: 57
 Info (10264): Verilog HDL Case Statement information at Shuffler.v(55): all case item expressions in this case statement are onehot File: /home/erick/ENGC40/Quartus/BlackJack/src/Shuffler.v Line: 55
@@ -2950,8 +2954,8 @@ Warning (10230): Verilog HDL assignment warning at CardAdder.v(86): truncated va
 Warning (10230): Verilog HDL assignment warning at CardAdder.v(89): truncated value with size 32 to match size of target (6) File: /home/erick/ENGC40/Quartus/BlackJack/src/CardAdder.v Line: 89
 Info (10264): Verilog HDL Case Statement information at CardAdder.v(72): all case item expressions in this case statement are onehot File: /home/erick/ENGC40/Quartus/BlackJack/src/CardAdder.v Line: 72
 Warning (10240): Verilog HDL Always Construct warning at CardAdder.v(109): inferring latch(es) for variable "F_State", which holds its previous value in one or more paths through the always construct File: /home/erick/ENGC40/Quartus/BlackJack/src/CardAdder.v Line: 109
-Warning (10270): Verilog HDL Case Statement warning at CardAdder.v(198): incomplete case statement has no default case item File: /home/erick/ENGC40/Quartus/BlackJack/src/CardAdder.v Line: 198
-Info (10264): Verilog HDL Case Statement information at CardAdder.v(198): all case item expressions in this case statement are onehot File: /home/erick/ENGC40/Quartus/BlackJack/src/CardAdder.v Line: 198
+Warning (10270): Verilog HDL Case Statement warning at CardAdder.v(195): incomplete case statement has no default case item File: /home/erick/ENGC40/Quartus/BlackJack/src/CardAdder.v Line: 195
+Info (10264): Verilog HDL Case Statement information at CardAdder.v(195): all case item expressions in this case statement are onehot File: /home/erick/ENGC40/Quartus/BlackJack/src/CardAdder.v Line: 195
 Info (10041): Inferred latch for "F_State.CardOK" at CardAdder.v(109) File: /home/erick/ENGC40/Quartus/BlackJack/src/CardAdder.v Line: 109
 Info (10041): Inferred latch for "F_State.PlusTenPlayer" at CardAdder.v(109) File: /home/erick/ENGC40/Quartus/BlackJack/src/CardAdder.v Line: 109
 Info (10041): Inferred latch for "F_State.PlusTenDealer" at CardAdder.v(109) File: /home/erick/ENGC40/Quartus/BlackJack/src/CardAdder.v Line: 109
@@ -2973,7 +2977,7 @@ Info (10041): Inferred latch for "o_Value[2]" at CardEvaluator.v(10) File: /home
 Info (10041): Inferred latch for "o_Value[3]" at CardEvaluator.v(10) File: /home/erick/ENGC40/Quartus/BlackJack/src/CardEvaluator.v Line: 10
 Info (12128): Elaborating entity "displaydecoder" for hierarchy "displaydecoder:DealerHand"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2019.11.28.16:20:08 Progress: Loading sldfa1369fd/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2019.12.02.15:42:55 Progress: Loading sldfa1369fd/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -2998,22 +3002,23 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/ip/s
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: /home/erick/ENGC40/Quartus/BlackJack/db/ip/sldfa1369fd/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Warning (19016): Clock multiplexers are found and protected
     Warning (19017): Found clock multiplexer MemAcessMux:MemAcessMux|o_MemClk File: /home/erick/ENGC40/Quartus/BlackJack/src/MemAcessMux.v Line: 14
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.Start_789" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.ShuffleDeck_773" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.PlayerWith1Card_757" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.DealerWith1Card_741" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.PlayerWith2Card_725" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.DealerWith2Card_709" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.PlayerTurn_693" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.PlayerHit_661" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.DealerHit_645" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.PlayerStay_629" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.DealerStay_613" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.CardToPlayer_597" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.CardToDealer_581" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.WinState_565" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.TieState_549" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.LoseState_533" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 98
+Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.Start_857" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.ShuffleDeck_841" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.PlayerWith1Card_825" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.D1_RstCardFSM_809" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.PlayerWith2Card_793" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.P_RstCardFSM_777" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.PlayerTurn_761" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.DealerTurn_745" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.PlayerHit_729" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.DealerHit_713" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.PlayerStay_697" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.DealerStay_681" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.CardToPlayer_665" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.CardToDealer_649" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.WinState_633" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.TieState_617" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.LoseState_601" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
 Info (278001): Inferred 52 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Nxt_Addr:NxtAddr_Decoder|Mod42" File: /home/erick/ENGC40/Quartus/BlackJack/src/Nxt_Addr.v Line: 54
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Nxt_Addr:NxtAddr_Decoder|Mod41" File: /home/erick/ENGC40/Quartus/BlackJack/src/Nxt_Addr.v Line: 53
@@ -3091,10 +3096,8 @@ Warning (13012): Latch CardEvaluator:CardEvaluatorDecoder|o_Value[2] has unsafe 
     Warning (13013): Ports D and ENA on the latch are fed by the same signal RAM:RAM|altsyncram:altsyncram_component|altsyncram_55u3:auto_generated|altsyncram_thr2:altsyncram1|q_a[0] File: /home/erick/ENGC40/Quartus/BlackJack/db/altsyncram_thr2.tdf Line: 35
 Warning (13012): Latch CardEvaluator:CardEvaluatorDecoder|o_Value[3] has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/CardEvaluator.v Line: 10
     Warning (13013): Ports D and ENA on the latch are fed by the same signal RAM:RAM|altsyncram:altsyncram_component|altsyncram_55u3:auto_generated|altsyncram_thr2:altsyncram1|q_a[0] File: /home/erick/ENGC40/Quartus/BlackJack/db/altsyncram_thr2.tdf Line: 35
-Warning (13012): Latch CardAdder:FSM_CardAdder|F_State.CardOK_378 has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/CardAdder.v Line: 109
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal BlackJackController:FSM_Global|WideOr19 File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 260
 Warning (13012): Latch CardAdder:FSM_CardAdder|F_State.ReadMem_489 has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/CardAdder.v Line: 109
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal BlackJackController:FSM_Global|WideOr19 File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 260
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BlackJackController:FSM_Global|WideOr19 File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 281
 Warning (13012): Latch Nxt_Addr:NxtAddr_Decoder|Addr_j[0] has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/Nxt_Addr.v Line: 11
     Warning (13013): Ports D and ENA on the latch are fed by the same signal Shuffler:FSM_Embaralhador|vo_Addr_I[5] File: /home/erick/ENGC40/Quartus/BlackJack/src/Shuffler.v Line: 44
 Warning (13012): Latch Nxt_Addr:NxtAddr_Decoder|Addr_j[1] has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/Nxt_Addr.v Line: 11
@@ -3107,15 +3110,19 @@ Warning (13012): Latch Nxt_Addr:NxtAddr_Decoder|Addr_j[4] has unsafe behavior Fi
     Warning (13013): Ports D and ENA on the latch are fed by the same signal Shuffler:FSM_Embaralhador|vo_Addr_I[5] File: /home/erick/ENGC40/Quartus/BlackJack/src/Shuffler.v Line: 44
 Warning (13012): Latch Nxt_Addr:NxtAddr_Decoder|Addr_j[5] has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/Nxt_Addr.v Line: 11
     Warning (13013): Ports D and ENA on the latch are fed by the same signal Shuffler:FSM_Embaralhador|vo_Addr_I[4] File: /home/erick/ENGC40/Quartus/BlackJack/src/Shuffler.v Line: 44
+Warning (13012): Latch CardAdder:FSM_CardAdder|F_State.CardOK_378 has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/CardAdder.v Line: 109
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BlackJackController:FSM_Global|WideOr19 File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 281
 Warning (13012): Latch CardAdder:FSM_CardAdder|F_State.Wait_FSM_502 has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/CardAdder.v Line: 109
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal BlackJackController:FSM_Global|WideOr19 File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 260
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BlackJackController:FSM_Global|WideOr19 File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 281
 Warning (13012): Latch CardAdder:FSM_CardAdder|F_State.Start_515 has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/CardAdder.v Line: 109
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CardAdder:FSM_CardAdder|A_State.ReadMem File: /home/erick/ENGC40/Quartus/BlackJack/src/CardAdder.v Line: 30
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "o_Win" is stuck at GND
     Warning (13410): Pin "o_Lose" is stuck at GND
     Warning (13410): Pin "o_Tie" is stuck at GND
+    Warning (13410): Pin "o_Hit_P" is stuck at GND
     Warning (13410): Pin "o_Hit_D" is stuck at GND
+    Warning (13410): Pin "o_Stay_P" is stuck at GND
     Warning (13410): Pin "o_Stay_D" is stuck at GND
     Warning (13410): Pin "DealerHndDisplayD[0]" is stuck at VCC
     Warning (13410): Pin "DealerHndDisplayD[1]" is stuck at VCC
@@ -3132,7 +3139,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "DealerHndDisplayU[5]" is stuck at VCC
     Warning (13410): Pin "DealerHndDisplayU[6]" is stuck at VCC
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
-Info (17049): 23 registers lost all their fanouts during netlist optimizations.
+Info (17049): 29 registers lost all their fanouts during netlist optimizations.
 Info (17016): Found the following redundant logic cells in design
     Info (17048): Logic cell "Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod41|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_5_result_int[0]~0" File: /home/erick/ENGC40/Quartus/BlackJack/db/alt_u_div_a4f.tdf Line: 51
     Info (17048): Logic cell "Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod37|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_5_result_int[0]~0" File: /home/erick/ENGC40/Quartus/BlackJack/db/alt_u_div_a4f.tdf Line: 51
@@ -3143,6 +3150,7 @@ Info (17016): Found the following redundant logic cells in design
     Info (17048): Logic cell "Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod17|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_5_result_int[0]~0" File: /home/erick/ENGC40/Quartus/BlackJack/db/alt_u_div_a4f.tdf Line: 51
     Info (17048): Logic cell "Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod29|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_5_result_int[0]~0" File: /home/erick/ENGC40/Quartus/BlackJack/db/alt_u_div_a4f.tdf Line: 51
     Info (17048): Logic cell "Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod5|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_5_result_int[0]~0" File: /home/erick/ENGC40/Quartus/BlackJack/db/alt_u_div_a4f.tdf Line: 51
+    Info (17048): Logic cell "Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod9|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_5_result_int[0]~0" File: /home/erick/ENGC40/Quartus/BlackJack/db/alt_u_div_a4f.tdf Line: 51
     Info (17048): Logic cell "Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod1|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_5_result_int[0]~0" File: /home/erick/ENGC40/Quartus/BlackJack/db/alt_u_div_a4f.tdf Line: 51
     Info (17048): Logic cell "Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod13|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_5_result_int[0]~0" File: /home/erick/ENGC40/Quartus/BlackJack/db/alt_u_div_a4f.tdf Line: 51
     Info (17048): Logic cell "Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod49|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_5_result_int[0]~0" File: /home/erick/ENGC40/Quartus/BlackJack/db/alt_u_div_a4f.tdf Line: 51
@@ -3162,17 +3170,20 @@ Info (17016): Found the following redundant logic cells in design
 Info (144001): Generated suppressed messages file /home/erick/ENGC40/Quartus/BlackJack/output_files/BlackJack.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1445 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "i_Hit"
+    Warning (15610): No output dependent on input pin "i_Stay"
+Info (21057): Implemented 1423 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 41 output pins
-    Info (21061): Implemented 1391 logic cells
+    Info (21059): Implemented 36 output pins
+    Info (21061): Implemented 1374 logic cells
     Info (21064): Implemented 4 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 86 warnings
-    Info: Peak virtual memory: 1084 megabytes
-    Info: Processing ended: Thu Nov 28 16:20:19 2019
-    Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:46
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 96 warnings
+    Info: Peak virtual memory: 1078 megabytes
+    Info: Processing ended: Mon Dec  2 15:43:07 2019
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:51
 
 
 +------------------------------------------+

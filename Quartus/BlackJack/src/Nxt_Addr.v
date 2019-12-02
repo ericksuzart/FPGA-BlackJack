@@ -61,7 +61,6 @@ module Nxt_Addr
             6'b 110001 : Addr_j = (Addr_i + {Count[1], Count[2], Count[3], Count[5], Count[6], Count[7]})   % 6'b 110100; // 49 
             6'b 110010 : Addr_j = (Addr_i + {Count[0], Count[3], Count[4], Count[8], Count[9], Count[10]})  % 6'b 110100; // 50 
             6'b 110011 : Addr_j = (Addr_i + {Count[1], Count[2], Count[3], Count[5], Count[6], Count[11]})  % 6'b 110100; // 51 
-            default: 6'b 0 // para não inferir latchs
         endcase
     end
 

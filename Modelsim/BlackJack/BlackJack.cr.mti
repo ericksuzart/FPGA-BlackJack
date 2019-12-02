@@ -1,9 +1,17 @@
-/home/erick/ENGC40/Modelsim/BlackJack/TB_BlackJack.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/TB_BlackJack.v
+/home/erick/ENGC40/Modelsim/BlackJack/src/Nxt_Addr.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/Nxt_Addr.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module TB_BlackJack
+-- Compiling module Nxt_Addr
 
 Top level modules:
-	TB_BlackJack
+	Nxt_Addr
+
+} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/PLL.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/PLL.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity PLL
+-- Compiling architecture SYN of pll
 
 } {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/RAM.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/RAM.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -14,21 +22,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity RAM
 -- Compiling architecture SYN of ram
 
-} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/PLL.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/PLL.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity PLL
--- Compiling architecture SYN of pll
-
-} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/Nxt_Addr.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/Nxt_Addr.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module Nxt_Addr
-
-Top level modules:
-	Nxt_Addr
-
 } {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/CardEvaluator.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/CardEvaluator.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module CardEvaluator
@@ -36,22 +29,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	CardEvaluator
 
-} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/RAM.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/erick/ENGC40/Modelsim/BlackJack/RAM.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package altera_mf_components
--- Compiling entity RAM
--- Compiling architecture SYN of ram
+} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/TestBenchs/TB_BlackJack.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/TestBenchs/TB_BlackJack.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module TB_BlackJack
 
-} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/PLL.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/erick/ENGC40/Modelsim/BlackJack/PLL.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity PLL
--- Compiling architecture SYN of pll
+Top level modules:
+	TB_BlackJack
 
 } {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/BlackJack.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/BlackJack.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -67,13 +50,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	EdgeDetector
 
-} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/CardAdder.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/CardAdder.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module CardAdder
-
-Top level modules:
-	CardAdder
-
 } {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/BlackJackController.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/BlackJackController.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module BlackJackController
@@ -81,12 +57,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	BlackJackController
 
-} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/TB_NxtAddr.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/TB_NxtAddr.v
+} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/CardAdder.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/CardAdder.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module Nxt_Addr_TB
+-- Compiling module CardAdder
 
 Top level modules:
-	Nxt_Addr_TB
+	CardAdder
 
 } {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/displaydecoder.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/displaydecoder.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -95,19 +71,26 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	displaydecoder
 
-} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/TB__Counter.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/TB__Counter.v
+} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/TestBenchs/TB_NxtAddr.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/TestBenchs/TB_NxtAddr.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Nxt_Addr_TB
+
+Top level modules:
+	Nxt_Addr_TB
+
+} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/TestBenchs/TB_Debouncer.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/TestBenchs/TB_Debouncer.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module TB_Debouncer
+
+Top level modules:
+	TB_Debouncer
+
+} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/TestBenchs/TB__Counter.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/TestBenchs/TB__Counter.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module Counter_TB
 
 Top level modules:
 	Counter_TB
-
-} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/Debouncer.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/Debouncer.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module Debouncer
-
-Top level modules:
-	Debouncer
 
 } {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/Shuffler.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/Shuffler.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -115,6 +98,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 
 Top level modules:
 	Shuffler
+
+} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/Debouncer.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/Debouncer.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Debouncer
+
+Top level modules:
+	Debouncer
 
 } {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/Counter.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/Counter.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -130,8 +120,4 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	MemAcessMux
 
-} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/ClockSycn.v {0 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/ClockSycn.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-** Error: (vlog-13069) /home/erick/ENGC40/Modelsim/BlackJack/src/ClockSycn.v(3): near "reg": syntax error, unexpected reg, expecting "SystemVerilog keyword 'import'" or ';' or '#' or '('.
-
-} {3.0 4.0} {}}
+} {} {}}

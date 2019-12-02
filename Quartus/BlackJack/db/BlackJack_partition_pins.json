@@ -4,34 +4,6 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "o_Hit_P",
-					"strict" : false
-				},
-				{
-					"name" : "o_Stay_P",
-					"strict" : false
-				},
-				{
-					"name" : "w_ResetDeb",
-					"strict" : false
-				},
-				{
-					"name" : "w_HitDeb",
-					"strict" : false
-				},
-				{
-					"name" : "w_HitNE",
-					"strict" : false
-				},
-				{
-					"name" : "w_StayDeb",
-					"strict" : false
-				},
-				{
-					"name" : "w_StayNE",
-					"strict" : false
-				},
-				{
 					"name" : "PlayerHndDisplayD[0]",
 					"strict" : false
 				},
@@ -93,14 +65,6 @@
 				},
 				{
 					"name" : "i_Reset",
-					"strict" : false
-				},
-				{
-					"name" : "i_Hit",
-					"strict" : false
-				},
-				{
-					"name" : "i_Stay",
 					"strict" : false
 				},
 				{
