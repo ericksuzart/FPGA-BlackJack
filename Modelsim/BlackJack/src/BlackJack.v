@@ -127,7 +127,7 @@ CardAdder	b2v_FSM_CardAdder(
 	.i_Card2P(SYNTHESIZED_WIRE_7),
 	.i_Card2D(SYNTHESIZED_WIRE_8),
 	.i_Reset(w_ResetPE),
-	.i_Clock(clk),
+	.i_Clock(inclk0),
 	.i_Card(SYNTHESIZED_WIRE_33),
 	.i_Value(SYNTHESIZED_WIRE_10),
 	.o_MemClk(SYNTHESIZED_WIRE_22),
@@ -151,7 +151,7 @@ CardAdder	b2v_FSM_CardAdder(
 
 Shuffler	b2v_FSM_Embaralhador(
 	.i_ActShuffler(SYNTHESIZED_WIRE_35),
-	.clk(clk),
+	.clk(inclk0),
 	.i_Addr_J(SYNTHESIZED_WIRE_12),
 	.i_MemData(SYNTHESIZED_WIRE_33),
 	.o_Shuffled(SYNTHESIZED_WIRE_16),
@@ -176,7 +176,7 @@ Shuffler	b2v_FSM_Embaralhador(
 
 
 BlackJackController	b2v_FSM_Global(
-	.i_Clk(clk),
+	.i_Clk(inclk0),
 	.i_Reset(w_ResetPE),
 	.i_Stay(w_HitPE),
 	.i_Hit(w_StayPE),
@@ -200,38 +200,42 @@ BlackJackController	b2v_FSM_Global(
 	.vo_ActShuffler(SYNTHESIZED_WIRE_35),
 	.vo_Card2Player(SYNTHESIZED_WIRE_7),
 	.vo_Card2Dealer(SYNTHESIZED_WIRE_8));
-	defparam	b2v_FSM_Global.CardToDealer = 5'b01101;
-	defparam	b2v_FSM_Global.CardToPlayer = 5'b01100;
-	defparam	b2v_FSM_Global.DealerBlackJack = 5'b10010;
-	defparam	b2v_FSM_Global.DealerHit = 5'b01001;
-	defparam	b2v_FSM_Global.DealerStay = 5'b01011;
-	defparam	b2v_FSM_Global.DealerTurn = 5'b00111;
-	defparam	b2v_FSM_Global.DealerWith1Card = 5'b00011;
-	defparam	b2v_FSM_Global.DealerWith2Card = 5'b00101;
-	defparam	b2v_FSM_Global.LoseState = 5'b10000;
-	defparam	b2v_FSM_Global.Measurement = 5'b10001;
-	defparam	b2v_FSM_Global.PlayerHit = 5'b01000;
-	defparam	b2v_FSM_Global.PlayerStay = 5'b01010;
-	defparam	b2v_FSM_Global.PlayerTurn = 5'b00110;
-	defparam	b2v_FSM_Global.PlayerWith1Card = 5'b00010;
-	defparam	b2v_FSM_Global.PlayerWith2Card = 5'b00100;
-	defparam	b2v_FSM_Global.ShuffleDeck = 5'b00001;
-	defparam	b2v_FSM_Global.Start = 5'b00000;
-	defparam	b2v_FSM_Global.TieState = 5'b01111;
-	defparam	b2v_FSM_Global.WinState = 5'b01110;
-
+	defparam b2v_FSM_Global.Start           = 5'b 00000;
+	defparam b2v_FSM_Global.ShuffleDeck     = 5'b 00001;
+	defparam b2v_FSM_Global.PlayerWith1Card = 5'b 00010;
+	defparam b2v_FSM_Global.D1_RstCardFSM   = 5'b 00011;
+	defparam b2v_FSM_Global.DealerWith1Card = 5'b 00100;
+	defparam b2v_FSM_Global.P_RstCardFSM    = 5'b 00101;
+	defparam b2v_FSM_Global.PlayerWith2Card = 5'b 00110;
+	defparam b2v_FSM_Global.D2_RstCardFSM   = 5'b 00111;
+	defparam b2v_FSM_Global.DealerWith2Card = 5'b 01000;
+	defparam b2v_FSM_Global.PlayerTurn      = 5'b 01001;
+	defparam b2v_FSM_Global.DealerTurn      = 5'b 01010;
+	defparam b2v_FSM_Global.PlayerHit       = 5'b 01011;
+	defparam b2v_FSM_Global.DealerHit       = 5'b 01100;
+	defparam b2v_FSM_Global.PlayerStay      = 5'b 01101;
+	defparam b2v_FSM_Global.DealerStay      = 5'b 01110;
+	defparam b2v_FSM_Global.CardToPlayer    = 5'b 01111;
+	defparam b2v_FSM_Global.CardToDealer    = 5'b 10000;
+	defparam b2v_FSM_Global.WinState        = 5'b 10001;
+	defparam b2v_FSM_Global.TieState        = 5'b 10010;
+	defparam b2v_FSM_Global.LoseState       = 5'b 10011;
+	defparam b2v_FSM_Global.Measurement     = 5'b 10100;
+	defparam b2v_FSM_Global.DealerBlackJack = 5'b 10101;
 
 Debouncer	b2v_HitButtonDebouncer(
-	.i_Clk_2kHz(clk),
+	.i_Clk(inclk0),
 	.i_Button(i_Hit),
 	.o_ButtonDeb(w_HitDeb),
 	.o_ButtonDown(w_HitNE),
 	.o_ButtonUp(w_HitPE));
 
 
-PLL	b2v_inst(
-	.inclk0(clk),
-	.c0(clk));
+// Não simulável
+
+// PLL	b2v_inst(
+// 	.inclk0(inclk0),
+// 	.c0(clk_PLL));
 
 
 MemAcessMux	b2v_MemAcessMux(
@@ -266,7 +270,7 @@ RAM	b2v_RAM(
 
 
 Debouncer	b2v_ResetButtonDebouncer(
-	.i_Clk_2kHz(clk),
+	.i_Clk(inclk0),
 	.i_Button(i_Reset),
 	.o_ButtonDeb(SYNTHESIZED_WIRE_4),
 	.o_ButtonDown(SYNTHESIZED_WIRE_3),
@@ -274,20 +278,10 @@ Debouncer	b2v_ResetButtonDebouncer(
 
 
 Debouncer	b2v_StayButtonDebouncer(
-	.i_Clk_2kHz(clk),
+	.i_Clk(inclk0),
 	.i_Button(i_Stay),
 	.o_ButtonDeb(w_StayDeb),
 	.o_ButtonDown(w_StayNE),
 	.o_ButtonUp(w_StayPE));
 
-assign	clk = inclk0;
-
-// Simulação de um PLL
-reg r_clk_PLL;
-
-initial r_clk_PLL = 1'b0;
-
-always #250000 r_clk_PLL <= ~r_clk_PLL;	
-
-assign clk_PLL = r_clk_PLL;
 endmodule
