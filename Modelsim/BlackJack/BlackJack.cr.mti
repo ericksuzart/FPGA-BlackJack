@@ -71,6 +71,20 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	Nxt_Addr_TB
 
+} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/Debouncer.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/Debouncer.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Debouncer
+
+Top level modules:
+	Debouncer
+
+} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/Shuffler.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/Shuffler.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Shuffler
+
+Top level modules:
+	Shuffler
+
 } {} {}} /home/erick/ENGC40/Modelsim/BlackJack/TestBenchs/TB__Counter.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/TestBenchs/TB__Counter.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module Counter_TB
@@ -85,19 +99,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	TB_Debouncer
 
-} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/Shuffler.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/Shuffler.v
+} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/Counter.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/Counter.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module Shuffler
+-- Compiling module Counter
 
 Top level modules:
-	Shuffler
-
-} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/Debouncer.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/Debouncer.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module Debouncer
-
-Top level modules:
-	Debouncer
+	Counter
 
 } {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/MemAcessMux.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/MemAcessMux.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -105,12 +112,5 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 
 Top level modules:
 	MemAcessMux
-
-} {} {}} /home/erick/ENGC40/Modelsim/BlackJack/src/Counter.v {1 {vlog -work work -stats=none /home/erick/ENGC40/Modelsim/BlackJack/src/Counter.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module Counter
-
-Top level modules:
-	Counter
 
 } {} {}}

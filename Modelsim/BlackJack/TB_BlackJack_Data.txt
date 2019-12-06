@@ -1,4 +1,0 @@
-[6020 ns] - O contador, quando ativo no reset, esta funcionando corretamente e contou ate    0
-||=================================================================||
-[18080 ns] - O contador, quando ativo no reset, esta funcionando corretamente e contou ate    2
-||=================================================================||

@@ -76,8 +76,13 @@ assign DUV.w_StayPE = w_StayPE;     // Stay posedge
 // Clock de 50 MHz
 always #5 clk = !clk;
 
+/*50000 kHz - 5 ns
+          2 kHz - x    (inversamente proporcional)
+        x = 5 * 50000 / 2
+        x = 125000 */
+
 // Clock de 2 kHz
-always #20 clk_PLL <= ~clk_PLL;	
+always #125 clk_PLL <= ~clk_PLL;	
 
 assign DUV.clk_PLL = clk_PLL;
 
@@ -168,8 +173,8 @@ begin
     if(ShowStates)
     begin
         #1 ;
-        $display("[%g ns] - Shuffler State: %8s | %s |",$time ," ", StateStringShuffler);
-        $fdisplay(OutputFile, "[%g ns] - Shuffler State: %8s | %s |",$time ," ", StateStringShuffler);
+        $display("[%t] - Shuffler State: %8s | %s |",$time ," ", StateStringShuffler);
+        $fdisplay(OutputFile, "[%t] - Shuffler State: %8s | %s |",$time ," ", StateStringShuffler);
     end
 end
 
@@ -179,8 +184,8 @@ begin
     if (ShowStates)
     begin
         #1 ;
-        $display("[%g ns] - CardAdder State:   | %s |",$time , StateStringCardAdder);
-        $fdisplay(OutputFile, "[%g ns] - CardAdder State:   | %s |",$time , StateStringCardAdder);
+        $display("[%t] - CardAdder State:   | %s |",$time , StateStringCardAdder);
+        $fdisplay(OutputFile, "[%t] - CardAdder State:   | %s |",$time , StateStringCardAdder);
 
         #1 ;
         if (StateFSMCardAdder == 4'b 1011)
@@ -195,7 +200,10 @@ end
 always @(StateFSMGlobal)
 begin
     if(ShowStates)
-        $display("||=================================================================||\n[%g ns] - BJController State: | %s |\n||=================================================================||",$time , StateStringGlobal);
+    begin
+        $display("||=================================================================||\n[%t] - BJController State: | %s |\n||=================================================================||",$time , StateStringGlobal);
+        $fdisplay(OutputFile, "||=================================================================||\n[%t] - BJController State: | %s |\n||=================================================================||",$time , StateStringGlobal);
+    end
 end
 
 //======================================================
@@ -211,24 +219,24 @@ task PlayerReset (input [31:0] clock_cicles, input Display);
     begin
         // Testar um input randomico de reset
         if (Display)
-            $display("||=================================================================||\n[%g ns] - O contador esta sendo testado com relacao ao reset", $time);
+            // $display("||=================================================================||\n[%t] - O contador esta sendo testado com relacao ao reset", $time);
+            $fdisplay(OutputFile, "||=================================================================||\n[%t] - O contador esta sendo testado com relacao ao reset", $time);
 
         // Inicizalizar o contador de checagem
         @(posedge clk_PLL) ResetBtn = 0;
-        @(posedge clk_PLL);
+        // @(posedge clk_PLL); // reseta o contador    
 
         if(clock_cicles)
         begin
-            // @(posedge clk_PLL);
-            // @(posedge clk_PLL);
             @(negedge clk_PLL) r_Contador = DUV.w_Count;
         end
+        else
+            @(posedge clk_PLL);
 
         // Repete un múmero de ciclos de clock dado pelo usuário
         repeat(clock_cicles)
         begin
-            @(posedge clk_PLL)
-            r_Contador = r_Contador + 1;
+            @(posedge clk_PLL) r_Contador = r_Contador + 1;
         end
 
         ResetBtn = 1;
@@ -242,14 +250,14 @@ task PlayerReset (input [31:0] clock_cicles, input Display);
         if(Display)
             if (r_Contador == DUV.w_Count)
             begin
-                $display("[%g ns] - O contador, quando ativo no reset, esta funcionando corretamente e contou ate %d\n||=================================================================||", $time, DUV.w_Count);
+                // $display("[%t] - O contador, quando ativo no reset, esta funcionando corretamente e contou ate %d\n||=================================================================||", $time, DUV.w_Count);
 
-                $fdisplay(OutputFile, "[%g ns] - O contador, quando ativo no reset, esta funcionando corretamente e contou ate %d\n||=================================================================||", $time, DUV.w_Count);
+                $fdisplay(OutputFile, "[%t] - O contador, quando ativo no reset, esta funcionando corretamente:\nContador: %d", $time, DUV.w_Count);
             end
             else
             begin
-                $display("[%g ns] - O contador, quando ativo no reset, nao esta funcionando corretamente:\n ContadorTB:%d\nContador:%d\n||=================================================================||", $time,r_Contador, DUV.w_Count);
-                $fdisplay(OutputFile, "[%g ns] - O contador, quando ativo no reset, nao esta funcionando corretamente:\n ContadorTB:%d\nContador:%d\n||=================================================================||", $time,r_Contador, DUV.w_Count);
+                // $display("[%t] - O contador, quando ativo no reset, nao esta funcionando corretamente:\n ContadorTB:%d\nContador:%d\n||===========================================||", $time,r_Contador, DUV.w_Count);
+                $fdisplay(OutputFile, "[%t] - O contador, quando ativo no reset, nao esta funcionando corretamente:\n ContadorTB:%d\nContador:%d\n||=================================================================||", $time,r_Contador, DUV.w_Count);
             end
     end
 endtask
@@ -270,7 +278,7 @@ reg [3:0] r_Ram [51:0];
 //         r_WriteEnable = 0;
 //         @(negedge Clock);
 //         data = w_Data;
-//         $display("[%g ns] -> %d read from address %d", $time, data, address);
+//         $display("[%t] -> %d read from address %d", $time, data, address);
 //         $display("_____________________________");
 //     end
 // endtask
@@ -287,32 +295,42 @@ endtask
 //                  Blocos iniital
 //======================================================
 
-// Teste do reset e do contador
+/* Teste do reset e do contador, utilizar um clk_PLL de 125 pois o de 125000
+demora de mais! 
+
+Distintos tempos de botão pressionado fazem a mão do player e do dealer serem
+diferentes assim, se essa condição se mostrar plausível no log do TestBench, o
+Counter, o Shuffler, o CardAdder e o BJController estão funcionando corretamente
+neste aspecto
+
+Esse initial irá testar todas as possibilidades do contador e nos mostrar as
+cartas iniciais do Player e do Dealer */
+
 integer i;
 
 initial
 begin : ResetTest
+    // Precisão do tempo
+    $timeformat(-3, 2, " ms", 10);
+
     // Abrir o arquivo de saída
-    OutputFile = $fopen("TB_BlackJack_Data.txt","w");
+    OutputFile = $fopen("ResetTest.txt","w");
 
     if (!OutputFile)
         $display("Nao foi possivel abrir o arquivo!");
 
     else
     begin
+        $display("||=================================================================||\n[%t] - Começando o testbench para verificar se o contador e o embaralhador estão funcionais\n||=================================================================||\n", $time);
+        
+        $fdisplay(OutputFile, "||=================================================================||\n[%t] - Começando o testbench para verificar se o contador e o embaralhador estão funcionais\n||=================================================================||\n", $time);
+
         clk = 0;
         clk_PLL = 1'b0;
         HitBtn = 1;
         StayBtn = 1;
         ResetBtn = 1;
         ShowStates = 0;
-
-        /* Distintos tempos de botão pressionado fazem a mão do player e do
-        dealer serem diferentes assim, o contador e o embaralhador estão
-        funcionando corretamente*/
-
-        /* testar todas as possibilidades e verificar se as cartas estão
-        relativamente bem embaralhadas */
 
         for(i = 0; i <= 4095; i= i +1)
         begin
@@ -321,11 +339,17 @@ begin : ResetTest
             wait (DUV.w_Count == i)
             begin
                  // Tempo de embaralhar e adicionar as cartas
-                #5960 $display("Player Hand: %d\nDealer Hand: %d", DUV.w_PlayerHnd, DUV.w_DealerHnd);
+                #5960;
+                // $display("Player Hand: %d\nDealer Hand: %d", DUV.w_PlayerHnd, DUV.w_DealerHnd);
+                $fdisplay(OutputFile, "Player Hand: %d\nDealer Hand: %d\n||=================================================================||", DUV.w_PlayerHnd, DUV.w_DealerHnd);
             end
         end
 
         # 200000 ;
+        
+        $display("\n||=================================================================||\n[%t] - Terminado o teste do contador e do embaralhador\n||=================================================================||", $time);
+        $fdisplay(OutputFile, "\n||=================================================================||\n[%t] - Terminado o teste do contador e do embaralhador\n||=================================================================||", $time);
+        
         $fclose(OutputFile);
     end
 
