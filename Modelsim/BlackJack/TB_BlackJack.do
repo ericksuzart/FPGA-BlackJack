@@ -1,6 +1,5 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate -radix ascii /TB_BlackJack/StateStringGlobal
 add wave -noupdate -divider Inputs
 add wave -noupdate /TB_BlackJack/DUV/inclk0
 add wave -noupdate /TB_BlackJack/DUV/clk_PLL
@@ -26,12 +25,8 @@ add wave -noupdate -divider {SINAIS INTERNOS}
 add wave -noupdate -divider {Debouncer output}
 add wave -noupdate /TB_BlackJack/DUV/w_ResetDeb
 add wave -noupdate /TB_BlackJack/DUV/w_ResetPE
-add wave -noupdate /TB_BlackJack/DUV/w_HitDeb
 add wave -noupdate /TB_BlackJack/DUV/w_HitPE
-add wave -noupdate /TB_BlackJack/DUV/w_HitNE
-add wave -noupdate /TB_BlackJack/DUV/w_StayDeb
 add wave -noupdate /TB_BlackJack/DUV/w_StayPE
-add wave -noupdate /TB_BlackJack/DUV/w_StayNE
 add wave -noupdate -divider CONTADOR
 add wave -noupdate /TB_BlackJack/DUV/b2v_Contador/clk_2K
 add wave -noupdate /TB_BlackJack/DUV/b2v_Contador/i_ActCounter
@@ -41,6 +36,7 @@ add wave -noupdate /TB_BlackJack/DUV/b2v_Contador/i_ResetDeb
 add wave -noupdate -radix unsigned /TB_BlackJack/DUV/b2v_Contador/o_Count
 add wave -noupdate /TB_BlackJack/DUV/b2v_Contador/o_TwoSec
 add wave -noupdate /TB_BlackJack/DUV/b2v_Contador/o_RstOK
+add wave -noupdate -radix unsigned /TB_BlackJack/DUV/b2v_Contador/r_Count
 add wave -noupdate -divider Embaralhador
 add wave -noupdate -radix ascii /TB_BlackJack/StateStringShuffler
 add wave -noupdate -divider Estados
@@ -90,6 +86,7 @@ add wave -noupdate /TB_BlackJack/DUV/b2v_FSM_CardAdder/vc_Ace_P
 add wave -noupdate /TB_BlackJack/DUV/b2v_FSM_CardAdder/vc_Face_D
 add wave -noupdate /TB_BlackJack/DUV/b2v_FSM_CardAdder/vc_Face_P
 add wave -noupdate -divider {Black Jack Controller}
+add wave -noupdate -radix ascii /TB_BlackJack/StateStringGlobal
 add wave -noupdate -divider Entradas
 add wave -noupdate /TB_BlackJack/DUV/b2v_FSM_Global/i_Clk
 add wave -noupdate /TB_BlackJack/DUV/b2v_FSM_Global/i_Reset
@@ -123,8 +120,12 @@ add wave -noupdate /TB_BlackJack/DUV/b2v_FSM_Global/vc_HitPlayer
 add wave -noupdate /TB_BlackJack/DUV/b2v_FSM_Global/vc_FirstTurn
 add wave -noupdate /TB_BlackJack/DUV/b2v_FSM_Global/A_State
 add wave -noupdate /TB_BlackJack/DUV/b2v_FSM_Global/F_State
+add wave -noupdate -divider Estados
+add wave -noupdate -radix ascii /TB_BlackJack/StateStringGlobal
+add wave -noupdate -radix ascii /TB_BlackJack/StateStringShuffler
+add wave -noupdate -radix ascii /TB_BlackJack/StateStringCardAdder
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {60428 ns} 0}
+WaveRestoreCursors {{Cursor 1} {319612 ns} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 247
 configure wave -valuecolwidth 114
@@ -140,4 +141,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {60426 ns} {60453 ns}
+WaveRestoreZoom {319553 ns} {319761 ns}

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for BlackJack
-Mon Dec  2 15:43:07 2019
+Thu Dec  5 12:33:43 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -20,82 +20,81 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  12. State Machine - |BlackJack|BlackJackController:FSM_Global|A_State
  13. User-Specified and Inferred Latches
  14. Registers Removed During Synthesis
- 15. Removed Registers Triggering Further Register Optimizations
- 16. General Register Statistics
- 17. Inverted Register Statistics
- 18. Multiplexer Restructuring Statistics (Restructuring Performed)
- 19. Source assignments for RAM:RAM|altsyncram:altsyncram_component|altsyncram_55u3:auto_generated|altsyncram_thr2:altsyncram1
- 20. Parameter Settings for User Entity Instance: BlackJackController:FSM_Global
- 21. Parameter Settings for User Entity Instance: Debouncer:ResetButtonDebouncer|EdgeDetector:PosEdge
- 22. Parameter Settings for User Entity Instance: Debouncer:ResetButtonDebouncer|EdgeDetector:NegEdge
- 23. Parameter Settings for User Entity Instance: Debouncer:HitButtonDebouncer|EdgeDetector:PosEdge
- 24. Parameter Settings for User Entity Instance: Debouncer:HitButtonDebouncer|EdgeDetector:NegEdge
- 25. Parameter Settings for User Entity Instance: Debouncer:StayButtonDebouncer|EdgeDetector:PosEdge
- 26. Parameter Settings for User Entity Instance: Debouncer:StayButtonDebouncer|EdgeDetector:NegEdge
- 27. Parameter Settings for User Entity Instance: Counter:Contador
- 28. Parameter Settings for User Entity Instance: PLL:inst|altpll:altpll_component
- 29. Parameter Settings for User Entity Instance: Shuffler:FSM_Embaralhador
- 30. Parameter Settings for User Entity Instance: RAM:RAM|altsyncram:altsyncram_component
- 31. Parameter Settings for User Entity Instance: CardAdder:FSM_CardAdder
- 32. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod42
- 33. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod41
- 34. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod40
- 35. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod43
- 36. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod37
- 37. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod38
- 38. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod36
- 39. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod39
- 40. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod34
- 41. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod33
- 42. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod32
- 43. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod35
- 44. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod45
- 45. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod46
- 46. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod44
- 47. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod47
- 48. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod21
- 49. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod25
- 50. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod17
- 51. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod29
- 52. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod26
- 53. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod22
- 54. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod18
- 55. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod30
- 56. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod24
- 57. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod20
- 58. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod16
- 59. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod28
- 60. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod23
- 61. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod27
- 62. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod19
- 63. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod31
- 64. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod10
- 65. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod6
- 66. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod2
- 67. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod14
- 68. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod5
- 69. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod9
- 70. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod1
- 71. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod13
- 72. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod8
- 73. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod4
- 74. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod0
- 75. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod12
- 76. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod7
- 77. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod11
- 78. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod3
- 79. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod15
- 80. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod50
- 81. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod49
- 82. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod48
- 83. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod51
- 84. altpll Parameter Settings by Entity Instance
- 85. altsyncram Parameter Settings by Entity Instance
- 86. In-System Memory Content Editor Settings
- 87. Post-Synthesis Netlist Statistics for Top Partition
- 88. Elapsed Time Per Partition
- 89. Analysis & Synthesis Messages
- 90. Analysis & Synthesis Suppressed Messages
+ 15. General Register Statistics
+ 16. Inverted Register Statistics
+ 17. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 18. Source assignments for RAM:RAM|altsyncram:altsyncram_component|altsyncram_55u3:auto_generated|altsyncram_thr2:altsyncram1
+ 19. Parameter Settings for User Entity Instance: BlackJackController:FSM_Global
+ 20. Parameter Settings for User Entity Instance: Debouncer:ResetButtonDebouncer|EdgeDetector:PosEdge
+ 21. Parameter Settings for User Entity Instance: Debouncer:ResetButtonDebouncer|EdgeDetector:NegEdge
+ 22. Parameter Settings for User Entity Instance: Debouncer:HitButtonDebouncer|EdgeDetector:PosEdge
+ 23. Parameter Settings for User Entity Instance: Debouncer:HitButtonDebouncer|EdgeDetector:NegEdge
+ 24. Parameter Settings for User Entity Instance: Debouncer:StayButtonDebouncer|EdgeDetector:PosEdge
+ 25. Parameter Settings for User Entity Instance: Debouncer:StayButtonDebouncer|EdgeDetector:NegEdge
+ 26. Parameter Settings for User Entity Instance: Counter:Contador
+ 27. Parameter Settings for User Entity Instance: PLL:inst|altpll:altpll_component
+ 28. Parameter Settings for User Entity Instance: Shuffler:FSM_Embaralhador
+ 29. Parameter Settings for User Entity Instance: RAM:RAM|altsyncram:altsyncram_component
+ 30. Parameter Settings for User Entity Instance: CardAdder:FSM_CardAdder
+ 31. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod42
+ 32. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod41
+ 33. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod40
+ 34. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod43
+ 35. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod37
+ 36. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod38
+ 37. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod36
+ 38. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod39
+ 39. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod34
+ 40. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod33
+ 41. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod32
+ 42. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod35
+ 43. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod45
+ 44. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod46
+ 45. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod44
+ 46. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod47
+ 47. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod21
+ 48. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod25
+ 49. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod17
+ 50. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod29
+ 51. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod26
+ 52. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod22
+ 53. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod18
+ 54. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod30
+ 55. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod24
+ 56. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod20
+ 57. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod16
+ 58. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod28
+ 59. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod23
+ 60. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod27
+ 61. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod19
+ 62. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod31
+ 63. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod10
+ 64. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod6
+ 65. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod2
+ 66. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod14
+ 67. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod5
+ 68. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod9
+ 69. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod1
+ 70. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod13
+ 71. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod8
+ 72. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod4
+ 73. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod0
+ 74. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod12
+ 75. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod7
+ 76. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod11
+ 77. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod3
+ 78. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod15
+ 79. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod50
+ 80. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod49
+ 81. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod48
+ 82. Parameter Settings for Inferred Entity Instance: Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod51
+ 83. altpll Parameter Settings by Entity Instance
+ 84. altsyncram Parameter Settings by Entity Instance
+ 85. In-System Memory Content Editor Settings
+ 86. Post-Synthesis Netlist Statistics for Top Partition
+ 87. Elapsed Time Per Partition
+ 88. Analysis & Synthesis Messages
+ 89. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -121,16 +120,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Dec  2 15:43:07 2019       ;
+; Analysis & Synthesis Status        ; Successful - Thu Dec  5 12:33:43 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; BlackJack                                   ;
 ; Top-level Entity Name              ; BlackJack                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 1,367                                       ;
-;     Total combinational functions  ; 1,324                                       ;
-;     Dedicated logic registers      ; 193                                         ;
-; Total registers                    ; 193                                         ;
-; Total pins                         ; 39                                          ;
+; Total logic elements               ; 1,522                                       ;
+;     Total combinational functions  ; 1,473                                       ;
+;     Dedicated logic registers      ; 219                                         ;
+; Total registers                    ; 219                                         ;
+; Total pins                         ; 43                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 256                                         ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -318,23 +317,23 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 1,367                    ;
+; Estimated Total logic elements              ; 1,522                    ;
 ;                                             ;                          ;
-; Total combinational functions               ; 1324                     ;
+; Total combinational functions               ; 1473                     ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 388                      ;
-;     -- 3 input functions                    ; 369                      ;
-;     -- <=2 input functions                  ; 567                      ;
+;     -- 4 input functions                    ; 461                      ;
+;     -- 3 input functions                    ; 430                      ;
+;     -- <=2 input functions                  ; 582                      ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 907                      ;
-;     -- arithmetic mode                      ; 417                      ;
+;     -- normal mode                          ; 1042                     ;
+;     -- arithmetic mode                      ; 431                      ;
 ;                                             ;                          ;
-; Total registers                             ; 193                      ;
-;     -- Dedicated logic registers            ; 193                      ;
+; Total registers                             ; 219                      ;
+;     -- Dedicated logic registers            ; 219                      ;
 ;     -- I/O registers                        ; 0                        ;
 ;                                             ;                          ;
-; I/O pins                                    ; 39                       ;
+; I/O pins                                    ; 43                       ;
 ; Total memory bits                           ; 256                      ;
 ;                                             ;                          ;
 ; Embedded Multiplier 9-bit elements          ; 0                        ;
@@ -344,8 +343,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 144                      ;
-; Total fan-out                               ; 4372                     ;
-; Average fan-out                             ; 2.72                     ;
+; Total fan-out                               ; 4992                     ;
+; Average fan-out                             ; 2.79                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -354,16 +353,20 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                   ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |BlackJack                                                                                                                              ; 1324 (2)            ; 193 (0)                   ; 256         ; 0            ; 0       ; 0         ; 39   ; 0            ; |BlackJack                                                                                                                                                                                                                                                                                                                                            ; BlackJack                         ; work         ;
-;    |BlackJackController:FSM_Global|                                                                                                     ; 9 (9)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|BlackJackController:FSM_Global                                                                                                                                                                                                                                                                                                             ; BlackJackController               ; work         ;
-;    |CardAdder:FSM_CardAdder|                                                                                                            ; 75 (75)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|CardAdder:FSM_CardAdder                                                                                                                                                                                                                                                                                                                    ; CardAdder                         ; work         ;
+; |BlackJack                                                                                                                              ; 1473 (2)            ; 219 (0)                   ; 256         ; 0            ; 0       ; 0         ; 43   ; 0            ; |BlackJack                                                                                                                                                                                                                                                                                                                                            ; BlackJack                         ; work         ;
+;    |BlackJackController:FSM_Global|                                                                                                     ; 99 (99)             ; 21 (21)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|BlackJackController:FSM_Global                                                                                                                                                                                                                                                                                                             ; BlackJackController               ; work         ;
+;    |CardAdder:FSM_CardAdder|                                                                                                            ; 89 (89)             ; 34 (34)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|CardAdder:FSM_CardAdder                                                                                                                                                                                                                                                                                                                    ; CardAdder                         ; work         ;
 ;    |CardEvaluator:CardEvaluatorDecoder|                                                                                                 ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|CardEvaluator:CardEvaluatorDecoder                                                                                                                                                                                                                                                                                                         ; CardEvaluator                     ; work         ;
-;    |Counter:Contador|                                                                                                                   ; 17 (17)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Counter:Contador                                                                                                                                                                                                                                                                                                                           ; Counter                           ; work         ;
+;    |Counter:Contador|                                                                                                                   ; 20 (20)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Counter:Contador                                                                                                                                                                                                                                                                                                                           ; Counter                           ; work         ;
+;    |Debouncer:HitButtonDebouncer|                                                                                                       ; 1 (0)               ; 3 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Debouncer:HitButtonDebouncer                                                                                                                                                                                                                                                                                                               ; Debouncer                         ; work         ;
+;       |EdgeDetector:NegEdge|                                                                                                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Debouncer:HitButtonDebouncer|EdgeDetector:NegEdge                                                                                                                                                                                                                                                                                          ; EdgeDetector                      ; work         ;
 ;    |Debouncer:ResetButtonDebouncer|                                                                                                     ; 2 (0)               ; 3 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Debouncer:ResetButtonDebouncer                                                                                                                                                                                                                                                                                                             ; Debouncer                         ; work         ;
 ;       |EdgeDetector:NegEdge|                                                                                                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Debouncer:ResetButtonDebouncer|EdgeDetector:NegEdge                                                                                                                                                                                                                                                                                        ; EdgeDetector                      ; work         ;
 ;       |EdgeDetector:PosEdge|                                                                                                            ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Debouncer:ResetButtonDebouncer|EdgeDetector:PosEdge                                                                                                                                                                                                                                                                                        ; EdgeDetector                      ; work         ;
+;    |Debouncer:StayButtonDebouncer|                                                                                                      ; 1 (0)               ; 3 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Debouncer:StayButtonDebouncer                                                                                                                                                                                                                                                                                                              ; Debouncer                         ; work         ;
+;       |EdgeDetector:NegEdge|                                                                                                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Debouncer:StayButtonDebouncer|EdgeDetector:NegEdge                                                                                                                                                                                                                                                                                         ; EdgeDetector                      ; work         ;
 ;    |MemAcessMux:MemAcessMux|                                                                                                            ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|MemAcessMux:MemAcessMux                                                                                                                                                                                                                                                                                                                    ; MemAcessMux                       ; work         ;
-;    |Nxt_Addr:NxtAddr_Decoder|                                                                                                           ; 940 (424)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder                                                                                                                                                                                                                                                                                                                   ; Nxt_Addr                          ; work         ;
+;    |Nxt_Addr:NxtAddr_Decoder|                                                                                                           ; 931 (423)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder                                                                                                                                                                                                                                                                                                                   ; Nxt_Addr                          ; work         ;
 ;       |lpm_divide:Mod0|                                                                                                                 ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod0                                                                                                                                                                                                                                                                                                   ; lpm_divide                        ; work         ;
 ;          |lpm_divide_m9m:auto_generated|                                                                                                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod0|lpm_divide_m9m:auto_generated                                                                                                                                                                                                                                                                     ; lpm_divide_m9m                    ; work         ;
 ;             |sign_div_unsign_bkh:divider|                                                                                               ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod0|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                                                                                                                                                                                                                                         ; sign_div_unsign_bkh               ; work         ;
@@ -472,10 +475,10 @@ refer to the applicable agreement for further details.
 ;          |lpm_divide_m9m:auto_generated|                                                                                                ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod33|lpm_divide_m9m:auto_generated                                                                                                                                                                                                                                                                    ; lpm_divide_m9m                    ; work         ;
 ;             |sign_div_unsign_bkh:divider|                                                                                               ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod33|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                                                                                                                                                                                                                                        ; sign_div_unsign_bkh               ; work         ;
 ;                |alt_u_div_a4f:divider|                                                                                                  ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod33|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider                                                                                                                                                                                                                  ; alt_u_div_a4f                     ; work         ;
-;       |lpm_divide:Mod34|                                                                                                                ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod34                                                                                                                                                                                                                                                                                                  ; lpm_divide                        ; work         ;
-;          |lpm_divide_m9m:auto_generated|                                                                                                ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod34|lpm_divide_m9m:auto_generated                                                                                                                                                                                                                                                                    ; lpm_divide_m9m                    ; work         ;
-;             |sign_div_unsign_bkh:divider|                                                                                               ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod34|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                                                                                                                                                                                                                                        ; sign_div_unsign_bkh               ; work         ;
-;                |alt_u_div_a4f:divider|                                                                                                  ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod34|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider                                                                                                                                                                                                                  ; alt_u_div_a4f                     ; work         ;
+;       |lpm_divide:Mod34|                                                                                                                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod34                                                                                                                                                                                                                                                                                                  ; lpm_divide                        ; work         ;
+;          |lpm_divide_m9m:auto_generated|                                                                                                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod34|lpm_divide_m9m:auto_generated                                                                                                                                                                                                                                                                    ; lpm_divide_m9m                    ; work         ;
+;             |sign_div_unsign_bkh:divider|                                                                                               ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod34|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                                                                                                                                                                                                                                        ; sign_div_unsign_bkh               ; work         ;
+;                |alt_u_div_a4f:divider|                                                                                                  ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod34|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider                                                                                                                                                                                                                  ; alt_u_div_a4f                     ; work         ;
 ;       |lpm_divide:Mod35|                                                                                                                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod35                                                                                                                                                                                                                                                                                                  ; lpm_divide                        ; work         ;
 ;          |lpm_divide_m9m:auto_generated|                                                                                                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod35|lpm_divide_m9m:auto_generated                                                                                                                                                                                                                                                                    ; lpm_divide_m9m                    ; work         ;
 ;             |sign_div_unsign_bkh:divider|                                                                                               ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod35|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                                                                                                                                                                                                                                        ; sign_div_unsign_bkh               ; work         ;
@@ -488,10 +491,10 @@ refer to the applicable agreement for further details.
 ;          |lpm_divide_m9m:auto_generated|                                                                                                ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod37|lpm_divide_m9m:auto_generated                                                                                                                                                                                                                                                                    ; lpm_divide_m9m                    ; work         ;
 ;             |sign_div_unsign_bkh:divider|                                                                                               ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod37|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                                                                                                                                                                                                                                        ; sign_div_unsign_bkh               ; work         ;
 ;                |alt_u_div_a4f:divider|                                                                                                  ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod37|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider                                                                                                                                                                                                                  ; alt_u_div_a4f                     ; work         ;
-;       |lpm_divide:Mod38|                                                                                                                ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod38                                                                                                                                                                                                                                                                                                  ; lpm_divide                        ; work         ;
-;          |lpm_divide_m9m:auto_generated|                                                                                                ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod38|lpm_divide_m9m:auto_generated                                                                                                                                                                                                                                                                    ; lpm_divide_m9m                    ; work         ;
-;             |sign_div_unsign_bkh:divider|                                                                                               ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod38|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                                                                                                                                                                                                                                        ; sign_div_unsign_bkh               ; work         ;
-;                |alt_u_div_a4f:divider|                                                                                                  ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod38|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider                                                                                                                                                                                                                  ; alt_u_div_a4f                     ; work         ;
+;       |lpm_divide:Mod38|                                                                                                                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod38                                                                                                                                                                                                                                                                                                  ; lpm_divide                        ; work         ;
+;          |lpm_divide_m9m:auto_generated|                                                                                                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod38|lpm_divide_m9m:auto_generated                                                                                                                                                                                                                                                                    ; lpm_divide_m9m                    ; work         ;
+;             |sign_div_unsign_bkh:divider|                                                                                               ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod38|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                                                                                                                                                                                                                                        ; sign_div_unsign_bkh               ; work         ;
+;                |alt_u_div_a4f:divider|                                                                                                  ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod38|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider                                                                                                                                                                                                                  ; alt_u_div_a4f                     ; work         ;
 ;       |lpm_divide:Mod39|                                                                                                                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod39                                                                                                                                                                                                                                                                                                  ; lpm_divide                        ; work         ;
 ;          |lpm_divide_m9m:auto_generated|                                                                                                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod39|lpm_divide_m9m:auto_generated                                                                                                                                                                                                                                                                    ; lpm_divide_m9m                    ; work         ;
 ;             |sign_div_unsign_bkh:divider|                                                                                               ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod39|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                                                                                                                                                                                                                                        ; sign_div_unsign_bkh               ; work         ;
@@ -508,10 +511,10 @@ refer to the applicable agreement for further details.
 ;          |lpm_divide_m9m:auto_generated|                                                                                                ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod41|lpm_divide_m9m:auto_generated                                                                                                                                                                                                                                                                    ; lpm_divide_m9m                    ; work         ;
 ;             |sign_div_unsign_bkh:divider|                                                                                               ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod41|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                                                                                                                                                                                                                                        ; sign_div_unsign_bkh               ; work         ;
 ;                |alt_u_div_a4f:divider|                                                                                                  ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod41|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider                                                                                                                                                                                                                  ; alt_u_div_a4f                     ; work         ;
-;       |lpm_divide:Mod42|                                                                                                                ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod42                                                                                                                                                                                                                                                                                                  ; lpm_divide                        ; work         ;
-;          |lpm_divide_m9m:auto_generated|                                                                                                ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod42|lpm_divide_m9m:auto_generated                                                                                                                                                                                                                                                                    ; lpm_divide_m9m                    ; work         ;
-;             |sign_div_unsign_bkh:divider|                                                                                               ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod42|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                                                                                                                                                                                                                                        ; sign_div_unsign_bkh               ; work         ;
-;                |alt_u_div_a4f:divider|                                                                                                  ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod42|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider                                                                                                                                                                                                                  ; alt_u_div_a4f                     ; work         ;
+;       |lpm_divide:Mod42|                                                                                                                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod42                                                                                                                                                                                                                                                                                                  ; lpm_divide                        ; work         ;
+;          |lpm_divide_m9m:auto_generated|                                                                                                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod42|lpm_divide_m9m:auto_generated                                                                                                                                                                                                                                                                    ; lpm_divide_m9m                    ; work         ;
+;             |sign_div_unsign_bkh:divider|                                                                                               ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod42|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                                                                                                                                                                                                                                        ; sign_div_unsign_bkh               ; work         ;
+;                |alt_u_div_a4f:divider|                                                                                                  ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod42|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider                                                                                                                                                                                                                  ; alt_u_div_a4f                     ; work         ;
 ;       |lpm_divide:Mod43|                                                                                                                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod43                                                                                                                                                                                                                                                                                                  ; lpm_divide                        ; work         ;
 ;          |lpm_divide_m9m:auto_generated|                                                                                                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod43|lpm_divide_m9m:auto_generated                                                                                                                                                                                                                                                                    ; lpm_divide_m9m                    ; work         ;
 ;             |sign_div_unsign_bkh:divider|                                                                                               ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod43|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                                                                                                                                                                                                                                        ; sign_div_unsign_bkh               ; work         ;
@@ -524,10 +527,10 @@ refer to the applicable agreement for further details.
 ;          |lpm_divide_m9m:auto_generated|                                                                                                ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod45|lpm_divide_m9m:auto_generated                                                                                                                                                                                                                                                                    ; lpm_divide_m9m                    ; work         ;
 ;             |sign_div_unsign_bkh:divider|                                                                                               ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod45|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                                                                                                                                                                                                                                        ; sign_div_unsign_bkh               ; work         ;
 ;                |alt_u_div_a4f:divider|                                                                                                  ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod45|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider                                                                                                                                                                                                                  ; alt_u_div_a4f                     ; work         ;
-;       |lpm_divide:Mod46|                                                                                                                ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod46                                                                                                                                                                                                                                                                                                  ; lpm_divide                        ; work         ;
-;          |lpm_divide_m9m:auto_generated|                                                                                                ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod46|lpm_divide_m9m:auto_generated                                                                                                                                                                                                                                                                    ; lpm_divide_m9m                    ; work         ;
-;             |sign_div_unsign_bkh:divider|                                                                                               ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod46|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                                                                                                                                                                                                                                        ; sign_div_unsign_bkh               ; work         ;
-;                |alt_u_div_a4f:divider|                                                                                                  ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod46|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider                                                                                                                                                                                                                  ; alt_u_div_a4f                     ; work         ;
+;       |lpm_divide:Mod46|                                                                                                                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod46                                                                                                                                                                                                                                                                                                  ; lpm_divide                        ; work         ;
+;          |lpm_divide_m9m:auto_generated|                                                                                                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod46|lpm_divide_m9m:auto_generated                                                                                                                                                                                                                                                                    ; lpm_divide_m9m                    ; work         ;
+;             |sign_div_unsign_bkh:divider|                                                                                               ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod46|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                                                                                                                                                                                                                                        ; sign_div_unsign_bkh               ; work         ;
+;                |alt_u_div_a4f:divider|                                                                                                  ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod46|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider                                                                                                                                                                                                                  ; alt_u_div_a4f                     ; work         ;
 ;       |lpm_divide:Mod47|                                                                                                                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod47                                                                                                                                                                                                                                                                                                  ; lpm_divide                        ; work         ;
 ;          |lpm_divide_m9m:auto_generated|                                                                                                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod47|lpm_divide_m9m:auto_generated                                                                                                                                                                                                                                                                    ; lpm_divide_m9m                    ; work         ;
 ;             |sign_div_unsign_bkh:divider|                                                                                               ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod47|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                                                                                                                                                                                                                                        ; sign_div_unsign_bkh               ; work         ;
@@ -582,7 +585,8 @@ refer to the applicable agreement for further details.
 ;             |sld_mod_ram_rom:mgl_prim2|                                                                                                 ; 48 (27)             ; 29 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|RAM:RAM|altsyncram:altsyncram_component|altsyncram_55u3:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                                                                           ; sld_mod_ram_rom                   ; work         ;
 ;                |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|                                                                     ; 21 (21)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|RAM:RAM|altsyncram:altsyncram_component|altsyncram_55u3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr                                                                                                                                                                                        ; sld_rom_sr                        ; work         ;
 ;    |Shuffler:FSM_Embaralhador|                                                                                                          ; 47 (47)             ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|Shuffler:FSM_Embaralhador                                                                                                                                                                                                                                                                                                                  ; Shuffler                          ; work         ;
-;    |displaydecoder:PlayerHand|                                                                                                          ; 46 (46)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|displaydecoder:PlayerHand                                                                                                                                                                                                                                                                                                                  ; displaydecoder                    ; work         ;
+;    |displaydecoder:DealerHand|                                                                                                          ; 50 (50)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|displaydecoder:DealerHand                                                                                                                                                                                                                                                                                                                  ; displaydecoder                    ; work         ;
+;    |displaydecoder:PlayerHand|                                                                                                          ; 45 (45)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|displaydecoder:PlayerHand                                                                                                                                                                                                                                                                                                                  ; displaydecoder                    ; work         ;
 ;    |sld_hub:auto_hub|                                                                                                                   ; 122 (1)             ; 87 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
 ;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 121 (0)             ; 87 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
 ;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 121 (0)             ; 87 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BlackJack|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                       ; alt_sld_fab  ;
@@ -690,45 +694,64 @@ Encoding Type:  One-Hot
 +-------------------------+-------------------------+---------------------+-------------------+------------------+------------------+----------------------+----------------------+--------------------+--------------------+-------------------+-------------------+-----------------------+--------------------+----------------------+-------------------------+-----------------------+-------------------------+---------------------+---------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                                    ;
-+-----------------------------------------------------+-----------------------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal                     ; Free of Timing Hazards ;
-+-----------------------------------------------------+-----------------------------------------+------------------------+
-; CardEvaluator:CardEvaluatorDecoder|o_Value[1]       ; CardEvaluator:CardEvaluatorDecoder|Mux4 ; yes                    ;
-; CardEvaluator:CardEvaluatorDecoder|o_Value[0]       ; CardEvaluator:CardEvaluatorDecoder|Mux4 ; yes                    ;
-; CardAdder:FSM_CardAdder|F_State.PlusTenPlayer_391   ; CardAdder:FSM_CardAdder|Selector33      ; yes                    ;
-; CardAdder:FSM_CardAdder|F_State.PlayerWithFace_417  ; CardAdder:FSM_CardAdder|Selector33      ; yes                    ;
-; CardAdder:FSM_CardAdder|F_State.PlayerWithAce_430   ; CardAdder:FSM_CardAdder|Selector33      ; yes                    ;
-; CardAdder:FSM_CardAdder|F_State.DealerWithFace_443  ; CardAdder:FSM_CardAdder|Selector33      ; yes                    ;
-; CardAdder:FSM_CardAdder|F_State.DealerWithAce_456   ; CardAdder:FSM_CardAdder|Selector33      ; yes                    ;
-; CardAdder:FSM_CardAdder|F_State.Value2Dealer_476    ; GND                                     ; yes                    ;
-; CardAdder:FSM_CardAdder|F_State.Value2Player_466    ; GND                                     ; yes                    ;
-; CardAdder:FSM_CardAdder|F_State.PlusTenDealer_404   ; CardAdder:FSM_CardAdder|Selector33      ; yes                    ;
-; CardEvaluator:CardEvaluatorDecoder|o_Value[2]       ; CardEvaluator:CardEvaluatorDecoder|Mux4 ; yes                    ;
-; CardEvaluator:CardEvaluatorDecoder|o_Value[3]       ; CardEvaluator:CardEvaluatorDecoder|Mux4 ; yes                    ;
-; Shuffler:FSM_Embaralhador|o_Data[0]                 ; Shuffler:FSM_Embaralhador|WideOr4       ; yes                    ;
-; Shuffler:FSM_Embaralhador|o_Address[0]              ; Shuffler:FSM_Embaralhador|o_Address     ; yes                    ;
-; Shuffler:FSM_Embaralhador|o_Address[1]              ; Shuffler:FSM_Embaralhador|o_Address     ; yes                    ;
-; Shuffler:FSM_Embaralhador|o_Address[2]              ; Shuffler:FSM_Embaralhador|o_Address     ; yes                    ;
-; Shuffler:FSM_Embaralhador|o_Address[3]              ; Shuffler:FSM_Embaralhador|o_Address     ; yes                    ;
-; Shuffler:FSM_Embaralhador|o_Address[4]              ; Shuffler:FSM_Embaralhador|o_Address     ; yes                    ;
-; Shuffler:FSM_Embaralhador|o_Address[5]              ; Shuffler:FSM_Embaralhador|o_Address     ; yes                    ;
-; Shuffler:FSM_Embaralhador|o_Data[1]                 ; Shuffler:FSM_Embaralhador|WideOr4       ; yes                    ;
-; Shuffler:FSM_Embaralhador|o_Data[2]                 ; Shuffler:FSM_Embaralhador|WideOr4       ; yes                    ;
-; Shuffler:FSM_Embaralhador|o_Data[3]                 ; Shuffler:FSM_Embaralhador|WideOr4       ; yes                    ;
-; CardAdder:FSM_CardAdder|F_State.ReadMem_489         ; CardAdder:FSM_CardAdder|Selector33      ; yes                    ;
-; Nxt_Addr:NxtAddr_Decoder|Addr_j[0]                  ; Nxt_Addr:NxtAddr_Decoder|Mux6           ; yes                    ;
-; Nxt_Addr:NxtAddr_Decoder|Addr_j[1]                  ; Nxt_Addr:NxtAddr_Decoder|Mux6           ; yes                    ;
-; Nxt_Addr:NxtAddr_Decoder|Addr_j[2]                  ; Nxt_Addr:NxtAddr_Decoder|Mux6           ; yes                    ;
-; Nxt_Addr:NxtAddr_Decoder|Addr_j[3]                  ; Nxt_Addr:NxtAddr_Decoder|Mux6           ; yes                    ;
-; Nxt_Addr:NxtAddr_Decoder|Addr_j[4]                  ; Nxt_Addr:NxtAddr_Decoder|Mux6           ; yes                    ;
-; Nxt_Addr:NxtAddr_Decoder|Addr_j[5]                  ; Nxt_Addr:NxtAddr_Decoder|Mux6           ; yes                    ;
-; CardAdder:FSM_CardAdder|F_State.CardOK_378          ; CardAdder:FSM_CardAdder|Selector33      ; yes                    ;
-; CardAdder:FSM_CardAdder|F_State.Wait_FSM_502        ; CardAdder:FSM_CardAdder|Selector33      ; yes                    ;
-; CardAdder:FSM_CardAdder|F_State.Start_515           ; CardAdder:FSM_CardAdder|Selector33      ; yes                    ;
-; Number of user-specified and inferred latches = 32  ;                                         ;                        ;
-+-----------------------------------------------------+-----------------------------------------+------------------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                            ;
++------------------------------------------------------------+------------------------------------------+------------------------+
+; Latch Name                                                 ; Latch Enable Signal                      ; Free of Timing Hazards ;
++------------------------------------------------------------+------------------------------------------+------------------------+
+; BlackJackController:FSM_Global|F_State.WinState_633        ; BlackJackController:FSM_Global|Selector1 ; yes                    ;
+; BlackJackController:FSM_Global|F_State.LoseState_601       ; BlackJackController:FSM_Global|Selector1 ; yes                    ;
+; BlackJackController:FSM_Global|F_State.TieState_617        ; BlackJackController:FSM_Global|Selector1 ; yes                    ;
+; BlackJackController:FSM_Global|F_State.PlayerHit_729       ; BlackJackController:FSM_Global|Selector1 ; yes                    ;
+; BlackJackController:FSM_Global|F_State.DealerHit_713       ; BlackJackController:FSM_Global|Selector1 ; yes                    ;
+; BlackJackController:FSM_Global|F_State.PlayerStay_697      ; BlackJackController:FSM_Global|Selector1 ; yes                    ;
+; BlackJackController:FSM_Global|F_State.DealerStay_681      ; BlackJackController:FSM_Global|Selector1 ; yes                    ;
+; CardEvaluator:CardEvaluatorDecoder|o_Value[1]              ; CardEvaluator:CardEvaluatorDecoder|Mux4  ; yes                    ;
+; CardEvaluator:CardEvaluatorDecoder|o_Value[0]              ; CardEvaluator:CardEvaluatorDecoder|Mux4  ; yes                    ;
+; CardAdder:FSM_CardAdder|F_State.PlusTenDealer_404          ; CardAdder:FSM_CardAdder|Selector33       ; yes                    ;
+; CardAdder:FSM_CardAdder|F_State.PlusTenPlayer_391          ; CardAdder:FSM_CardAdder|Selector33       ; yes                    ;
+; CardAdder:FSM_CardAdder|F_State.PlayerWithFace_417         ; CardAdder:FSM_CardAdder|Selector33       ; yes                    ;
+; CardAdder:FSM_CardAdder|F_State.PlayerWithAce_430          ; CardAdder:FSM_CardAdder|Selector33       ; yes                    ;
+; CardAdder:FSM_CardAdder|F_State.DealerWithFace_443         ; CardAdder:FSM_CardAdder|Selector33       ; yes                    ;
+; CardAdder:FSM_CardAdder|F_State.DealerWithAce_456          ; CardAdder:FSM_CardAdder|Selector33       ; yes                    ;
+; CardAdder:FSM_CardAdder|F_State.Value2Dealer_476           ; GND                                      ; yes                    ;
+; CardAdder:FSM_CardAdder|F_State.Value2Player_466           ; GND                                      ; yes                    ;
+; CardEvaluator:CardEvaluatorDecoder|o_Value[2]              ; CardEvaluator:CardEvaluatorDecoder|Mux4  ; yes                    ;
+; CardEvaluator:CardEvaluatorDecoder|o_Value[3]              ; CardEvaluator:CardEvaluatorDecoder|Mux4  ; yes                    ;
+; Shuffler:FSM_Embaralhador|o_Data[0]                        ; Shuffler:FSM_Embaralhador|WideOr4        ; yes                    ;
+; Shuffler:FSM_Embaralhador|o_Address[0]                     ; Shuffler:FSM_Embaralhador|o_Address      ; yes                    ;
+; Shuffler:FSM_Embaralhador|o_Address[1]                     ; Shuffler:FSM_Embaralhador|o_Address      ; yes                    ;
+; Shuffler:FSM_Embaralhador|o_Address[2]                     ; Shuffler:FSM_Embaralhador|o_Address      ; yes                    ;
+; Shuffler:FSM_Embaralhador|o_Address[3]                     ; Shuffler:FSM_Embaralhador|o_Address      ; yes                    ;
+; Shuffler:FSM_Embaralhador|o_Address[4]                     ; Shuffler:FSM_Embaralhador|o_Address      ; yes                    ;
+; Shuffler:FSM_Embaralhador|o_Address[5]                     ; Shuffler:FSM_Embaralhador|o_Address      ; yes                    ;
+; BlackJackController:FSM_Global|F_State.Measurement_585     ; BlackJackController:FSM_Global|Selector1 ; yes                    ;
+; BlackJackController:FSM_Global|F_State.PlayerTurn_761      ; BlackJackController:FSM_Global|Selector1 ; yes                    ;
+; BlackJackController:FSM_Global|F_State.DealerTurn_745      ; BlackJackController:FSM_Global|Selector1 ; yes                    ;
+; BlackJackController:FSM_Global|F_State.DealerBlackJack_569 ; BlackJackController:FSM_Global|Selector1 ; yes                    ;
+; CardAdder:FSM_CardAdder|F_State.CardOK_378                 ; CardAdder:FSM_CardAdder|Selector33       ; yes                    ;
+; BlackJackController:FSM_Global|F_State.CardToPlayer_665    ; BlackJackController:FSM_Global|Selector1 ; yes                    ;
+; BlackJackController:FSM_Global|F_State.CardToDealer_649    ; BlackJackController:FSM_Global|Selector1 ; yes                    ;
+; Shuffler:FSM_Embaralhador|o_Data[1]                        ; Shuffler:FSM_Embaralhador|WideOr4        ; yes                    ;
+; Shuffler:FSM_Embaralhador|o_Data[2]                        ; Shuffler:FSM_Embaralhador|WideOr4        ; yes                    ;
+; Shuffler:FSM_Embaralhador|o_Data[3]                        ; Shuffler:FSM_Embaralhador|WideOr4        ; yes                    ;
+; BlackJackController:FSM_Global|F_State.D1_RstCardFSM_809   ; BlackJackController:FSM_Global|Selector1 ; yes                    ;
+; BlackJackController:FSM_Global|F_State.P_RstCardFSM_777    ; BlackJackController:FSM_Global|Selector1 ; yes                    ;
+; BlackJackController:FSM_Global|F_State.PlayerWith1Card_825 ; BlackJackController:FSM_Global|Selector1 ; yes                    ;
+; BlackJackController:FSM_Global|F_State.PlayerWith2Card_793 ; BlackJackController:FSM_Global|Selector1 ; yes                    ;
+; CardAdder:FSM_CardAdder|F_State.ReadMem_489                ; CardAdder:FSM_CardAdder|Selector33       ; yes                    ;
+; Nxt_Addr:NxtAddr_Decoder|Addr_j[0]                         ; Nxt_Addr:NxtAddr_Decoder|Mux6            ; yes                    ;
+; BlackJackController:FSM_Global|F_State.ShuffleDeck_841     ; BlackJackController:FSM_Global|Selector1 ; yes                    ;
+; Nxt_Addr:NxtAddr_Decoder|Addr_j[1]                         ; Nxt_Addr:NxtAddr_Decoder|Mux6            ; yes                    ;
+; Nxt_Addr:NxtAddr_Decoder|Addr_j[2]                         ; Nxt_Addr:NxtAddr_Decoder|Mux6            ; yes                    ;
+; Nxt_Addr:NxtAddr_Decoder|Addr_j[3]                         ; Nxt_Addr:NxtAddr_Decoder|Mux6            ; yes                    ;
+; Nxt_Addr:NxtAddr_Decoder|Addr_j[4]                         ; Nxt_Addr:NxtAddr_Decoder|Mux6            ; yes                    ;
+; Nxt_Addr:NxtAddr_Decoder|Addr_j[5]                         ; Nxt_Addr:NxtAddr_Decoder|Mux6            ; yes                    ;
+; BlackJackController:FSM_Global|F_State.Start_857           ; BlackJackController:FSM_Global|Selector1 ; yes                    ;
+; CardAdder:FSM_CardAdder|F_State.Wait_FSM_502               ; CardAdder:FSM_CardAdder|Selector33       ; yes                    ;
+; CardAdder:FSM_CardAdder|F_State.Start_515                  ; CardAdder:FSM_CardAdder|Selector33       ; yes                    ;
+; Number of user-specified and inferred latches = 51         ;                                          ;                        ;
++------------------------------------------------------------+------------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -737,17 +760,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +---------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------+
 ; Register name                                                                                                                   ; Reason for Removal                                                      ;
 +---------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------+
+; Debouncer:StayButtonDebouncer|EdgeDetector:PosEdge|sig_dly                                                                      ; Merged with Debouncer:StayButtonDebouncer|EdgeDetector:NegEdge|sig_dly  ;
+; Debouncer:HitButtonDebouncer|EdgeDetector:PosEdge|sig_dly                                                                       ; Merged with Debouncer:HitButtonDebouncer|EdgeDetector:NegEdge|sig_dly   ;
 ; Debouncer:ResetButtonDebouncer|EdgeDetector:PosEdge|sig_dly                                                                     ; Merged with Debouncer:ResetButtonDebouncer|EdgeDetector:NegEdge|sig_dly ;
-; Debouncer:HitButtonDebouncer|EdgeDetector:PosEdge|sig_dly                                                                       ; Lost fanout                                                             ;
-; Debouncer:HitButtonDebouncer|r_ButtonSync                                                                                       ; Lost fanout                                                             ;
-; Debouncer:HitButtonDebouncer|r_Intermediario                                                                                    ; Lost fanout                                                             ;
-; Debouncer:StayButtonDebouncer|EdgeDetector:PosEdge|sig_dly                                                                      ; Lost fanout                                                             ;
-; Debouncer:StayButtonDebouncer|r_ButtonSync                                                                                      ; Lost fanout                                                             ;
-; Debouncer:StayButtonDebouncer|r_Intermediario                                                                                   ; Lost fanout                                                             ;
-; BlackJackController:FSM_Global|vc_FirstTurn                                                                                     ; Lost fanout                                                             ;
-; BlackJackController:FSM_Global|vc_HitPlayer                                                                                     ; Lost fanout                                                             ;
-; BlackJackController:FSM_Global|A_State.Measurement                                                                              ; Lost fanout                                                             ;
-; BlackJackController:FSM_Global|A_State.DealerBlackJack                                                                          ; Lost fanout                                                             ;
 ; CardAdder:FSM_CardAdder|A_State~2                                                                                               ; Lost fanout                                                             ;
 ; CardAdder:FSM_CardAdder|A_State~3                                                                                               ; Lost fanout                                                             ;
 ; CardAdder:FSM_CardAdder|A_State~4                                                                                               ; Lost fanout                                                             ;
@@ -761,37 +776,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; BlackJackController:FSM_Global|A_State~4                                                                                        ; Lost fanout                                                             ;
 ; BlackJackController:FSM_Global|A_State~5                                                                                        ; Lost fanout                                                             ;
 ; BlackJackController:FSM_Global|A_State~6                                                                                        ; Lost fanout                                                             ;
-; BlackJackController:FSM_Global|A_State.TieState                                                                                 ; Merged with BlackJackController:FSM_Global|A_State.LoseState            ;
-; BlackJackController:FSM_Global|A_State.WinState                                                                                 ; Merged with BlackJackController:FSM_Global|A_State.LoseState            ;
-; BlackJackController:FSM_Global|A_State.PlayerHit                                                                                ; Merged with BlackJackController:FSM_Global|A_State.DealerHit            ;
-; BlackJackController:FSM_Global|A_State.PlayerStay                                                                               ; Merged with BlackJackController:FSM_Global|A_State.DealerStay           ;
-; BlackJackController:FSM_Global|A_State.PlayerTurn                                                                               ; Merged with BlackJackController:FSM_Global|A_State.DealerStay           ;
-; BlackJackController:FSM_Global|A_State.CardToPlayer                                                                             ; Merged with BlackJackController:FSM_Global|A_State.CardToDealer         ;
-; BlackJackController:FSM_Global|A_State.LoseState                                                                                ; Stuck at GND due to stuck port data_in                                  ;
-; BlackJackController:FSM_Global|A_State.DealerStay                                                                               ; Stuck at GND due to stuck port data_in                                  ;
-; BlackJackController:FSM_Global|A_State.CardToDealer                                                                             ; Stuck at GND due to stuck port data_in                                  ;
-; BlackJackController:FSM_Global|A_State.DealerHit                                                                                ; Stuck at GND due to stuck port data_in                                  ;
-; CardAdder:FSM_CardAdder|vc_HndD[0..5]                                                                                           ; Lost fanout                                                             ;
 ; RAM:RAM|altsyncram:altsyncram_component|altsyncram_55u3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[2] ; Stuck at GND due to stuck port data_in                                  ;
-; Total Number of Removed Registers = 41                                                                                          ;                                                                         ;
+; Total Number of Removed Registers = 17                                                                                          ;                                                                         ;
 +---------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                      ;
-+------------------------------------------------------------+---------------------------+-------------------------------------------------------------------------+
-; Register name                                              ; Reason for Removal        ; Registers Removed due to This Register                                  ;
-+------------------------------------------------------------+---------------------------+-------------------------------------------------------------------------+
-; BlackJackController:FSM_Global|A_State.LoseState           ; Stuck at GND              ; CardAdder:FSM_CardAdder|vc_HndD[0], CardAdder:FSM_CardAdder|vc_HndD[1], ;
-;                                                            ; due to stuck port data_in ; CardAdder:FSM_CardAdder|vc_HndD[2], CardAdder:FSM_CardAdder|vc_HndD[3], ;
-;                                                            ;                           ; CardAdder:FSM_CardAdder|vc_HndD[4], CardAdder:FSM_CardAdder|vc_HndD[5]  ;
-; Debouncer:HitButtonDebouncer|EdgeDetector:PosEdge|sig_dly  ; Lost Fanouts              ; Debouncer:HitButtonDebouncer|r_ButtonSync,                              ;
-;                                                            ;                           ; Debouncer:HitButtonDebouncer|r_Intermediario                            ;
-; Debouncer:StayButtonDebouncer|EdgeDetector:PosEdge|sig_dly ; Lost Fanouts              ; Debouncer:StayButtonDebouncer|r_ButtonSync,                             ;
-;                                                            ;                           ; Debouncer:StayButtonDebouncer|r_Intermediario                           ;
-; BlackJackController:FSM_Global|A_State.CardToDealer        ; Stuck at GND              ; BlackJackController:FSM_Global|A_State.DealerHit                        ;
-;                                                            ; due to stuck port data_in ;                                                                         ;
-+------------------------------------------------------------+---------------------------+-------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -799,12 +786,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 193   ;
-; Number of registers using Synchronous Clear  ; 36    ;
-; Number of registers using Synchronous Load   ; 21    ;
+; Total registers                              ; 219   ;
+; Number of registers using Synchronous Clear  ; 53    ;
+; Number of registers using Synchronous Load   ; 26    ;
 ; Number of registers using Asynchronous Clear ; 62    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 122   ;
+; Number of registers using Clock Enable       ; 127   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -2675,31 +2662,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 66                          ;
-; cycloneiii_ff         ; 106                         ;
+; boundary_port         ; 70                          ;
+; cycloneiii_ff         ; 132                         ;
 ;     CLR               ; 4                           ;
 ;     ENA               ; 16                          ;
-;     ENA CLR           ; 18                          ;
+;     ENA CLR           ; 6                           ;
+;     ENA CLR SCLR      ; 12                          ;
 ;     ENA CLR SLD       ; 6                           ;
 ;     ENA SCLR          ; 17                          ;
-;     ENA SCLR SLD      ; 5                           ;
+;     ENA SCLR SLD      ; 10                          ;
 ;     SCLR              ; 2                           ;
-;     plain             ; 38                          ;
-; cycloneiii_lcell_comb ; 1203                        ;
-;     arith             ; 409                         ;
-;         2 data inputs ; 364                         ;
-;         3 data inputs ; 45                          ;
-;     normal            ; 794                         ;
-;         0 data inputs ; 54                          ;
-;         1 data inputs ; 73                          ;
-;         2 data inputs ; 40                          ;
-;         3 data inputs ; 293                         ;
-;         4 data inputs ; 334                         ;
+;     plain             ; 59                          ;
+; cycloneiii_lcell_comb ; 1351                        ;
+;     arith             ; 423                         ;
+;         2 data inputs ; 369                         ;
+;         3 data inputs ; 54                          ;
+;     normal            ; 928                         ;
+;         0 data inputs ; 53                          ;
+;         1 data inputs ; 71                          ;
+;         2 data inputs ; 52                          ;
+;         3 data inputs ; 345                         ;
+;         4 data inputs ; 407                         ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 4                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 10.50                       ;
-; Average LUT depth     ; 7.31                        ;
+; Average LUT depth     ; 6.89                        ;
 +-----------------------+-----------------------------+
 
 
@@ -2718,7 +2706,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Dec  2 15:42:39 2019
+    Info: Processing started: Thu Dec  5 12:33:18 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off BlackJack -c BlackJack
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -2977,7 +2965,7 @@ Info (10041): Inferred latch for "o_Value[2]" at CardEvaluator.v(10) File: /home
 Info (10041): Inferred latch for "o_Value[3]" at CardEvaluator.v(10) File: /home/erick/ENGC40/Quartus/BlackJack/src/CardEvaluator.v Line: 10
 Info (12128): Elaborating entity "displaydecoder" for hierarchy "displaydecoder:DealerHand"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2019.12.02.15:42:55 Progress: Loading sldfa1369fd/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2019.12.05.12:33:32 Progress: Loading sldfa1369fd/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -3002,23 +2990,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/ip/s
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: /home/erick/ENGC40/Quartus/BlackJack/db/ip/sldfa1369fd/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Warning (19016): Clock multiplexers are found and protected
     Warning (19017): Found clock multiplexer MemAcessMux:MemAcessMux|o_MemClk File: /home/erick/ENGC40/Quartus/BlackJack/src/MemAcessMux.v Line: 14
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.Start_857" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.ShuffleDeck_841" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.PlayerWith1Card_825" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.D1_RstCardFSM_809" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.PlayerWith2Card_793" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.P_RstCardFSM_777" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.PlayerTurn_761" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.DealerTurn_745" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.PlayerHit_729" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.DealerHit_713" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.PlayerStay_697" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.DealerStay_681" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.CardToPlayer_665" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.CardToDealer_649" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.WinState_633" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.TieState_617" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
-Warning (14026): LATCH primitive "BlackJackController:FSM_Global|F_State.LoseState_601" is permanently enabled File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
 Info (278001): Inferred 52 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Nxt_Addr:NxtAddr_Decoder|Mod42" File: /home/erick/ENGC40/Quartus/BlackJack/src/Nxt_Addr.v Line: 54
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Nxt_Addr:NxtAddr_Decoder|Mod41" File: /home/erick/ENGC40/Quartus/BlackJack/src/Nxt_Addr.v Line: 53
@@ -3088,6 +3059,20 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/add_
     Info (12023): Found entity 1: add_sub_7pc File: /home/erick/ENGC40/Quartus/BlackJack/db/add_sub_7pc.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
     Info (12023): Found entity 1: add_sub_8pc File: /home/erick/ENGC40/Quartus/BlackJack/db/add_sub_8pc.tdf Line: 22
+Warning (13012): Latch BlackJackController:FSM_Global|F_State.WinState_633 has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counter:Contador|o_TwoSec File: /home/erick/ENGC40/Quartus/BlackJack/src/Counter.v Line: 14
+Warning (13012): Latch BlackJackController:FSM_Global|F_State.LoseState_601 has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BlackJackController:FSM_Global|vc_HitPlayer File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 43
+Warning (13012): Latch BlackJackController:FSM_Global|F_State.TieState_617 has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BlackJackController:FSM_Global|vc_HitPlayer File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 43
+Warning (13012): Latch BlackJackController:FSM_Global|F_State.PlayerHit_729 has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BlackJackController:FSM_Global|A_State.PlayerHit File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 48
+Warning (13012): Latch BlackJackController:FSM_Global|F_State.DealerHit_713 has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BlackJackController:FSM_Global|A_State.DealerHit File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 48
+Warning (13012): Latch BlackJackController:FSM_Global|F_State.PlayerStay_697 has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BlackJackController:FSM_Global|A_State.PlayerStay File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 48
+Warning (13012): Latch BlackJackController:FSM_Global|F_State.DealerStay_681 has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BlackJackController:FSM_Global|A_State.DealerStay File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 48
 Warning (13012): Latch CardEvaluator:CardEvaluatorDecoder|o_Value[1] has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/CardEvaluator.v Line: 10
     Warning (13013): Ports D and ENA on the latch are fed by the same signal RAM:RAM|altsyncram:altsyncram_component|altsyncram_55u3:auto_generated|altsyncram_thr2:altsyncram1|q_a[0] File: /home/erick/ENGC40/Quartus/BlackJack/db/altsyncram_thr2.tdf Line: 35
 Warning (13012): Latch CardEvaluator:CardEvaluatorDecoder|o_Value[0] has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/CardEvaluator.v Line: 10
@@ -3096,10 +3081,26 @@ Warning (13012): Latch CardEvaluator:CardEvaluatorDecoder|o_Value[2] has unsafe 
     Warning (13013): Ports D and ENA on the latch are fed by the same signal RAM:RAM|altsyncram:altsyncram_component|altsyncram_55u3:auto_generated|altsyncram_thr2:altsyncram1|q_a[0] File: /home/erick/ENGC40/Quartus/BlackJack/db/altsyncram_thr2.tdf Line: 35
 Warning (13012): Latch CardEvaluator:CardEvaluatorDecoder|o_Value[3] has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/CardEvaluator.v Line: 10
     Warning (13013): Ports D and ENA on the latch are fed by the same signal RAM:RAM|altsyncram:altsyncram_component|altsyncram_55u3:auto_generated|altsyncram_thr2:altsyncram1|q_a[0] File: /home/erick/ENGC40/Quartus/BlackJack/db/altsyncram_thr2.tdf Line: 35
+Warning (13012): Latch BlackJackController:FSM_Global|F_State.Measurement_585 has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BlackJackController:FSM_Global|A_State.PlayerStay File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 48
+Warning (13012): Latch BlackJackController:FSM_Global|F_State.PlayerTurn_761 has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counter:Contador|o_TwoSec File: /home/erick/ENGC40/Quartus/BlackJack/src/Counter.v Line: 14
+Warning (13012): Latch BlackJackController:FSM_Global|F_State.DealerTurn_745 has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counter:Contador|o_TwoSec File: /home/erick/ENGC40/Quartus/BlackJack/src/Counter.v Line: 14
+Warning (13012): Latch BlackJackController:FSM_Global|F_State.DealerBlackJack_569 has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BlackJackController:FSM_Global|A_State.PlayerStay File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 48
+Warning (13012): Latch CardAdder:FSM_CardAdder|F_State.CardOK_378 has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/CardAdder.v Line: 109
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BlackJackController:FSM_Global|WideOr19 File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 281
+Warning (13012): Latch BlackJackController:FSM_Global|F_State.CardToPlayer_665 has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BlackJackController:FSM_Global|A_State.PlayerTurn File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 48
+Warning (13012): Latch BlackJackController:FSM_Global|F_State.P_RstCardFSM_777 has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BlackJackController:FSM_Global|A_State.D2_RstCardFSM File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 48
 Warning (13012): Latch CardAdder:FSM_CardAdder|F_State.ReadMem_489 has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/CardAdder.v Line: 109
     Warning (13013): Ports D and ENA on the latch are fed by the same signal BlackJackController:FSM_Global|WideOr19 File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 281
 Warning (13012): Latch Nxt_Addr:NxtAddr_Decoder|Addr_j[0] has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/Nxt_Addr.v Line: 11
     Warning (13013): Ports D and ENA on the latch are fed by the same signal Shuffler:FSM_Embaralhador|vo_Addr_I[5] File: /home/erick/ENGC40/Quartus/BlackJack/src/Shuffler.v Line: 44
+Warning (13012): Latch BlackJackController:FSM_Global|F_State.ShuffleDeck_841 has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Debouncer:ResetButtonDebouncer|r_ButtonSync File: /home/erick/ENGC40/Quartus/BlackJack/src/Debouncer.v Line: 16
 Warning (13012): Latch Nxt_Addr:NxtAddr_Decoder|Addr_j[1] has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/Nxt_Addr.v Line: 11
     Warning (13013): Ports D and ENA on the latch are fed by the same signal Shuffler:FSM_Embaralhador|vo_Addr_I[4] File: /home/erick/ENGC40/Quartus/BlackJack/src/Shuffler.v Line: 44
 Warning (13012): Latch Nxt_Addr:NxtAddr_Decoder|Addr_j[2] has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/Nxt_Addr.v Line: 11
@@ -3110,36 +3111,14 @@ Warning (13012): Latch Nxt_Addr:NxtAddr_Decoder|Addr_j[4] has unsafe behavior Fi
     Warning (13013): Ports D and ENA on the latch are fed by the same signal Shuffler:FSM_Embaralhador|vo_Addr_I[5] File: /home/erick/ENGC40/Quartus/BlackJack/src/Shuffler.v Line: 44
 Warning (13012): Latch Nxt_Addr:NxtAddr_Decoder|Addr_j[5] has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/Nxt_Addr.v Line: 11
     Warning (13013): Ports D and ENA on the latch are fed by the same signal Shuffler:FSM_Embaralhador|vo_Addr_I[4] File: /home/erick/ENGC40/Quartus/BlackJack/src/Shuffler.v Line: 44
-Warning (13012): Latch CardAdder:FSM_CardAdder|F_State.CardOK_378 has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/CardAdder.v Line: 109
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal BlackJackController:FSM_Global|WideOr19 File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 281
+Warning (13012): Latch BlackJackController:FSM_Global|F_State.Start_857 has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 101
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Debouncer:ResetButtonDebouncer|r_ButtonSync File: /home/erick/ENGC40/Quartus/BlackJack/src/Debouncer.v Line: 16
 Warning (13012): Latch CardAdder:FSM_CardAdder|F_State.Wait_FSM_502 has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/CardAdder.v Line: 109
     Warning (13013): Ports D and ENA on the latch are fed by the same signal BlackJackController:FSM_Global|WideOr19 File: /home/erick/ENGC40/Quartus/BlackJack/src/BlackJackController.v Line: 281
 Warning (13012): Latch CardAdder:FSM_CardAdder|F_State.Start_515 has unsafe behavior File: /home/erick/ENGC40/Quartus/BlackJack/src/CardAdder.v Line: 109
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CardAdder:FSM_CardAdder|A_State.ReadMem File: /home/erick/ENGC40/Quartus/BlackJack/src/CardAdder.v Line: 30
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "o_Win" is stuck at GND
-    Warning (13410): Pin "o_Lose" is stuck at GND
-    Warning (13410): Pin "o_Tie" is stuck at GND
-    Warning (13410): Pin "o_Hit_P" is stuck at GND
-    Warning (13410): Pin "o_Hit_D" is stuck at GND
-    Warning (13410): Pin "o_Stay_P" is stuck at GND
-    Warning (13410): Pin "o_Stay_D" is stuck at GND
-    Warning (13410): Pin "DealerHndDisplayD[0]" is stuck at VCC
-    Warning (13410): Pin "DealerHndDisplayD[1]" is stuck at VCC
-    Warning (13410): Pin "DealerHndDisplayD[2]" is stuck at VCC
-    Warning (13410): Pin "DealerHndDisplayD[3]" is stuck at VCC
-    Warning (13410): Pin "DealerHndDisplayD[4]" is stuck at VCC
-    Warning (13410): Pin "DealerHndDisplayD[5]" is stuck at VCC
-    Warning (13410): Pin "DealerHndDisplayD[6]" is stuck at VCC
-    Warning (13410): Pin "DealerHndDisplayU[0]" is stuck at VCC
-    Warning (13410): Pin "DealerHndDisplayU[1]" is stuck at VCC
-    Warning (13410): Pin "DealerHndDisplayU[2]" is stuck at VCC
-    Warning (13410): Pin "DealerHndDisplayU[3]" is stuck at VCC
-    Warning (13410): Pin "DealerHndDisplayU[4]" is stuck at VCC
-    Warning (13410): Pin "DealerHndDisplayU[5]" is stuck at VCC
-    Warning (13410): Pin "DealerHndDisplayU[6]" is stuck at VCC
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
-Info (17049): 29 registers lost all their fanouts during netlist optimizations.
+Info (17049): 13 registers lost all their fanouts during netlist optimizations.
 Info (17016): Found the following redundant logic cells in design
     Info (17048): Logic cell "Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod41|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_5_result_int[0]~0" File: /home/erick/ENGC40/Quartus/BlackJack/db/alt_u_div_a4f.tdf Line: 51
     Info (17048): Logic cell "Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod37|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_5_result_int[0]~0" File: /home/erick/ENGC40/Quartus/BlackJack/db/alt_u_div_a4f.tdf Line: 51
@@ -3158,10 +3137,6 @@ Info (17016): Found the following redundant logic cells in design
     Info (17048): Logic cell "Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod26|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_5_result_int[1]~0" File: /home/erick/ENGC40/Quartus/BlackJack/db/alt_u_div_a4f.tdf Line: 51
     Info (17048): Logic cell "Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod18|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_5_result_int[1]~0" File: /home/erick/ENGC40/Quartus/BlackJack/db/alt_u_div_a4f.tdf Line: 51
     Info (17048): Logic cell "Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod30|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_5_result_int[1]~0" File: /home/erick/ENGC40/Quartus/BlackJack/db/alt_u_div_a4f.tdf Line: 51
-    Info (17048): Logic cell "Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod42|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_5_result_int[1]~0" File: /home/erick/ENGC40/Quartus/BlackJack/db/alt_u_div_a4f.tdf Line: 51
-    Info (17048): Logic cell "Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod38|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_5_result_int[1]~0" File: /home/erick/ENGC40/Quartus/BlackJack/db/alt_u_div_a4f.tdf Line: 51
-    Info (17048): Logic cell "Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod34|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_5_result_int[1]~0" File: /home/erick/ENGC40/Quartus/BlackJack/db/alt_u_div_a4f.tdf Line: 51
-    Info (17048): Logic cell "Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod46|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_5_result_int[1]~0" File: /home/erick/ENGC40/Quartus/BlackJack/db/alt_u_div_a4f.tdf Line: 51
     Info (17048): Logic cell "Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod6|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_5_result_int[1]~0" File: /home/erick/ENGC40/Quartus/BlackJack/db/alt_u_div_a4f.tdf Line: 51
     Info (17048): Logic cell "Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod10|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_5_result_int[1]~0" File: /home/erick/ENGC40/Quartus/BlackJack/db/alt_u_div_a4f.tdf Line: 51
     Info (17048): Logic cell "Nxt_Addr:NxtAddr_Decoder|lpm_divide:Mod2|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_5_result_int[1]~0" File: /home/erick/ENGC40/Quartus/BlackJack/db/alt_u_div_a4f.tdf Line: 51
@@ -3170,20 +3145,17 @@ Info (17016): Found the following redundant logic cells in design
 Info (144001): Generated suppressed messages file /home/erick/ENGC40/Quartus/BlackJack/output_files/BlackJack.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "i_Hit"
-    Warning (15610): No output dependent on input pin "i_Stay"
-Info (21057): Implemented 1423 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1581 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 36 output pins
-    Info (21061): Implemented 1374 logic cells
+    Info (21059): Implemented 40 output pins
+    Info (21061): Implemented 1528 logic cells
     Info (21064): Implemented 4 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 96 warnings
-    Info: Peak virtual memory: 1078 megabytes
-    Info: Processing ended: Mon Dec  2 15:43:07 2019
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:51
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 84 warnings
+    Info: Peak virtual memory: 1077 megabytes
+    Info: Processing ended: Thu Dec  5 12:33:43 2019
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:49
 
 
 +------------------------------------------+

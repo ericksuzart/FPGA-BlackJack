@@ -4,6 +4,106 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "o_Win",
+					"strict" : false
+				},
+				{
+					"name" : "o_Lose",
+					"strict" : false
+				},
+				{
+					"name" : "o_Tie",
+					"strict" : false
+				},
+				{
+					"name" : "o_Hit_P",
+					"strict" : false
+				},
+				{
+					"name" : "o_Hit_D",
+					"strict" : false
+				},
+				{
+					"name" : "o_Stay_P",
+					"strict" : false
+				},
+				{
+					"name" : "o_Stay_D",
+					"strict" : false
+				},
+				{
+					"name" : "o_HitDeb",
+					"strict" : false
+				},
+				{
+					"name" : "o_HitNE",
+					"strict" : false
+				},
+				{
+					"name" : "o_StayDeb",
+					"strict" : false
+				},
+				{
+					"name" : "o_StayNE",
+					"strict" : false
+				},
+				{
+					"name" : "DealerHndDisplayD[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DealerHndDisplayD[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DealerHndDisplayD[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DealerHndDisplayD[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DealerHndDisplayD[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DealerHndDisplayD[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DealerHndDisplayD[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DealerHndDisplayU[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DealerHndDisplayU[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DealerHndDisplayU[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DealerHndDisplayU[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DealerHndDisplayU[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DealerHndDisplayU[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DealerHndDisplayU[6]",
+					"strict" : false
+				},
+				{
 					"name" : "PlayerHndDisplayD[0]",
 					"strict" : false
 				},
@@ -61,6 +161,14 @@
 				},
 				{
 					"name" : "inclk0",
+					"strict" : false
+				},
+				{
+					"name" : "i_Hit",
+					"strict" : false
+				},
+				{
+					"name" : "i_Stay",
 					"strict" : false
 				},
 				{

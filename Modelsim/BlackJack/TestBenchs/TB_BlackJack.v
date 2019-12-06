@@ -18,11 +18,10 @@ wire o_Hit_P, o_Hit_D, o_Stay_P, o_Stay_D;
 wire [0:6] DealerHndDisplayD, DealerHndDisplayU;
 wire [0:6] PlayerHndDisplayD, PlayerHndDisplayU;
 
-// Estados dos botões
-wire w_ResetDeb, w_StayDeb, w_HitDeb;
+// Saídas dos debouncers
+wire w_HitPE, w_ResetDeb, w_ResetNE, w_ResetPE, w_StayPE;
 
-// Borda de descida do botão de Stay e de hit
-wire w_StayNE, w_HitNE;
+wire w_HitDeb, w_HitNE, w_StayDeb, w_StayNE;
 
 // Estados da máquina de estados global:
 reg [8*15:0] StateStringGlobal;
@@ -35,6 +34,9 @@ wire [3:0] StateFSMShuffler;
 // Estados da máquina de estados do adicionador de cartas
 reg [8*15:0] StateStringCardAdder;
 wire [3:0] StateFSMCardAdder;
+
+// Arquivo
+reg [31:0] OutputFile;
 
 
 BlackJack DUV
@@ -53,13 +55,21 @@ BlackJack DUV
     .DealerHndDisplayU(DealerHndDisplayU) ,	// output [0:6] DealerHndDisplayU
     .DealerHndDisplayD(DealerHndDisplayD) ,	// output [0:6] DealerHndDisplayD
     .PlayerHndDisplayU(PlayerHndDisplayU) ,	// output [0:6] PlayerHndDisplayU
-    .PlayerHndDisplayD(PlayerHndDisplayD) ,	// output [0:6] PlayerHndDisplayD
-    .w_ResetDeb(w_ResetDeb) ,	// output  w_ResetDeb
-    .w_HitDeb(w_HitDeb) ,	// output  w_HitDeb
-    .w_HitNE(w_HitNE) ,	// output  w_HitNE
-    .w_StayDeb(w_StayDeb) ,	// output  w_StayDeb
-    .w_StayNE(w_StayNE) 	// output  w_StayNE
+    .PlayerHndDisplayD(PlayerHndDisplayD), 	// output [0:6] PlayerHndDisplayD
+
+    // saídas extra dos debouncers
+    .o_HitDeb(w_HitDeb) ,
+    .o_HitNE(w_HitNE) ,
+    .o_StayDeb(w_StayDeb) ,
+    .o_StayNE(w_StayNE)
 );
+
+// Saídas internas dos debouncers
+assign DUV.w_ResetDeb = w_ResetDeb; // output  w_ResetDeb
+assign DUV.w_ResetPE = w_ResetPE;   // reset posedge
+assign DUV.w_ResetNE = w_ResetNE;   // Reset Negedge
+assign DUV.w_HitPE = w_HitPE;       // Hit posedge
+assign DUV.w_StayPE = w_StayPE;     // Stay posedge
 
 // Clocks always
 
@@ -67,29 +77,13 @@ BlackJack DUV
 always #5 clk = !clk;
 
 // Clock de 2 kHz
-always #10 clk_PLL <= ~clk_PLL;	
+always #20 clk_PLL <= ~clk_PLL;	
 
 assign DUV.clk_PLL = clk_PLL;
 
-
-// Teste do reset e do contador
-initial
-begin
-    clk = 0;
-    clk_PLL = 1'b0;
-    HitBtn = 1;
-    StayBtn = 1;
-    ResetBtn = 1;
-
-    $monitor("%g -> O controlador geral esta no estado %s\n%g - O Shuffler esta no estado: %s\n%g - O CardAdder geral esta no estado: %s",$time , StateStringGlobal,$time, StateStringShuffler, $time, StateStringCardAdder);
-    
-    PlayerReset(0);
-    #100 PlayerReset(1);
-
-    # 100000 $stop;
-end
-
-
+//======================================================
+//               Monitorando estados
+//======================================================
 
 // Acessando os estados da FSM global:
 assign StateFSMGlobal = DUV.b2v_FSM_Global.A_State;
@@ -165,30 +159,73 @@ begin
     endcase
 end
 
-// Task para simular um reset do player e verificar se o contador está
-// funcionando corretamente
+// Monitorar o estado do Shuffler
 
-integer seed, i;
+reg ShowStates; // variável para indicar se deve-se mostrar os estados
+
+always @(StateFSMShuffler)
+begin
+    if(ShowStates)
+    begin
+        #1 ;
+        $display("[%g ns] - Shuffler State: %8s | %s |",$time ," ", StateStringShuffler);
+        $fdisplay(OutputFile, "[%g ns] - Shuffler State: %8s | %s |",$time ," ", StateStringShuffler);
+    end
+end
+
+// Monitorar o estado do CardAdder
+always @(StateFSMCardAdder)
+begin
+    if (ShowStates)
+    begin
+        #1 ;
+        $display("[%g ns] - CardAdder State:   | %s |",$time , StateStringCardAdder);
+        $fdisplay(OutputFile, "[%g ns] - CardAdder State:   | %s |",$time , StateStringCardAdder);
+
+        #1 ;
+        if (StateFSMCardAdder == 4'b 1011)
+        begin
+            $display("Player Hand: %d\nDealer Hand: %d", DUV.w_PlayerHnd, DUV.w_DealerHnd);
+            $fdisplay(OutputFile, "Player Hand: %d\nDealer Hand: %d", DUV.w_PlayerHnd, DUV.w_DealerHnd);
+        end
+    end
+end
+
+// Monitorar o estado do BlackJackController
+always @(StateFSMGlobal)
+begin
+    if(ShowStates)
+        $display("||=================================================================||\n[%g ns] - BJController State: | %s |\n||=================================================================||",$time , StateStringGlobal);
+end
+
+//======================================================
+//                      Tasks
+//======================================================
+
+/* Task para simular um reset do player e verificar se o contador está
+funcionando corretamente*/
+
 reg [11:0] r_Contador;
 
-
-task PlayerReset;
-    input seed;
-
+task PlayerReset (input [31:0] clock_cicles, input Display);
     begin
         // Testar um input randomico de reset
-        $display("%g - O contador esta sendo testado com relacao ao reset", $time);
+        if (Display)
+            $display("||=================================================================||\n[%g ns] - O contador esta sendo testado com relacao ao reset", $time);
 
         // Inicizalizar o contador de checagem
         @(posedge clk_PLL) ResetBtn = 0;
         @(posedge clk_PLL);
-        @(posedge clk_PLL);
-        @(posedge clk_PLL);
-        @(negedge clk_PLL) r_Contador = DUV.b2v_Contador.o_Count;
 
-        i = $urandom(seed) % 4000;
+        if(clock_cicles)
+        begin
+            // @(posedge clk_PLL);
+            // @(posedge clk_PLL);
+            @(negedge clk_PLL) r_Contador = DUV.w_Count;
+        end
 
-        repeat(i)
+        // Repete un múmero de ciclos de clock dado pelo usuário
+        repeat(clock_cicles)
         begin
             @(posedge clk_PLL)
             r_Contador = r_Contador + 1;
@@ -197,13 +234,103 @@ task PlayerReset;
         ResetBtn = 1;
 
         // Verifica se a saída está como o esperado
-        @(posedge clk_PLL);
-        if (r_Contador == DUV.b2v_Contador.o_Count)
-            $display("%g - O contador, quando ativo no reset, esta funcionando corretamente e contou ate %d", $time, DUV.b2v_Contador.o_Count);
+        if(clock_cicles)
+            @(negedge clk_PLL);
         else
-            $display("%g - O contador, quando ativo no reset, nao esta funcionando corretamente:\n ContadorTB:%d\nContador:%d", $time,r_Contador, DUV.b2v_Contador.o_Count);
+            r_Contador = 0;
+
+        if(Display)
+            if (r_Contador == DUV.w_Count)
+            begin
+                $display("[%g ns] - O contador, quando ativo no reset, esta funcionando corretamente e contou ate %d\n||=================================================================||", $time, DUV.w_Count);
+
+                $fdisplay(OutputFile, "[%g ns] - O contador, quando ativo no reset, esta funcionando corretamente e contou ate %d\n||=================================================================||", $time, DUV.w_Count);
+            end
+            else
+            begin
+                $display("[%g ns] - O contador, quando ativo no reset, nao esta funcionando corretamente:\n ContadorTB:%d\nContador:%d\n||=================================================================||", $time,r_Contador, DUV.w_Count);
+                $fdisplay(OutputFile, "[%g ns] - O contador, quando ativo no reset, nao esta funcionando corretamente:\n ContadorTB:%d\nContador:%d\n||=================================================================||", $time,r_Contador, DUV.w_Count);
+            end
+    end
+endtask
+
+// Task to read from a memory module
+wire r_Addr;
+assign r_Addr = DUV.w_MemAddr;
+
+reg [3:0] r_Ram [51:0];
+
+// task read;
+//     input [5:0] address;
+//     output [3:0] data;
+    
+//     begin
+//         @(negedge Clock);
+//         r_Addr = address;
+//         r_WriteEnable = 0;
+//         @(negedge Clock);
+//         data = w_Data;
+//         $display("[%g ns] -> %d read from address %d", $time, data, address);
+//         $display("_____________________________");
+//     end
+// endtask
+
+// Task para verificar se a memória foi embaralhada
+
+task CheckMem;
+    begin
         
     end
 endtask
+
+//======================================================
+//                  Blocos iniital
+//======================================================
+
+// Teste do reset e do contador
+integer i;
+
+initial
+begin : ResetTest
+    // Abrir o arquivo de saída
+    OutputFile = $fopen("TB_BlackJack_Data.txt","w");
+
+    if (!OutputFile)
+        $display("Nao foi possivel abrir o arquivo!");
+
+    else
+    begin
+        clk = 0;
+        clk_PLL = 1'b0;
+        HitBtn = 1;
+        StayBtn = 1;
+        ResetBtn = 1;
+        ShowStates = 0;
+
+        /* Distintos tempos de botão pressionado fazem a mão do player e do
+        dealer serem diferentes assim, o contador e o embaralhador estão
+        funcionando corretamente*/
+
+        /* testar todas as possibilidades e verificar se as cartas estão
+        relativamente bem embaralhadas */
+
+        for(i = 0; i <= 4095; i= i +1)
+        begin
+            #5970 PlayerReset(i,1);
+
+            wait (DUV.w_Count == i)
+            begin
+                 // Tempo de embaralhar e adicionar as cartas
+                #5960 $display("Player Hand: %d\nDealer Hand: %d", DUV.w_PlayerHnd, DUV.w_DealerHnd);
+            end
+        end
+
+        # 200000 ;
+        $fclose(OutputFile);
+    end
+
+    $stop;
+end
+
 
 endmodule // TB_BlackJack

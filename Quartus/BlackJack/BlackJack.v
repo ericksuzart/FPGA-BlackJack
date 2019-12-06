@@ -14,7 +14,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
-// CREATED		"Thu Nov 28 16:24:11 2019"
+// CREATED		"Thu Dec  5 13:08:35 2019"
 
 module BlackJack(
 	inclk0,
@@ -28,11 +28,10 @@ module BlackJack(
 	o_Hit_D,
 	o_Stay_P,
 	o_Stay_D,
-	w_ResetDeb,
-	w_HitDeb,
-	w_HitNE,
-	w_StayDeb,
-	w_StayNE,
+	o_HitDeb,
+	o_HitNE,
+	o_StayDeb,
+	o_StayNE,
 	DealerHndDisplayD,
 	DealerHndDisplayU,
 	PlayerHndDisplayD,
@@ -51,11 +50,10 @@ output wire	o_Hit_P;
 output wire	o_Hit_D;
 output wire	o_Stay_P;
 output wire	o_Stay_D;
-output wire	w_ResetDeb;
-output wire	w_HitDeb;
-output wire	w_HitNE;
-output wire	w_StayDeb;
-output wire	w_StayNE;
+output wire	o_HitDeb;
+output wire	o_HitNE;
+output wire	o_StayDeb;
+output wire	o_StayNE;
 output wire	[0:6] DealerHndDisplayD;
 output wire	[0:6] DealerHndDisplayU;
 output wire	[0:6] PlayerHndDisplayD;
@@ -63,79 +61,78 @@ output wire	[0:6] PlayerHndDisplayU;
 
 wire	clk;
 wire	clk_PLL;
+wire	[5:0] w_A_Addr;
+wire	w_A_MemClk;
+wire	w_ActCounter;
+wire	w_ActShuffler;
+wire	w_Card2Dealer;
+wire	w_Card2Player;
+wire	w_CardOK;
+wire	[3:0] w_CardValue;
+wire	[11:0] w_Count;
+wire	w_CountRstOK;
+wire	[5:0] w_DealerHnd;
 wire	w_HitPE;
+wire	[5:0] w_MemAddr;
+wire	w_MemClk;
+wire	[3:0] w_MemData;
+wire	[5:0] w_PlayerHnd;
+wire	w_ResetDeb;
+wire	w_ResetNE;
 wire	w_ResetPE;
+wire	w_RstCounter;
+wire	[5:0] w_S_Addr;
+wire	[5:0] w_S_Addr_I;
+wire	[5:0] w_S_Addr_J;
+wire	[3:0] w_S_Data;
+wire	w_S_MemClk;
+wire	w_ShowHndD;
+wire	w_ShowHndP;
+wire	w_Shuffled;
 wire	w_StayPE;
-wire	[3:0] SYNTHESIZED_WIRE_33;
-wire	SYNTHESIZED_WIRE_1;
-wire	SYNTHESIZED_WIRE_2;
-wire	SYNTHESIZED_WIRE_3;
-wire	SYNTHESIZED_WIRE_4;
-wire	SYNTHESIZED_WIRE_5;
-wire	[5:0] SYNTHESIZED_WIRE_34;
-wire	SYNTHESIZED_WIRE_7;
-wire	SYNTHESIZED_WIRE_8;
-wire	[3:0] SYNTHESIZED_WIRE_10;
-wire	SYNTHESIZED_WIRE_35;
-wire	[5:0] SYNTHESIZED_WIRE_12;
-wire	SYNTHESIZED_WIRE_14;
-wire	SYNTHESIZED_WIRE_15;
-wire	SYNTHESIZED_WIRE_16;
-wire	SYNTHESIZED_WIRE_17;
-wire	[5:0] SYNTHESIZED_WIRE_36;
-wire	SYNTHESIZED_WIRE_21;
-wire	SYNTHESIZED_WIRE_22;
-wire	[5:0] SYNTHESIZED_WIRE_23;
-wire	[5:0] SYNTHESIZED_WIRE_24;
-wire	[5:0] SYNTHESIZED_WIRE_25;
-wire	[11:0] SYNTHESIZED_WIRE_26;
-wire	SYNTHESIZED_WIRE_27;
-wire	SYNTHESIZED_WIRE_29;
-wire	SYNTHESIZED_WIRE_30;
-wire	[5:0] SYNTHESIZED_WIRE_31;
-wire	[3:0] SYNTHESIZED_WIRE_32;
+wire	w_TwoSec;
+wire	w_WriteEnable;
 
-assign	w_ResetDeb = SYNTHESIZED_WIRE_4;
 
 
 
 
 CardEvaluator	b2v_CardEvaluatorDecoder(
-	.i_Card(SYNTHESIZED_WIRE_33),
-	.o_Value(SYNTHESIZED_WIRE_10));
+	.i_Card(w_MemData),
+	.o_Value(w_CardValue));
 
 
 Counter	b2v_Contador(
 	.clk_2K(clk_PLL),
-	.i_ActCounter(SYNTHESIZED_WIRE_1),
-	.i_RstCounter(SYNTHESIZED_WIRE_2),
-	.i_ResetNeg(SYNTHESIZED_WIRE_3),
-	.i_ResetDeb(SYNTHESIZED_WIRE_4),
-	.o_TwoSec(SYNTHESIZED_WIRE_14),
-	.o_RstOK(SYNTHESIZED_WIRE_15),
-	.o_Count(SYNTHESIZED_WIRE_26));
+	.i_ActCounter(w_ActCounter),
+	.i_RstCounter(w_RstCounter),
+	.i_ResetNeg(w_ResetNE),
+	.i_ResetDeb(w_ResetDeb),
+	.o_TwoSec(w_TwoSec),
+	.o_RstOK(w_CountRstOK),
+	.o_Count(w_Count));
 	defparam	b2v_Contador.WIDTH = 12;
 
 
 displaydecoder	b2v_DealerHand(
-	.enable(SYNTHESIZED_WIRE_5),
-	.hand(SYNTHESIZED_WIRE_34),
+	.enable(w_ShowHndD),
+	.hand(w_DealerHnd),
 	.displayd(DealerHndDisplayD),
 	.displayu(DealerHndDisplayU));
 
 
 CardAdder	b2v_FSM_CardAdder(
-	.i_Card2P(SYNTHESIZED_WIRE_7),
-	.i_Card2D(SYNTHESIZED_WIRE_8),
+	.i_Card2P(w_Card2Player),
+	.i_Card2D(w_Card2Dealer),
 	.i_Reset(w_ResetPE),
 	.i_Clock(clk),
-	.i_Card(SYNTHESIZED_WIRE_33),
-	.i_Value(SYNTHESIZED_WIRE_10),
-	.o_MemClk(SYNTHESIZED_WIRE_22),
-	.o_CardOK(SYNTHESIZED_WIRE_17),
-	.o_Address(SYNTHESIZED_WIRE_23),
-	.o_DealerHnd(SYNTHESIZED_WIRE_34),
-	.o_PlayerHnd(SYNTHESIZED_WIRE_36));
+	.i_Card(w_MemData),
+	.i_Value(w_CardValue),
+	.o_MemClk(w_A_MemClk),
+	.o_CardOK(w_CardOK),
+	.o_Address(w_A_Addr),
+	.o_DealerHnd(w_DealerHnd),
+	.o_PlayerHnd(w_PlayerHnd));
 	defparam	b2v_FSM_CardAdder.CardOK = 4'b1011;
 	defparam	b2v_FSM_CardAdder.DealerWithAce = 4'b0101;
 	defparam	b2v_FSM_CardAdder.DealerWithFace = 4'b0110;
@@ -151,16 +148,16 @@ CardAdder	b2v_FSM_CardAdder(
 
 
 Shuffler	b2v_FSM_Embaralhador(
-	.i_ActShuffler(SYNTHESIZED_WIRE_35),
+	.i_ActShuffler(w_ActShuffler),
 	.clk(clk),
-	.i_Addr_J(SYNTHESIZED_WIRE_12),
-	.i_MemData(SYNTHESIZED_WIRE_33),
-	.o_Shuffled(SYNTHESIZED_WIRE_16),
-	.o_MemClk(SYNTHESIZED_WIRE_21),
-	.o_Write(SYNTHESIZED_WIRE_29),
-	.o_Address(SYNTHESIZED_WIRE_24),
-	.o_Data(SYNTHESIZED_WIRE_32),
-	.vo_Addr_I(SYNTHESIZED_WIRE_25));
+	.i_Addr_J(w_S_Addr_J),
+	.i_MemData(w_MemData),
+	.o_Shuffled(w_Shuffled),
+	.o_MemClk(w_S_MemClk),
+	.o_Write(w_WriteEnable),
+	.o_Address(w_S_Addr),
+	.o_Data(w_S_Data),
+	.vo_Addr_I(w_S_Addr_I));
 	defparam	b2v_FSM_Embaralhador.ChangeAddr = 4'b1000;
 	defparam	b2v_FSM_Embaralhador.GetNxtAddr = 4'b0100;
 	defparam	b2v_FSM_Embaralhador.I_ReadMemOut = 4'b0010;
@@ -181,12 +178,12 @@ BlackJackController	b2v_FSM_Global(
 	.i_Reset(w_ResetPE),
 	.i_Stay(w_HitPE),
 	.i_Hit(w_StayPE),
-	.vi_TwoSec(SYNTHESIZED_WIRE_14),
-	.vi_RstOK(SYNTHESIZED_WIRE_15),
-	.vi_Shuffled(SYNTHESIZED_WIRE_16),
-	.vi_CardOK(SYNTHESIZED_WIRE_17),
-	.vi_HandD(SYNTHESIZED_WIRE_34),
-	.vi_HandP(SYNTHESIZED_WIRE_36),
+	.vi_TwoSec(w_TwoSec),
+	.vi_RstOK(w_CountRstOK),
+	.vi_Shuffled(w_Shuffled),
+	.vi_CardOK(w_CardOK),
+	.vi_HandD(w_DealerHnd),
+	.vi_HandP(w_PlayerHnd),
 	.o_Win(o_Win),
 	.o_Lose(o_Lose),
 	.o_Tie(o_Tie),
@@ -194,39 +191,42 @@ BlackJackController	b2v_FSM_Global(
 	.o_Hit_D(o_Hit_D),
 	.o_Stay_P(o_Stay_P),
 	.o_Stay_D(o_Stay_D),
-	.o_ShwHnd_P(SYNTHESIZED_WIRE_27),
-	.o_ShwHnd_D(SYNTHESIZED_WIRE_5),
-	.vo_ActCounter(SYNTHESIZED_WIRE_2),
-	.vo_RstCounter(SYNTHESIZED_WIRE_1),
-	.vo_ActShuffler(SYNTHESIZED_WIRE_35),
-	.vo_Card2Player(SYNTHESIZED_WIRE_7),
-	.vo_Card2Dealer(SYNTHESIZED_WIRE_8));
-	defparam	b2v_FSM_Global.CardToDealer = 5'b01101;
-	defparam	b2v_FSM_Global.CardToPlayer = 5'b01100;
-	defparam	b2v_FSM_Global.DealerBlackJack = 5'b10010;
-	defparam	b2v_FSM_Global.DealerHit = 5'b01001;
-	defparam	b2v_FSM_Global.DealerStay = 5'b01011;
-	defparam	b2v_FSM_Global.DealerTurn = 5'b00111;
-	defparam	b2v_FSM_Global.DealerWith1Card = 5'b00011;
-	defparam	b2v_FSM_Global.DealerWith2Card = 5'b00101;
-	defparam	b2v_FSM_Global.LoseState = 5'b10000;
-	defparam	b2v_FSM_Global.Measurement = 5'b10001;
-	defparam	b2v_FSM_Global.PlayerHit = 5'b01000;
-	defparam	b2v_FSM_Global.PlayerStay = 5'b01010;
-	defparam	b2v_FSM_Global.PlayerTurn = 5'b00110;
+	.o_ShwHnd_P(w_ShowHndP),
+	.o_ShwHnd_D(w_ShowHndD),
+	.vo_ActCounter(w_ActCounter),
+	.vo_RstCounter(w_RstCounter),
+	.vo_ActShuffler(w_ActShuffler),
+	.vo_Card2Player(w_Card2Player),
+	.vo_Card2Dealer(w_Card2Dealer));
+	defparam	b2v_FSM_Global.CardToDealer = 5'b10000;
+	defparam	b2v_FSM_Global.CardToPlayer = 5'b01111;
+	defparam	b2v_FSM_Global.D1_RstCardFSM = 5'b00011;
+	defparam	b2v_FSM_Global.D2_RstCardFSM = 5'b00111;
+	defparam	b2v_FSM_Global.DealerBlackJack = 5'b10101;
+	defparam	b2v_FSM_Global.DealerHit = 5'b01100;
+	defparam	b2v_FSM_Global.DealerStay = 5'b01110;
+	defparam	b2v_FSM_Global.DealerTurn = 5'b01010;
+	defparam	b2v_FSM_Global.DealerWith1Card = 5'b00100;
+	defparam	b2v_FSM_Global.DealerWith2Card = 5'b01000;
+	defparam	b2v_FSM_Global.LoseState = 5'b10011;
+	defparam	b2v_FSM_Global.Measurement = 5'b10100;
+	defparam	b2v_FSM_Global.P_RstCardFSM = 5'b00101;
+	defparam	b2v_FSM_Global.PlayerHit = 5'b01011;
+	defparam	b2v_FSM_Global.PlayerStay = 5'b01101;
+	defparam	b2v_FSM_Global.PlayerTurn = 5'b01001;
 	defparam	b2v_FSM_Global.PlayerWith1Card = 5'b00010;
-	defparam	b2v_FSM_Global.PlayerWith2Card = 5'b00100;
+	defparam	b2v_FSM_Global.PlayerWith2Card = 5'b00110;
 	defparam	b2v_FSM_Global.ShuffleDeck = 5'b00001;
 	defparam	b2v_FSM_Global.Start = 5'b00000;
-	defparam	b2v_FSM_Global.TieState = 5'b01111;
-	defparam	b2v_FSM_Global.WinState = 5'b01110;
+	defparam	b2v_FSM_Global.TieState = 5'b10010;
+	defparam	b2v_FSM_Global.WinState = 5'b10001;
 
 
 Debouncer	b2v_HitButtonDebouncer(
-	.i_Clk_2kHz(clk_PLL),
+	.i_Clk(clk),
 	.i_Button(i_Hit),
-	.o_ButtonDeb(w_HitDeb),
-	.o_ButtonDown(w_HitNE),
+	.o_ButtonDeb(o_HitDeb),
+	.o_ButtonDown(o_HitNE),
 	.o_ButtonUp(w_HitPE));
 
 
@@ -236,49 +236,49 @@ PLL	b2v_inst(
 
 
 MemAcessMux	b2v_MemAcessMux(
-	.ActShuffler(SYNTHESIZED_WIRE_35),
-	.i_ShufflerClk(SYNTHESIZED_WIRE_21),
-	.i_AdderClk(SYNTHESIZED_WIRE_22),
-	.i_AdderAddress(SYNTHESIZED_WIRE_23),
-	.i_ShufflerAddr(SYNTHESIZED_WIRE_24),
-	.o_MemClk(SYNTHESIZED_WIRE_30),
-	.o_Address(SYNTHESIZED_WIRE_31));
+	.ActShuffler(w_ActShuffler),
+	.i_ShufflerClk(w_S_MemClk),
+	.i_AdderClk(w_A_MemClk),
+	.i_AdderAddress(w_A_Addr),
+	.i_ShufflerAddr(w_S_Addr),
+	.o_MemClk(w_MemClk),
+	.o_Address(w_MemAddr));
 
 
 Nxt_Addr	b2v_NxtAddr_Decoder(
-	.Addr_i(SYNTHESIZED_WIRE_25),
-	.Count(SYNTHESIZED_WIRE_26),
-	.Addr_j(SYNTHESIZED_WIRE_12));
+	.Addr_i(w_S_Addr_I),
+	.Count(w_Count),
+	.Addr_j(w_S_Addr_J));
 
 
 displaydecoder	b2v_PlayerHand(
-	.enable(SYNTHESIZED_WIRE_27),
-	.hand(SYNTHESIZED_WIRE_36),
+	.enable(w_ShowHndP),
+	.hand(w_PlayerHnd),
 	.displayd(PlayerHndDisplayD),
 	.displayu(PlayerHndDisplayU));
 
 
 RAM	b2v_RAM(
-	.wren(SYNTHESIZED_WIRE_29),
-	.clock(SYNTHESIZED_WIRE_30),
-	.address(SYNTHESIZED_WIRE_31),
-	.data(SYNTHESIZED_WIRE_32),
-	.q(SYNTHESIZED_WIRE_33));
+	.wren(w_WriteEnable),
+	.clock(w_MemClk),
+	.address(w_MemAddr),
+	.data(w_S_Data),
+	.q(w_MemData));
 
 
 Debouncer	b2v_ResetButtonDebouncer(
-	.i_Clk_2kHz(clk_PLL),
+	.i_Clk(clk),
 	.i_Button(i_Reset),
-	.o_ButtonDeb(SYNTHESIZED_WIRE_4),
-	.o_ButtonDown(SYNTHESIZED_WIRE_3),
+	.o_ButtonDeb(w_ResetDeb),
+	.o_ButtonDown(w_ResetNE),
 	.o_ButtonUp(w_ResetPE));
 
 
 Debouncer	b2v_StayButtonDebouncer(
-	.i_Clk_2kHz(clk_PLL),
+	.i_Clk(clk),
 	.i_Button(i_Stay),
-	.o_ButtonDeb(w_StayDeb),
-	.o_ButtonDown(w_StayNE),
+	.o_ButtonDeb(o_StayDeb),
+	.o_ButtonDown(o_StayNE),
 	.o_ButtonUp(w_StayPE));
 
 assign	clk = inclk0;

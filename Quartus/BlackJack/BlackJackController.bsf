@@ -207,83 +207,98 @@ refer to the applicable agreement for further details.
 		""
 		(type "PARAMETER_UNSIGNED_BIN")	)
 	(parameter
-		"DealerWith1Card"
+		"D1_RstCardFSM"
 		"00011"
 		""
 		(type "PARAMETER_UNSIGNED_BIN")	)
 	(parameter
-		"PlayerWith2Card"
+		"DealerWith1Card"
 		"00100"
 		""
 		(type "PARAMETER_UNSIGNED_BIN")	)
 	(parameter
-		"DealerWith2Card"
+		"P_RstCardFSM"
 		"00101"
 		""
 		(type "PARAMETER_UNSIGNED_BIN")	)
 	(parameter
-		"PlayerTurn"
+		"PlayerWith2Card"
 		"00110"
 		""
 		(type "PARAMETER_UNSIGNED_BIN")	)
 	(parameter
-		"DealerTurn"
+		"D2_RstCardFSM"
 		"00111"
 		""
 		(type "PARAMETER_UNSIGNED_BIN")	)
 	(parameter
-		"PlayerHit"
+		"DealerWith2Card"
 		"01000"
 		""
 		(type "PARAMETER_UNSIGNED_BIN")	)
 	(parameter
-		"DealerHit"
+		"PlayerTurn"
 		"01001"
 		""
 		(type "PARAMETER_UNSIGNED_BIN")	)
 	(parameter
-		"PlayerStay"
+		"DealerTurn"
 		"01010"
 		""
 		(type "PARAMETER_UNSIGNED_BIN")	)
 	(parameter
-		"DealerStay"
+		"PlayerHit"
 		"01011"
 		""
 		(type "PARAMETER_UNSIGNED_BIN")	)
 	(parameter
-		"CardToPlayer"
+		"DealerHit"
 		"01100"
 		""
 		(type "PARAMETER_UNSIGNED_BIN")	)
 	(parameter
-		"CardToDealer"
+		"PlayerStay"
 		"01101"
 		""
 		(type "PARAMETER_UNSIGNED_BIN")	)
 	(parameter
-		"WinState"
+		"DealerStay"
 		"01110"
 		""
 		(type "PARAMETER_UNSIGNED_BIN")	)
 	(parameter
-		"TieState"
+		"CardToPlayer"
 		"01111"
 		""
 		(type "PARAMETER_UNSIGNED_BIN")	)
 	(parameter
-		"LoseState"
+		"CardToDealer"
 		"10000"
 		""
 		(type "PARAMETER_UNSIGNED_BIN")	)
 	(parameter
-		"Measurement"
+		"WinState"
 		"10001"
 		""
 		(type "PARAMETER_UNSIGNED_BIN")	)
 	(parameter
-		"DealerBlackJack"
+		"TieState"
 		"10010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"LoseState"
+		"10011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Measurement"
+		"10100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"DealerBlackJack"
+		"10101"
 		""
 		(type "PARAMETER_UNSIGNED_BIN")	)
 	(drawing
