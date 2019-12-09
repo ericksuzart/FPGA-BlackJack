@@ -93,7 +93,10 @@ wire	w_StayPE;
 wire	w_TwoSec;
 wire	w_WriteEnable;
 
-
+// variáveis para verificação da memória
+wire	w_MuxTestEnable;
+wire	[5:0] w_TestAddr;
+wire 	w_TestClk;
 
 
 
@@ -176,8 +179,8 @@ Shuffler	b2v_FSM_Embaralhador(
 BlackJackController	b2v_FSM_Global(
 	.i_Clk(clk),
 	.i_Reset(w_ResetPE),
-	.i_Stay(w_HitPE),
-	.i_Hit(w_StayPE),
+	.i_Stay(w_HiNE),
+	.i_Hit(w_StayNE),
 	.vi_TwoSec(w_TwoSec),
 	.vi_RstOK(w_CountRstOK),
 	.vi_Shuffled(w_Shuffled),
@@ -264,6 +267,14 @@ RAM	b2v_RAM(
 	.address(w_MemAddr),
 	.data(w_S_Data),
 	.q(w_MemData));
+
+// SPRWI RAM(
+// 	    .i_Data(w_S_Data),
+//         .i_Addr(w_MemAddr), // Memory address
+//         .i_WriteEnable(w_WriteEnable),
+// 		.i_Clock(w_MemClk),
+//         .o_Data(w_MemData)
+// 	);
 
 
 Debouncer	b2v_ResetButtonDebouncer(

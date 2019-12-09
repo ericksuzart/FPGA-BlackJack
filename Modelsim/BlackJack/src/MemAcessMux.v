@@ -13,6 +13,13 @@ module MemAcessMux
     output reg o_MemClk
 );
 
+    /*
+        Esse módulo nos indica a prioridade de acesso a memória, visto que a
+        mesma não deve ser acessada simultaneamente por distintos módulos.
+
+        As entradas de test são utilizadas apenas no testbench
+    */
+
     always @(*)
     begin
         case (ActShuffler)

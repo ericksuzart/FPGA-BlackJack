@@ -1,0 +1,798 @@
+||=================================================================||
+[ 0.00001 s] - Começando o testbench para verificar se o jogo está funcional
+||=================================================================||
+
+||=================================================================||
+[ 0.00001 s] - O contador esta sendo testado com relacao ao reset
+||=================================================================||
+[ 0.00002 s] - BJController State: |            Start |
+||=================================================================||
+[ 0.00002 s] - CardAdder State:   |            Start |
+||=================================================================||
+[ 0.00002 s] - BJController State: |      ShuffleDeck |
+||=================================================================||
+[ 0.00002 s] - CardAdder State:   |         Wait_FSM |
+[ 0.00002 s] - Shuffler State:          |            Start |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  1 de  0 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  6 de  5 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado:  5 com  0 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  2 de  1 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  2 de  1 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado:  1 com  1 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  3 de  2 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido: 10 de 22 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 22 com  2 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  4 de  3 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido: 10 de 11 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 11 com  3 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  5 de  4 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  3 de 28 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 28 com  4 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  1 de  5 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  3 de 15 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 15 com  5 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  7 de  6 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  3 de 22 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 22 com  6 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  8 de  7 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  5 de 17 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 17 com  7 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  9 de  8 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido: 10 de 24 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 24 com  8 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido: 10 de  9 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  7 de 19 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 19 com  9 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido: 10 de 10 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  1 de 26 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 26 com 10 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  4 de 11 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  9 de 21 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 21 com 11 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido: 10 de 12 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  5 de 28 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 28 com 12 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  1 de 13 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido: 10 de 23 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 23 com 13 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  2 de 14 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  5 de 30 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 30 com 14 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  1 de 15 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  1 de 23 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 23 com 15 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  4 de 16 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  2 de 40 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 40 com 16 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  8 de 17 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido: 10 de 25 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 25 com 17 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  6 de 18 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  4 de 42 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 42 com 18 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido: 10 de 19 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  2 de 27 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 27 com 19 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  8 de 20 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  6 de 44 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 44 com 20 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  4 de 21 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  4 de 29 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 29 com 21 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  7 de 22 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  8 de 46 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 46 com 22 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  1 de 23 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  6 de 31 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 31 com 23 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  9 de 24 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido: 10 de 48 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 48 com 24 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  8 de 25 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido: 10 de 35 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 35 com 25 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido: 10 de 26 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  6 de 42 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 42 com 26 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido: 10 de 27 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  8 de 35 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 35 com 27 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido: 10 de 28 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  6 de  0 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado:  0 com 28 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  4 de 29 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido: 10 de 37 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 37 com 29 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  2 de 30 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido: 10 de  2 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado:  2 com 30 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  1 de 31 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  1 de 39 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 39 com 31 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  7 de 32 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  3 de  4 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado:  4 com 32 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  8 de 33 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  3 de 41 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 41 com 33 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  9 de 34 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  3 de  6 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado:  6 com 34 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido: 10 de 35 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  5 de 43 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 43 com 35 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido: 10 de 36 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido: 10 de  8 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado:  8 com 36 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  4 de 37 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  7 de 45 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 45 com 37 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido: 10 de 38 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  1 de 10 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 10 com 38 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  1 de 39 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  9 de 47 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado: 47 com 39 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  4 de 40 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido: 10 de  0 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado:  0 com 40 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido:  8 de 41 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  2 de  1 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado:  1 com 41 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido: 10 de 42 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido:  9 de  6 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado:  6 com 42 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00002 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00002 s] - Shuffler State:          |      InitOutputs |
+[ 0.00002 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00002 s] - Lido: 10 de 43 
+[ 0.00002 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00002 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00002 s] - Lido: 10 de  3 
+[ 0.00002 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00002 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00002 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00002 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00002 s] - Trocado:  3 com 43 
+[ 0.00002 s] - Shuffler State:          |          IfState |
+[ 0.00003 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00003 s] - Shuffler State:          |      InitOutputs |
+[ 0.00003 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00003 s] - Lido:  8 de 44 
+[ 0.00003 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00003 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00003 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00003 s] - Lido: 10 de  8 
+[ 0.00003 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00003 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00003 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00003 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00003 s] - Trocado:  8 com 44 
+[ 0.00003 s] - Shuffler State:          |          IfState |
+[ 0.00003 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00003 s] - Shuffler State:          |      InitOutputs |
+[ 0.00003 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00003 s] - Lido:  4 de 45 
+[ 0.00003 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00003 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00003 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00003 s] - Lido:  8 de  1 
+[ 0.00003 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00003 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00003 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00003 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00003 s] - Trocado:  1 com 45 
+[ 0.00003 s] - Shuffler State:          |          IfState |
+[ 0.00003 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00003 s] - Shuffler State:          |      InitOutputs |
+[ 0.00003 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00003 s] - Lido:  7 de 46 
+[ 0.00003 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00003 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00003 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00003 s] - Lido: 10 de 10 
+[ 0.00003 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00003 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00003 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00003 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00003 s] - Trocado: 10 com 46 
+[ 0.00003 s] - Shuffler State:          |          IfState |
+[ 0.00003 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00003 s] - Shuffler State:          |      InitOutputs |
+[ 0.00003 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00003 s] - Lido:  1 de 47 
+[ 0.00003 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00003 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00003 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00003 s] - Lido: 10 de  3 
+[ 0.00003 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00003 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00003 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00003 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00003 s] - Trocado:  3 com 47 
+[ 0.00003 s] - Shuffler State:          |          IfState |
+[ 0.00003 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00003 s] - Shuffler State:          |      InitOutputs |
+[ 0.00003 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00003 s] - Lido:  9 de 48 
+[ 0.00003 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00003 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00003 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00003 s] - Lido:  8 de  8 
+[ 0.00003 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00003 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00003 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00003 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00003 s] - Trocado:  8 com 48 
+[ 0.00003 s] - Shuffler State:          |          IfState |
+[ 0.00003 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00003 s] - Shuffler State:          |      InitOutputs |
+[ 0.00003 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00003 s] - Lido: 10 de 49 
+[ 0.00003 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00003 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00003 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00003 s] - Lido:  7 de  9 
+[ 0.00003 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00003 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00003 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00003 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00003 s] - Trocado:  9 com 49 
+[ 0.00003 s] - Shuffler State:          |          IfState |
+[ 0.00003 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00003 s] - Shuffler State:          |      InitOutputs |
+[ 0.00003 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00003 s] - Lido: 10 de 50 
+[ 0.00003 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00003 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00003 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00003 s] - Lido:  2 de  2 
+[ 0.00003 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00003 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00003 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00003 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00003 s] - Trocado:  2 com 50 
+[ 0.00003 s] - Shuffler State:          |          IfState |
+[ 0.00003 s] - Shuffler State:          |     IncreaseAddr |
+[ 0.00003 s] - Shuffler State:          |      InitOutputs |
+[ 0.00003 s] - Shuffler State:          |     I_ReadMemOut |
+[ 0.00003 s] - Lido: 10 de 51 
+[ 0.00003 s] - Shuffler State:          |    I_StoreMemOut |
+[ 0.00003 s] - Shuffler State:          |       GetNxtAddr |
+[ 0.00003 s] - Shuffler State:          |     J_ReadMemOut |
+[ 0.00003 s] - Lido:  9 de 11 
+[ 0.00003 s] - Shuffler State:          |    J_StoreMemOut |
+[ 0.00003 s] - Shuffler State:          |   J_WriteMemAddr |
+[ 0.00003 s] - Shuffler State:          |       ChangeAddr |
+[ 0.00003 s] - Shuffler State:          |   I_WriteMemAddr |
+[ 0.00003 s] - Trocado: 11 com 51 
+[ 0.00003 s] - Shuffler State:          |          IfState |
+[ 0.00003 s] - Shuffler State:          |         Shuffled |
+||=================================================================||
+[ 0.00003 s] - BJController State: |  PlayerWith1Card |
+||=================================================================||
+[ 0.00003 s] - CardAdder State:   |          ReadMem |
+[ 0.00003 s] - Shuffler State:          |            Start |
+[ 0.00003 s] - CardAdder State:   |     Value2Player |
+[ 0.00003 s] - CardAdder State:   |           CardOK |
+Player Hand:  4
+Dealer Hand:  0
+||=================================================================||
+[ 0.00003 s] - BJController State: |    D1_RstCardFSM |
+||=================================================================||
+[ 0.00003 s] - CardAdder State:   |         Wait_FSM |
+||=================================================================||
+[ 0.00003 s] - BJController State: |  DealerWith1Card |
+||=================================================================||
+[ 0.00003 s] - CardAdder State:   |          ReadMem |
+[ 0.00003 s] - CardAdder State:   |     Value2Dealer |
+[ 0.00003 s] - CardAdder State:   |           CardOK |
+Player Hand:  4
+Dealer Hand:  4
+||=================================================================||
+[ 0.00003 s] - BJController State: |     P_RstCardFSM |
+||=================================================================||
+[ 0.00003 s] - CardAdder State:   |         Wait_FSM |
+||=================================================================||
+[ 0.00003 s] - BJController State: |  PlayerWith2Card |
+||=================================================================||
+[ 0.00003 s] - CardAdder State:   |          ReadMem |
+[ 0.00003 s] - CardAdder State:   |     Value2Player |
+[ 0.00003 s] - CardAdder State:   |   PlayerWithFace |
+[ 0.00003 s] - CardAdder State:   |           CardOK |
+Player Hand: 14
+Dealer Hand:  4
+||=================================================================||
+[ 0.00003 s] - BJController State: |    D2_RstCardFSM |
+||=================================================================||
+[ 0.00003 s] - CardAdder State:   |         Wait_FSM |
+||=================================================================||
+[ 0.00003 s] - BJController State: |  DealerWith2Card |
+||=================================================================||
+[ 0.00003 s] - CardAdder State:   |          ReadMem |
+[ 0.00003 s] - CardAdder State:   |     Value2Dealer |
+[ 0.00003 s] - CardAdder State:   |    DealerWithAce |
+[ 0.00003 s] - CardAdder State:   |           CardOK |
+Player Hand: 14
+Dealer Hand:  5
+||=================================================================||
+[ 0.00003 s] - BJController State: |       PlayerTurn |
+||=================================================================||
+[ 0.00003 s] - CardAdder State:   |         Wait_FSM |
+
+||=================================================================||
+[ 0.01002 s] - Terminado o teste para verificar se o jogo está funcional
+||=================================================================||
