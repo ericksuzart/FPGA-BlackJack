@@ -248,6 +248,8 @@ begin
                 F_State = LoseState;
             else if (vi_HandP == vi_HandD)
                 F_State = TieState;
+            else
+                F_State = LoseState;
 
         // default :
         //     F_State = Start;

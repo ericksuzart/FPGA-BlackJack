@@ -9,433 +9,433 @@ z2
 cModel Technology
 d/home/erick
 vBlackJack
-Z0 !s110 1575945777
+!s110 1575947946
 !i10b 1
 !s100 :gT?B0UaYN>N<giT9hnQS1
 I0<oI;@Gb]k[jS^V2?7cjb1
-Z1 VDg1SIo80bB@j0V0VzS_@n1
-Z2 d/home/erick/ENGC40/Modelsim/BlackJack
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z1 d/home/erick/ENGC40/Modelsim/BlackJack
 w1575940897
 8/home/erick/ENGC40/Modelsim/BlackJack/src/BlackJack.v
 F/home/erick/ENGC40/Modelsim/BlackJack/src/BlackJack.v
 L0 19
-Z3 OV;L;10.5b;63
+Z2 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1575945777.000000
+Z3 !s108 1575947946.000000
 !s107 /home/erick/ENGC40/Modelsim/BlackJack/src/BlackJack.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/erick/ENGC40/Modelsim/BlackJack/src/BlackJack.v|
 !i113 1
-Z5 o-work work
-Z6 tCvgOpt 0
+Z4 o-work work
+Z5 tCvgOpt 0
 n@black@jack
 vBlackJackController
-R0
+Z6 !s110 1575947947
 !i10b 1
-!s100 Y?a_HKZgT77a8f^58``Uk3
-IezA1_ejbYmazP0iKIB^X]1
+!s100 P>egLdmInRj=ajSc_n1Ja1
+IMASKRBb69Q9<nj=ARzSEH1
+R0
 R1
-R2
-w1575914883
+w1575946392
 8/home/erick/ENGC40/Modelsim/BlackJack/src/BlackJackController.v
 F/home/erick/ENGC40/Modelsim/BlackJack/src/BlackJackController.v
 L0 3
-R3
+R2
 r1
 !s85 0
 31
-R4
+R3
 !s107 /home/erick/ENGC40/Modelsim/BlackJack/src/BlackJackController.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/erick/ENGC40/Modelsim/BlackJack/src/BlackJackController.v|
 !i113 1
+R4
 R5
-R6
 n@black@jack@controller
 vCardAdder
-Z7 !s110 1575945778
+R6
 !i10b 1
 !s100 8lX=<STCQILCGIVQ7XKhA2
 IPA35iSSi3:DCSPH7^OK4=0
+R0
 R1
-R2
 w1575174102
 8/home/erick/ENGC40/Modelsim/BlackJack/src/CardAdder.v
 F/home/erick/ENGC40/Modelsim/BlackJack/src/CardAdder.v
 L0 3
-R3
+R2
 r1
 !s85 0
 31
-R4
+Z7 !s108 1575947947.000000
 !s107 /home/erick/ENGC40/Modelsim/BlackJack/src/CardAdder.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/erick/ENGC40/Modelsim/BlackJack/src/CardAdder.v|
 !i113 1
+R4
 R5
-R6
 n@card@adder
 vCardEvaluator
-R7
+R6
 !i10b 1
 !s100 ODcbjgei0]41]Sj>L[m013
 I5d70b<90z@BbUCmQS6;BQ1
+R0
 R1
-R2
 w1574960430
 8/home/erick/ENGC40/Modelsim/BlackJack/src/CardEvaluator.v
 F/home/erick/ENGC40/Modelsim/BlackJack/src/CardEvaluator.v
 L0 3
-R3
+R2
 r1
 !s85 0
 31
-Z8 !s108 1575945778.000000
+R7
 !s107 /home/erick/ENGC40/Modelsim/BlackJack/src/CardEvaluator.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/erick/ENGC40/Modelsim/BlackJack/src/CardEvaluator.v|
 !i113 1
+R4
 R5
-R6
 n@card@evaluator
 vCounter
-R7
+R6
 !i10b 1
 !s100 1JEk0LJdPgF[nG6XETe_W1
 I22l6dGE>h?CBLSo]?6HkD0
+R0
 R1
-R2
 w1575942750
 8/home/erick/ENGC40/Modelsim/BlackJack/src/Counter.v
 F/home/erick/ENGC40/Modelsim/BlackJack/src/Counter.v
 L0 3
-R3
+R2
 r1
 !s85 0
 31
-R8
+R7
 !s107 /home/erick/ENGC40/Modelsim/BlackJack/src/Counter.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/erick/ENGC40/Modelsim/BlackJack/src/Counter.v|
 !i113 1
+R4
 R5
-R6
 n@counter
 vCounter_TB
-R7
+R6
 !i10b 1
 !s100 lP3lf3ldU?F<AA`cFTS<P2
 IVneDIK8DkdWGaI>F`ic181
+R0
 R1
-R2
 w1575078937
 8/home/erick/ENGC40/Modelsim/BlackJack/TestBenchs/TB__Counter.v
 F/home/erick/ENGC40/Modelsim/BlackJack/TestBenchs/TB__Counter.v
 L0 3
-R3
+R2
 r1
 !s85 0
 31
-R8
+R7
 !s107 /home/erick/ENGC40/Modelsim/BlackJack/TestBenchs/TB__Counter.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/erick/ENGC40/Modelsim/BlackJack/TestBenchs/TB__Counter.v|
 !i113 1
+R4
 R5
-R6
 n@counter_@t@b
 vDebouncer
-R7
+R6
 !i10b 1
 !s100 M`]D9IiRO8lkzdFDC>hk52
 IMSJ:hJL7W^F39:F2icM>f2
+R0
 R1
-R2
 w1575084305
 8/home/erick/ENGC40/Modelsim/BlackJack/src/Debouncer.v
 F/home/erick/ENGC40/Modelsim/BlackJack/src/Debouncer.v
 L0 3
-R3
+R2
 r1
 !s85 0
 31
-R8
+R7
 !s107 /home/erick/ENGC40/Modelsim/BlackJack/src/Debouncer.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/erick/ENGC40/Modelsim/BlackJack/src/Debouncer.v|
 !i113 1
+R4
 R5
-R6
 n@debouncer
 vdisplaydecoder
-R7
+R6
 !i10b 1
 !s100 LUISKgNk]U[DHh9@hZ6^31
 ILm8UM_@n9TW:cFSnL3a9R3
+R0
 R1
-R2
 w1574919867
 8/home/erick/ENGC40/Modelsim/BlackJack/src/displaydecoder.v
 F/home/erick/ENGC40/Modelsim/BlackJack/src/displaydecoder.v
 L0 3
-R3
+R2
 r1
 !s85 0
 31
-R8
+R7
 !s107 /home/erick/ENGC40/Modelsim/BlackJack/src/displaydecoder.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/erick/ENGC40/Modelsim/BlackJack/src/displaydecoder.v|
 !i113 1
+R4
 R5
-R6
 vEdgeDetector
-R7
+R6
 !i10b 1
 !s100 Rhg=7NN:hGEDNlW292J_O3
 IAN<T2N5dLRK`C5j7OSUYP0
+R0
 R1
-R2
 w1574905803
 8/home/erick/ENGC40/Modelsim/BlackJack/src/EdgeDetector.v
 F/home/erick/ENGC40/Modelsim/BlackJack/src/EdgeDetector.v
 L0 1
-R3
+R2
 r1
 !s85 0
 31
-R8
+R7
 !s107 /home/erick/ENGC40/Modelsim/BlackJack/src/EdgeDetector.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/erick/ENGC40/Modelsim/BlackJack/src/EdgeDetector.v|
 !i113 1
+R4
 R5
-R6
 n@edge@detector
 vMemAcessMux
-R7
+R6
 !i10b 1
 !s100 1^[kN2N<QU5Ha`zk7G3JX1
 IPmhzf;d]kZ82`?EogH2RY0
+R0
 R1
-R2
 w1575923468
 8/home/erick/ENGC40/Modelsim/BlackJack/src/MemAcessMux.v
 F/home/erick/ENGC40/Modelsim/BlackJack/src/MemAcessMux.v
 L0 1
-R3
+R2
 r1
 !s85 0
 31
-R8
+R7
 !s107 /home/erick/ENGC40/Modelsim/BlackJack/src/MemAcessMux.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/erick/ENGC40/Modelsim/BlackJack/src/MemAcessMux.v|
 !i113 1
+R4
 R5
-R6
 n@mem@acess@mux
 vNxt_Addr
-R7
+R6
 !i10b 1
 !s100 T`Vmg18hSI9D=H>Jd^CPj1
 IJXV25WO2fgzdFfzBlNGFX0
+R0
 R1
-R2
 w1574960239
 8/home/erick/ENGC40/Modelsim/BlackJack/src/Nxt_Addr.v
 F/home/erick/ENGC40/Modelsim/BlackJack/src/Nxt_Addr.v
 L0 3
-R3
+R2
 r1
 !s85 0
 31
-R8
+R7
 !s107 /home/erick/ENGC40/Modelsim/BlackJack/src/Nxt_Addr.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/erick/ENGC40/Modelsim/BlackJack/src/Nxt_Addr.v|
 !i113 1
+R4
 R5
-R6
 n@nxt_@addr
 vNxt_Addr_TB
-R7
+R6
 !i10b 1
 !s100 Cg;ATIXfQb>BziaTg_Ni@1
 I[RidPD0AK<A5cg4Ji[An60
+R0
 R1
-R2
 w1575078966
 8/home/erick/ENGC40/Modelsim/BlackJack/TestBenchs/TB_NxtAddr.v
 F/home/erick/ENGC40/Modelsim/BlackJack/TestBenchs/TB_NxtAddr.v
 L0 3
-R3
+R2
 r1
 !s85 0
 31
-R8
+R7
 !s107 /home/erick/ENGC40/Modelsim/BlackJack/TestBenchs/TB_NxtAddr.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/erick/ENGC40/Modelsim/BlackJack/TestBenchs/TB_NxtAddr.v|
 !i113 1
+R4
 R5
-R6
 n@nxt_@addr_@t@b
 Epll
-Z9 w1574917508
-Z10 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z11 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-R2
-Z12 8/home/erick/ENGC40/Modelsim/BlackJack/src/PLL.vhd
-Z13 F/home/erick/ENGC40/Modelsim/BlackJack/src/PLL.vhd
+Z8 w1574917508
+Z9 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z10 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R1
+Z11 8/home/erick/ENGC40/Modelsim/BlackJack/src/PLL.vhd
+Z12 F/home/erick/ENGC40/Modelsim/BlackJack/src/PLL.vhd
 l0
 L42
 VhdWFGCT>]D:E4I6:URgiP1
 !s100 N;^hW@k<?=jge:=h^TU`:3
-Z14 OV;C;10.5b;63
+Z13 OV;C;10.5b;63
 32
-R7
+R6
 !i10b 1
-R8
-Z15 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/erick/ENGC40/Modelsim/BlackJack/src/PLL.vhd|
-Z16 !s107 /home/erick/ENGC40/Modelsim/BlackJack/src/PLL.vhd|
+R7
+Z14 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/erick/ENGC40/Modelsim/BlackJack/src/PLL.vhd|
+Z15 !s107 /home/erick/ENGC40/Modelsim/BlackJack/src/PLL.vhd|
 !i113 1
-Z17 o-work work -2002 -explicit
-Z18 tExplicit 1 CvgOpt 0
+Z16 o-work work -2002 -explicit
+Z17 tExplicit 1 CvgOpt 0
 Asyn
+R9
 R10
-R11
 DEx4 work 3 pll 0 22 hdWFGCT>]D:E4I6:URgiP1
 l125
 L51
 VZk0gDePz:3f`?MVXEG74K2
 !s100 =573RALVIKn=[jiCfH76C3
-R14
+R13
 32
-R7
+R6
 !i10b 1
-R8
+R7
+R14
 R15
-R16
 !i113 1
+R16
 R17
-R18
 Eram
+R8
+Z18 DPx9 altera_mf 20 altera_mf_components 0 22 gV:l9C^?PSb6]b5V?_jR@3
 R9
-Z19 DPx9 altera_mf 20 altera_mf_components 0 22 gV:l9C^?PSb6]b5V?_jR@3
 R10
-R11
-R2
-Z20 8/home/erick/ENGC40/Modelsim/BlackJack/src/RAM.vhd
-Z21 F/home/erick/ENGC40/Modelsim/BlackJack/src/RAM.vhd
+R1
+Z19 8/home/erick/ENGC40/Modelsim/BlackJack/src/RAM.vhd
+Z20 F/home/erick/ENGC40/Modelsim/BlackJack/src/RAM.vhd
 l0
 L42
 VlbUFTBlEAF>5>W@L9ezVM3
 !s100 ?<VkTddBaPka^ED4H2?Bf1
-R14
+R13
 32
-R7
+R6
 !i10b 1
-R8
-Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/erick/ENGC40/Modelsim/BlackJack/src/RAM.vhd|
-Z23 !s107 /home/erick/ENGC40/Modelsim/BlackJack/src/RAM.vhd|
+R7
+Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/erick/ENGC40/Modelsim/BlackJack/src/RAM.vhd|
+Z22 !s107 /home/erick/ENGC40/Modelsim/BlackJack/src/RAM.vhd|
 !i113 1
+R16
 R17
-R18
 Asyn
-R19
+R18
+R9
 R10
-R11
 DEx4 work 3 ram 0 22 lbUFTBlEAF>5>W@L9ezVM3
 l58
 L54
 V9[V5bol_IJATzNJh`;d>e0
 !s100 KaGE6EnF<[G;]?U4fR4dI3
-R14
+R13
 32
-R7
+R6
 !i10b 1
-R8
-R22
-R23
-!i113 1
-R17
-R18
-vShuffler
 R7
+R21
+R22
+!i113 1
+R16
+R17
+vShuffler
+R6
 !i10b 1
 !s100 <ea7bKR8In3JkgY:SlV7Y0
 IM3cAkEY?ghHR@cAZH6R=X3
+R0
 R1
-R2
 w1574952922
 8/home/erick/ENGC40/Modelsim/BlackJack/src/Shuffler.v
 F/home/erick/ENGC40/Modelsim/BlackJack/src/Shuffler.v
 L0 3
-R3
+R2
 r1
 !s85 0
 31
-R8
+R7
 !s107 /home/erick/ENGC40/Modelsim/BlackJack/src/Shuffler.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/erick/ENGC40/Modelsim/BlackJack/src/Shuffler.v|
 !i113 1
+R4
 R5
-R6
 n@shuffler
 vTB_BlackJack
-R7
+R6
 !i10b 1
-!s100 G]_;38`Wkl[k@Q3PkA[lC1
-I@ibmN1lkFP=aDEchAAW9J2
+!s100 WhBUE;[nbGOzL?WnI?]:;1
+Ii@48MKP<PKUlNKKRPIc]>0
+R0
 R1
-R2
-w1575945774
+w1575947914
 8/home/erick/ENGC40/Modelsim/BlackJack/TestBenchs/TB_BlackJack.v
 F/home/erick/ENGC40/Modelsim/BlackJack/TestBenchs/TB_BlackJack.v
 L0 3
-R3
+R2
 r1
 !s85 0
 31
-R8
+R7
 !s107 /home/erick/ENGC40/Modelsim/BlackJack/TestBenchs/TB_BlackJack.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/erick/ENGC40/Modelsim/BlackJack/TestBenchs/TB_BlackJack.v|
 !i113 1
+R4
 R5
-R6
 n@t@b_@black@jack
 vTB_Debouncer
-R7
+R6
 !i10b 1
 !s100 GD<Czd_]4A`jcYAhJeRT30
 IEA@J=@De8U;^C5S`A>YzU2
+R0
 R1
-R2
 w1575083451
 8/home/erick/ENGC40/Modelsim/BlackJack/TestBenchs/TB_Debouncer.v
 F/home/erick/ENGC40/Modelsim/BlackJack/TestBenchs/TB_Debouncer.v
 L0 3
-R3
+R2
 r1
 !s85 0
 31
-R8
+R7
 !s107 /home/erick/ENGC40/Modelsim/BlackJack/TestBenchs/TB_Debouncer.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/erick/ENGC40/Modelsim/BlackJack/TestBenchs/TB_Debouncer.v|
 !i113 1
+R4
 R5
-R6
 n@t@b_@debouncer
 vTester
-R7
+R6
 !i10b 1
 !s100 B6;eCT80][b:ZzDU@0Ig;3
 I?[LYFbn5EYd22LzG9T1G^0
+R0
 R1
-R2
 w1575924030
 8/home/erick/ENGC40/Modelsim/BlackJack/TestBenchs/Tester.v
 F/home/erick/ENGC40/Modelsim/BlackJack/TestBenchs/Tester.v
 L0 1
-R3
+R2
 r1
 !s85 0
 31
-R8
+R7
 !s107 /home/erick/ENGC40/Modelsim/BlackJack/TestBenchs/Tester.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/erick/ENGC40/Modelsim/BlackJack/TestBenchs/Tester.v|
 !i113 1
+R4
 R5
-R6
 n@tester

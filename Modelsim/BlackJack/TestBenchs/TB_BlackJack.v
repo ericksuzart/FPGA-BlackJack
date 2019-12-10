@@ -393,8 +393,11 @@ begin : ResetTest
         ShowStates = 1; // Comentar para testar todas as possibilidades
         ResetTestFinished = 0;
 
-        // for(i = 0; i < 4096; i= i +1) // Tirar o comentário para testar todas as possibilidades
-        for(i = 0; i < 40; i= i +1) // Comentar para testar todas as possibilidades
+        // for(i = 0; i < 4096; i= i +1)    // Tirar o comentário para testar todas as possibilidades
+        // for(i = 0; i < 40; i= i +1)      // Player com BlackJack
+        // for(i = 0; i < 41; i= i +1)      // Dealer com BlackJack
+        // for(i = 0; i < 317; i= i +1)     // Teste de empate
+        for(i = 0; i < 0; i= i +1) // Comentar para testar as demais possibilidades
         begin
             #5970 PlayerReset(i,1);
 
@@ -442,8 +445,13 @@ begin : GameTest
             ResetBtn = 1;
             ShowStates = 1;
             
-            // Player com BlackJack
-            PlayerReset(40,0);
+            
+            // PlayerReset(40,0)    // Player com BlackJack (ativar em ResetTest o correspondente)
+            // PlayerReset(41,0)    // Dealer com BlackJack (ativar em ResetTest o correspondente)
+            // PlayerReset(317,0);  // Teste de empate com blackjack (ativar em ResetTest o correspondente)
+            // PlayerReset(0,0);    // Player perde
+            // PlayerReset(4,0);    // Jogador perde com Dealer com 21
+            PlayerReset(3,0);    // Teste de empate sem blackjack
 
             wait (o_Win || o_Lose || o_Tie)
             begin
