@@ -225,7 +225,7 @@ refer to the applicable agreement for further details.
 		(line (pt 121 12)(pt 117 8))
 	)
 	(flipy)
-	(annotation_block (location)(rect 512 -200 568 -184))
+	(annotation_block (location)(rect 256 -200 312 -184))
 )
 (pin
 	(output)
@@ -243,7 +243,7 @@ refer to the applicable agreement for further details.
 		(line (pt 121 12)(pt 117 8))
 	)
 	(flipy)
-	(annotation_block (location)(rect 512 -184 568 -168))
+	(annotation_block (location)(rect 256 -184 312 -168))
 )
 (pin
 	(output)
@@ -261,7 +261,7 @@ refer to the applicable agreement for further details.
 		(line (pt 123 12)(pt 119 8))
 	)
 	(flipy)
-	(annotation_block (location)(rect 512 -160 568 -144))
+	(annotation_block (location)(rect 256 -160 312 -144))
 )
 (pin
 	(output)
@@ -279,7 +279,7 @@ refer to the applicable agreement for further details.
 		(line (pt 123 12)(pt 119 8))
 	)
 	(flipy)
-	(annotation_block (location)(rect 512 -144 568 -128))
+	(annotation_block (location)(rect 256 -144 312 -128))
 )
 (pin
 	(output)
