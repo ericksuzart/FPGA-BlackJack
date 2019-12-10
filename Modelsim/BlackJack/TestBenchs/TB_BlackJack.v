@@ -78,10 +78,6 @@ assign DUV.w_ResetNE = w_ResetNE;   // Reset Negedge
 assign DUV.w_HitPE = w_HitPE;       // Hit posedge
 assign DUV.w_StayPE = w_StayPE;     // Stay posedge
 
-// Entrada de teste do multiplexador
-assign DUV.w_MuxTestEnable = MuxEnable;
-assign DUV.w_TestAddr = TestAddr;
-assign DUV.w_TestClk = TestClk;
 
 // Tester
 
@@ -111,7 +107,7 @@ always #5 clk = !clk;
         125 = 2000 kHz */
 
 // Clock de 2000 kHz
-always #125 clk_PLL <= ~clk_PLL;	
+always #250 clk_PLL <= ~clk_PLL;	
 
 assign DUV.clk_PLL = clk_PLL;
 
@@ -208,13 +204,13 @@ begin
         
         case (StateFSMShuffler)
             4'b 0010 : // I_ReadMemOut
-                $fdisplay(OutputGameFile, "[%t] - Lido: %d de %d ",$time ,DUV.w_CardValue, DUV.w_S_Addr);
+                $fdisplay(OutputGameFile, "\n[%t] -        Lido: %d do endereço %d \n",$time ,DUV.w_CardValue, DUV.w_S_Addr);
 
             4'b 0101 : // J_ReadMemOut
-                $fdisplay(OutputGameFile, "[%t] - Lido: %d de %d ",$time ,DUV.w_CardValue, DUV.w_S_Addr);
+                $fdisplay(OutputGameFile, "\n[%t] -        Lido: %d do endereço %d \n",$time ,DUV.w_CardValue, DUV.w_S_Addr);
 
             4'b 1001 : // I_WriteMemAddr
-                $fdisplay(OutputGameFile, "[%t] - Trocado: %d com %d ",$time ,DUV.w_S_Addr_J, DUV.w_S_Addr_I);
+                $fdisplay(OutputGameFile, "\n[%t] -        Trocado: %d com %d \n",$time ,DUV.w_S_Addr_J, DUV.w_S_Addr_I);
         endcase
     end
 end
@@ -227,14 +223,14 @@ begin
         #1 ;
         // $display("[%t] - CardAdder State:   | %s |",$time , StateStringCardAdder);
         // $fdisplay(OutputResetFile, "[%t] - CardAdder State:   | %s |",$time , StateStringCardAdder);
-        $fdisplay(OutputGameFile, "[%t] - CardAdder State:   | %s |",$time , StateStringCardAdder);
+        $fdisplay(OutputGameFile, "[%t] - CardAdder State:         | %s |",$time , StateStringCardAdder);
 
         #1 ;
         if (StateFSMCardAdder == 4'b 1011)
         begin
             // $display("Player Hand: %d\nDealer Hand: %d", DUV.w_PlayerHnd, DUV.w_DealerHnd);
             // $fdisplay(OutputResetFile, "Player Hand: %d\nDealer Hand: %d", DUV.w_PlayerHnd, DUV.w_DealerHnd);
-            $fdisplay(OutputGameFile, "Player Hand: %d\nDealer Hand: %d", DUV.w_PlayerHnd, DUV.w_DealerHnd);
+            $fdisplay(OutputGameFile, "\n       Player Hand: %d\n       Dealer Hand: %d\n", DUV.w_PlayerHnd, DUV.w_DealerHnd);
         end
     end
 end
@@ -246,8 +242,26 @@ begin
     begin
         // $display("||=================================================================||\n[%t] - BJController State: | %s |\n||=================================================================||",$time , StateStringGlobal);
         // $fdisplay(OutputResetFile, "||=================================================================||\n[%t] - BJController State: | %s |\n||=================================================================||",$time , StateStringGlobal);
-        $fdisplay(OutputGameFile, "||=================================================================||\n[%t] - BJController State: | %s |\n||=================================================================||",$time , StateStringGlobal);
+        $fdisplay(OutputGameFile, "||=================================================================||\n[%t] - BJController State:      | %s |\n||=================================================================||",$time , StateStringGlobal);
     end
+end
+
+// Monitorar se o player deu hit ou stay
+always @(o_Hit_P or o_Stay_P)
+begin
+    if (o_Hit_P)
+        $fdisplay(OutputGameFile, "\n[%t] - O jogador deu Hit \n",$time);
+    if (o_Stay_P)
+        $fdisplay(OutputGameFile, "\n[%t] - O jogador deu Stay \n",$time);
+end
+
+// Monitorar se o dealer deu hit ou stay
+always @(o_Hit_D or o_Stay_D)
+begin
+    if (o_Hit_D)
+        $fdisplay(OutputGameFile, "\n[%t] - O dealer deu Hit \n",$time);
+    if (o_Stay_D)
+        $fdisplay(OutputGameFile, "\n[%t] - O dealer deu Stay \n",$time);
 end
 
 //======================================================
@@ -368,9 +382,9 @@ begin : ResetTest
 
     else
     begin
-        $display("||=================================================================||\n[%t] - Começando o testbench para verificar se o contador e o embaralhador estão funcionais\n||=================================================================||\n", $time);
+        $display("||########################################################################################||\n[%t] - Começando o testbench para verificar se o contador e o embaralhador estão funcionais\n||########################################################################################||\n", $time);
         
-        $fdisplay(OutputResetFile, "||=================================================================||\n[%t] - Começando o testbench para verificar se o contador e o embaralhador estão funcionais\n||=================================================================||\n", $time);
+        $fdisplay(OutputResetFile, "||########################################################################################||\n[%t] - Começando o testbench para verificar se o contador e o embaralhador estão funcionais\n||########################################################################################||\n", $time);
 
         clk = 0;
         clk_PLL = 1'b0;
@@ -380,7 +394,7 @@ begin : ResetTest
         ResetTestFinished = 0;
 
         // for(i = 0; i < 4096; i= i +1) // Tirar o comentário para testar todas as possibilidades
-        for(i = 0; i < 0; i= i +1) // Comentar para testar todas as possibilidades
+        for(i = 0; i < 40; i= i +1) // Comentar para testar todas as possibilidades
         begin
             #5970 PlayerReset(i,1);
 
@@ -408,7 +422,8 @@ begin : GameTest
     wait(ResetTestFinished)
     begin
         // Precisão do tempo
-        $timeformat(0, 5, " s", 10);
+        // Está em milisegundos porém 
+        $timeformat(-3, 5, " s", 10);
 
         // Abrir o arquivo de saída
         OutputGameFile = $fopen("GameTest.txt","w");
@@ -418,9 +433,9 @@ begin : GameTest
 
         else
         begin
-            $display("||=================================================================||\n[%t] - Começando o testbench para verificar se o jogo está funcional\n||=================================================================||\n", $time);
+            $display("||########################################################################################||\n[%t] - Começando o testbench para verificar o funcionamento do jogo\n||########################################################################################||\n", $time);
             
-            $fdisplay(OutputGameFile, "||=================================================================||\n[%t] - Começando o testbench para verificar se o jogo está funcional\n||=================================================================||\n", $time);
+            $fdisplay(OutputGameFile, "||########################################################################################|\n[%t] - Começando o testbench para verificar o funcionamento do jogo\n||########################################################################################||\n", $time);
 
             clk = 0;
             clk_PLL = 1'b0;
@@ -430,10 +445,18 @@ begin : GameTest
             // Player com BlackJack
             PlayerReset(40,0);
 
-            # 10000000 ;
+            wait (o_Win || o_Lose || o_Tie)
+            begin
+                if (o_Win)
+                    $fdisplay(OutputGameFile, "\n[%t] - O jogador venceu essa jogada\n", $time);
+                if (o_Lose)
+                    $fdisplay(OutputGameFile, "\n[%t] - O jogador perdeu essa jogada\n", $time);
+                if (o_Tie)
+                    $fdisplay(OutputGameFile, "\n[%t] - O jogador empatou essa jogada\n", $time);
+            end
             
-            $display("\n||=================================================================||\n[%t] - Terminado o teste para verificar se o jogo está funcional\n||=================================================================||", $time);
-            $fdisplay(OutputGameFile, "\n||=================================================================||\n[%t] - Terminado o teste para verificar se o jogo está funcional\n||=================================================================||", $time);
+            $display("\n||########################################################################################||\n[%t] - Terminado o teste para verificar o funcionamento do jogo\n||########################################################################################||", $time);
+            $fdisplay(OutputGameFile, "\n||########################################################################################||\n[%t] - Terminado o teste para verificar o funcionamento do jogo\n||########################################################################################||", $time);
             
             $fclose(OutputGameFile);
         end

@@ -93,7 +93,10 @@ wire	w_StayPE;
 wire	w_TwoSec;
 wire	w_WriteEnable;
 
-
+// variáveis para verificação da memória
+wire	w_MuxTestEnable;
+wire	[5:0] w_TestAddr;
+wire 	w_TestClk;
 
 
 
@@ -176,8 +179,8 @@ Shuffler	b2v_FSM_Embaralhador(
 BlackJackController	b2v_FSM_Global(
 	.i_Clk(clk),
 	.i_Reset(w_ResetPE),
-	.i_Stay(w_HitPE),
-	.i_Hit(w_StayPE),
+	.i_Stay(w_StayPE),
+	.i_Hit(w_HitPE),
 	.vi_TwoSec(w_TwoSec),
 	.vi_RstOK(w_CountRstOK),
 	.vi_Shuffled(w_Shuffled),
@@ -222,17 +225,11 @@ BlackJackController	b2v_FSM_Global(
 	defparam	b2v_FSM_Global.WinState = 5'b10001;
 
 
-Debouncer	b2v_HitButtonDebouncer(
-	.i_Clk(clk),
-	.i_Button(i_Hit),
-	.o_ButtonDeb(o_HitDeb),
-	.o_ButtonDown(o_HitNE),
-	.o_ButtonUp(w_HitPE));
 
 
-PLL	b2v_inst(
-	.inclk0(clk),
-	.c0(clk_PLL));
+// PLL	b2v_inst(
+// 	.inclk0(clk),
+// 	.c0(clk_PLL));
 
 
 MemAcessMux	b2v_MemAcessMux(
@@ -265,6 +262,14 @@ RAM	b2v_RAM(
 	.data(w_S_Data),
 	.q(w_MemData));
 
+// SPRWI RAM(
+// 	    .i_Data(w_S_Data),
+//         .i_Addr(w_MemAddr), // Memory address
+//         .i_WriteEnable(w_WriteEnable),
+// 		.i_Clock(w_MemClk),
+//         .o_Data(w_MemData)
+// 	);
+
 
 Debouncer	b2v_ResetButtonDebouncer(
 	.i_Clk(clk),
@@ -274,13 +279,26 @@ Debouncer	b2v_ResetButtonDebouncer(
 	.o_ButtonUp(w_ResetPE));
 
 
+Debouncer	b2v_HitButtonDebouncer(
+	.i_Clk(clk),
+	.i_Button(i_Hit),
+	.o_ButtonDeb(w_HitDeb),
+	.o_ButtonDown(w_HitNE),
+	.o_ButtonUp(w_HitPE));
+
+
 Debouncer	b2v_StayButtonDebouncer(
 	.i_Clk(clk),
 	.i_Button(i_Stay),
-	.o_ButtonDeb(o_StayDeb),
-	.o_ButtonDown(o_StayNE),
+	.o_ButtonDeb(w_StayDeb),
+	.o_ButtonDown(w_StayNE),
 	.o_ButtonUp(w_StayPE));
 
 assign	clk = inclk0;
+
+assign	o_HitDeb = w_HitDeb;
+assign	o_HitNE = w_HitNE;
+assign	o_StayDeb = w_StayDeb;
+assign	o_StayNE = w_StayNE;
 
 endmodule
