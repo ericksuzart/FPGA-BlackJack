@@ -12,7 +12,7 @@ module Counter
     // -----------------------------------------------
     output [WIDTH-1:0] o_Count, // Saida do contador
     output wire o_TwoSec,       // Output que indica se passaram 2 segundos
-    output o_RstOK              // Indica se o contador foi resetado com Sucesso
+    output reg o_RstOK              // Indica se o contador foi resetado com Sucesso
 );
 
     // Registrador para armazenar o numero do contador
@@ -22,24 +22,31 @@ module Counter
     always @ (posedge clk_2K or posedge i_ResetNeg)
     begin
         if (i_ResetNeg)
+        begin
             r_Count <= 0;
+            o_RstOK <= 1;
+        end
 
         else if (!i_ResetDeb)
+        begin
             r_Count <= r_Count + 1;
+            o_RstOK <= 0;
+        end
 
         else if (i_RstCounter)
         begin
             r_Count <= 0;
+            o_RstOK <= 1;
         end
 
         // O operador ~& faz um NAND no contador, e retorna 0 caso todos os bits
         // dele forem 1
         else if ((i_ActCounter)&&(~&r_Count))
+        begin
             r_Count <= r_Count + 1;
+            o_RstOK <= 0;
+        end
     end
-
-    // Indica se o contador foi resetado para o BlackJackController
-    assign o_RstOK = 1? (i_RstCounter):0;
 
     // Atribuição ternária da saída o_TwoSec
     assign o_TwoSec = 1? ((i_ActCounter)&&(!i_ResetNeg)&&(!i_RstCounter)&&(&r_Count)): 0;

@@ -179,8 +179,8 @@ Shuffler	b2v_FSM_Embaralhador(
 BlackJackController	b2v_FSM_Global(
 	.i_Clk(clk),
 	.i_Reset(w_ResetPE),
-	.i_Stay(w_HiNE),
-	.i_Hit(w_StayNE),
+	.i_Stay(w_StayPE),
+	.i_Hit(w_HitPE),
 	.vi_TwoSec(w_TwoSec),
 	.vi_RstOK(w_CountRstOK),
 	.vi_Shuffled(w_Shuffled),
@@ -225,12 +225,6 @@ BlackJackController	b2v_FSM_Global(
 	defparam	b2v_FSM_Global.WinState = 5'b10001;
 
 
-Debouncer	b2v_HitButtonDebouncer(
-	.i_Clk(clk),
-	.i_Button(i_Hit),
-	.o_ButtonDeb(o_HitDeb),
-	.o_ButtonDown(o_HitNE),
-	.o_ButtonUp(w_HitPE));
 
 
 // PLL	b2v_inst(
@@ -285,13 +279,26 @@ Debouncer	b2v_ResetButtonDebouncer(
 	.o_ButtonUp(w_ResetPE));
 
 
+Debouncer	b2v_HitButtonDebouncer(
+	.i_Clk(clk),
+	.i_Button(i_Hit),
+	.o_ButtonDeb(w_HitDeb),
+	.o_ButtonDown(w_HitNE),
+	.o_ButtonUp(w_HitPE));
+
+
 Debouncer	b2v_StayButtonDebouncer(
 	.i_Clk(clk),
 	.i_Button(i_Stay),
-	.o_ButtonDeb(o_StayDeb),
-	.o_ButtonDown(o_StayNE),
+	.o_ButtonDeb(w_StayDeb),
+	.o_ButtonDown(w_StayNE),
 	.o_ButtonUp(w_StayPE));
 
 assign	clk = inclk0;
+
+assign	o_HitDeb = w_HitDeb;
+assign	o_HitNE = w_HitNE;
+assign	o_StayDeb = w_StayDeb;
+assign	o_StayNE = w_StayNE;
 
 endmodule
